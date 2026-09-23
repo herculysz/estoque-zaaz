@@ -1,0 +1,36 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: pt-BR
+	maxParallelismPerRefresh: 1
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["database","host","dim_calendario","fct_updated","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fact_updated"]
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","MCP-PBIModeling"]
+
+annotation __TEdtr = 1
+
+ref table dim_calendario
+ref table DateTableTemplate_ef6d0dd0-95a2-4512-91da-883f0e5eaaa2
+ref table LocalDateTable_bea7b7cd-4e5a-4991-89e3-817011c4209d
+ref table LocalDateTable_498158f6-430a-4bd6-80e9-7622cf64ec13
+ref table fct_updated
+ref table LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e
+ref table fct_saldoEstoque
+ref table LocalDateTable_b83fbf0c-0c88-43f9-8c77-68ad5ff5fe3f
+ref table fct_saldoVolante
+ref table LocalDateTable_2a3bc3d7-a451-4bce-a706-e928d9c6f175
+ref table fct_materiaisAplicados
+ref table LocalDateTable_dd36a252-f2fd-4a5c-b7c9-a31babb489a5
+ref table Medidas
+ref table fact_updated
+
+ref cultureInfo pt-BR
+

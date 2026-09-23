@@ -1,0 +1,59 @@
+createOrReplace
+
+	table Medidas
+		lineageTag: ec89080e-d392-4345-a7ba-04729daf1646
+
+		calculationGroup
+
+		measure saldo_volante_disponivel = ```
+				
+				VAR _MaxData = 
+				    CALCULATE(
+				        MAX(fct_saldoVolante[data_saldo])
+				    )
+				RETURN
+				    CALCULATE(
+				        SUM(fct_saldoVolante[saldo]),
+				        fct_saldoVolante[descricao_material] <> "",
+				        fct_saldoVolante[data_saldo] = _MaxData
+				    )
+				```
+			formatString: 0
+			lineageTag: ebc8bb00-0667-4860-8549-fe4c407f230e
+
+			annotation PBI_FormatHint = {"isDecimal":true}
+
+		measure saldo_volante_disponivel_graph =
+				
+				SUMX(
+				    SUMMARIZE(
+				        fct_saldoVolante,
+				        fct_saldoVolante[descricao_material],
+				        fct_saldoVolante[condicao]
+				    ),
+				    VAR _MaxData = CALCULATE(MAX(fct_saldoVolante[data_saldo]))
+				    RETURN
+				        CALCULATE(
+				            SUM(fct_saldoVolante[saldo]),
+				            KEEPFILTERS(fct_saldoVolante[descricao_material] <> ""),
+				            KEEPFILTERS(fct_saldoVolante[condicao] <> ""),
+				            fct_saldoVolante[data_saldo] = _MaxData
+				        )
+				)
+			lineageTag: 8163937d-cf3a-4aa8-ad9e-170b08b16157
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column Ordinal
+			dataType: int64
+			isHidden
+			lineageTag: f5f73772-8feb-4c96-a938-8d4dd97edc99
+			sourceColumn: Ordinal
+
+		column Medidas
+			dataType: string
+			isHidden
+			lineageTag: 3c1add8b-8855-45b2-81bc-e8bdf169dd7a
+			sourceColumn: Name
+			sortByColumn: Ordinal
+

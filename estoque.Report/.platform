@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "estoque"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "97fd29de-4a89-4bbe-b0d5-a2ced2b1e733"
+  }
+}

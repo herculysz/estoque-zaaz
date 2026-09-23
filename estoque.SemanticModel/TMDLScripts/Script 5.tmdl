@@ -1,0 +1,49 @@
+createOrReplace
+
+	table fact_updated
+
+		measure Atualização = "Atualizado em: "& MAX(fact_updated[DataHoraAtualização])
+
+		column DataHoraAtualização
+			dataType: dateTime
+			formatString: General Date
+			summarizeBy: none
+			sourceColumn: DataHoraAtualização
+
+
+		partition fact_updated = m
+			mode: import
+			source =
+					let
+					    HorarioUTC =
+					        DateTimeZone.FixedUtcNow(),
+					
+					    HorarioBrasilia =
+					        DateTimeZone.SwitchZone(
+					            HorarioUTC,
+					            -3
+					        ),
+					
+					    DataHoraSemFuso =
+					        DateTimeZone.RemoveZone(
+					            HorarioBrasilia
+					        ),
+					
+					    Fonte =
+					        #table(
+					            type table [
+					                DataHoraAtualização = datetime
+					            ],
+					            {
+					                {
+					                    DataHoraSemFuso
+					                }
+					            }
+					        )
+					in
+					    Fonte
+
+		annotation PBI_NavigationStepName = Navegação
+
+		annotation PBI_ResultType = Table
+

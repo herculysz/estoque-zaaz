@@ -1,0 +1,34 @@
+relationship 2f839008-7634-4412-82cb-31dc6a489246
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_calendario.Data
+	toColumn: LocalDateTable_bea7b7cd-4e5a-4991-89e3-817011c4209d.Date
+
+relationship 46152887-c1fe-4ccb-8afa-ed1756e1958c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_calendario.'Início do Mês'
+	toColumn: LocalDateTable_498158f6-430a-4bd6-80e9-7622cf64ec13.Date
+
+relationship a3e03801-0554-42a3-8e41-aa921117f6a5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_updated.DataHoraAtualização
+	toColumn: LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e.Date
+
+relationship 08479615-b912-4b6a-b853-fe11788b05b0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_saldoEstoque.data_saldo
+	toColumn: LocalDateTable_b83fbf0c-0c88-43f9-8c77-68ad5ff5fe3f.Date
+
+relationship 39e81751-7957-4fb7-8e8e-62a3dec8b08c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_saldoVolante.data_saldo
+	toColumn: LocalDateTable_2a3bc3d7-a451-4bce-a706-e928d9c6f175.Date
+
+relationship 77f9c1b7-e7dd-493e-ae2a-70f76da173f1
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_materiaisAplicados.data_baixa_protocolo
+	toColumn: LocalDateTable_dd36a252-f2fd-4a5c-b7c9-a31babb489a5.Date
+
+relationship 2778c328-9e62-d322-962e-842227e0d4b1
+	fromColumn: fct_materiaisAplicados.'data_aplicacao.1'
+	toColumn: dim_calendario.Data
+

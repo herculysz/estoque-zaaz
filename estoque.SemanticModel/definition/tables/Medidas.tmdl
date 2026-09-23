@@ -1,0 +1,245 @@
+table Medidas
+	lineageTag: ec89080e-d392-4345-a7ba-04729daf1646
+
+	calculationGroup
+
+	measure saldoV_disponivel = ```
+			
+			/*VAR _MaxData = 
+			    CALCULATE(
+			        MAX(fct_saldoVolante[data_saldo])
+			    )
+			RETURN*/
+			    CALCULATE(
+			        SUM(fct_saldoVolante[saldo]),
+			        fct_saldoVolante[descricao_material] <> "",
+			        --fct_saldoVolante[data_saldo] = _MaxData
+			        fct_saldoVolante[data_saldo] = MAX(fct_saldoVolante[data_saldo])
+			    )
+			```
+		formatString: 0
+		displayFolder: Volante
+		lineageTag: ebc8bb00-0667-4860-8549-fe4c407f230e
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure saldoV_disponivel_graph =
+			
+			SUMX(
+			    SUMMARIZE(
+			        fct_saldoVolante,
+			        fct_saldoVolante[descricao_material],
+			        fct_saldoVolante[condicao],
+			        fct_saldoVolante[bk_material],
+			        fct_saldoVolante[serializado],
+			        fct_saldoVolante[gerente],
+			        fct_saldoVolante[coordenador],
+			        fct_saldoVolante[supervisor],
+			        fct_saldoVolante[nome],
+			        fct_saldoVolante[tem_caracter_incorreto]
+			
+			    ),
+			    --VAR _MaxData = CALCULATE(MAX(fct_saldoVolante[data_saldo]))
+			    --RETURN
+			        CALCULATE(
+			            SUM(fct_saldoVolante[saldo]),
+			            KEEPFILTERS(fct_saldoVolante[descricao_material] <> ""),
+			            KEEPFILTERS(fct_saldoVolante[condicao] <> ""),
+			            --fct_saldoVolante[data_saldo] = _MaxData
+			            fct_saldoVolante[data_saldo] = MAX(fct_saldoVolante[data_saldo])
+			        )
+			)
+		displayFolder: Volante
+		lineageTag: 8163937d-cf3a-4aa8-ad9e-170b08b16157
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure saldoEF_disponivel = ```
+			
+			    CALCULATE(
+			        SUM(fct_saldoEstoque[saldo_disponivel]),
+			        fct_saldoEstoque[descricao_material] <> "",
+			        fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			    )
+			```
+		formatString: #,0.00
+		displayFolder: EstoqueFisico
+		lineageTag: c70eed1c-15fb-43f0-9555-5e848e59d199
+
+	measure saldoEF_disponivel_graph =
+			
+			
+			SUMX(
+			    SUMMARIZE(
+			        fct_saldoEstoque,
+			        fct_saldoEstoque[contrato],
+			        fct_saldoEstoque[projeto],
+			        fct_saldoEstoque[bk_material],
+			        fct_saldoEstoque[descricao_material],
+			        fct_saldoEstoque[categoria_tecnologia],
+			        fct_saldoEstoque[condicao],
+			        fct_saldoEstoque[serializado],
+			        fct_saldoEstoque[tem_caracter_incorreto]
+			    ),
+			        CALCULATE(
+			            [saldoEF_disponivel],
+			            KEEPFILTERS(fct_saldoEstoque),
+			            fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			        )
+			)
+		formatString: #,0
+		displayFolder: EstoqueFisico
+		lineageTag: e11f6a80-0eba-40cd-bf8b-d77f4b6e225b
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure @saldoV_cor_back_serial = IF(SELECTEDVALUE('fct_saldoVolante'[tem_caracter_incorreto]) = "SIM", "#E5B389", BLANK())
+		displayFolder: Volante
+		lineageTag: 96de49e2-2eba-4f32-8033-8ca432d294ae
+
+	measure @saldoV_cor_txt_serial = IF(SELECTEDVALUE('fct_saldoVolante'[tem_caracter_incorreto]) = "SIM", "#7F0000", BLANK())
+		displayFolder: Volante
+		lineageTag: 4d9b675e-99ec-4fcf-bf7e-b5ae0c77a6a8
+
+	measure saldoEF_tm = ```
+			
+			    CALCULATE(
+			        SUM(fct_saldoEstoque[programado_tm]),
+			        fct_saldoEstoque[descricao_material] <> "",
+			        fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			    )
+			```
+		displayFolder: EstoqueFisico
+		lineageTag: 780b0325-226e-48f0-9e5e-1b8375592181
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure saldoEF_rm = ```
+			
+			    CALCULATE(
+			        SUM(fct_saldoEstoque[programado_rm]),
+			        fct_saldoEstoque[descricao_material] <> "",
+			        fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			    )
+			```
+		displayFolder: EstoqueFisico
+		lineageTag: 2b9d2b52-a929-4efe-a52b-a1e27e3df724
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure saldoEF_bruto = ```
+			
+			    CALCULATE(
+			        SUM(fct_saldoEstoque[saldo_estoque]),
+			        fct_saldoEstoque[descricao_material] <> "",
+			        fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			    )
+			```
+		displayFolder: EstoqueFisico
+		lineageTag: 51fe6faa-2dc4-462a-9368-bd5f84d59a4d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure saldoEF_bruto_graph =
+			
+			
+			SUMX(
+			    SUMMARIZE(
+			        fct_saldoEstoque,
+			        fct_saldoEstoque[contrato],
+			        fct_saldoEstoque[projeto],
+			        fct_saldoEstoque[bk_material],
+			        fct_saldoEstoque[descricao_material],
+			        fct_saldoEstoque[categoria_tecnologia],
+			        fct_saldoEstoque[condicao],
+			        fct_saldoEstoque[serializado]
+			    ),
+			        CALCULATE(
+			            [saldoEF_bruto],
+			            KEEPFILTERS(fct_saldoEstoque),
+			            fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			        )
+			)
+		formatString: #,0
+		displayFolder: EstoqueFisico
+		lineageTag: 45a27e51-f63d-472a-9b5b-0cfc13071308
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure saldoEF_rm_graph =
+			
+			
+			SUMX(
+			    SUMMARIZE(
+			        fct_saldoEstoque,
+			        fct_saldoEstoque[contrato],
+			        fct_saldoEstoque[projeto],
+			        fct_saldoEstoque[bk_material],
+			        fct_saldoEstoque[descricao_material],
+			        fct_saldoEstoque[categoria_tecnologia],
+			        fct_saldoEstoque[condicao],
+			        fct_saldoEstoque[serializado]
+			    ),
+			        CALCULATE(
+			            [saldoEF_rm],
+			            KEEPFILTERS(fct_saldoEstoque),
+			            fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			        )
+			)
+		formatString: #,0
+		displayFolder: EstoqueFisico
+		lineageTag: a725094a-9389-4f08-9f41-3196ea673287
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure saldoEF_tm_graph =
+			
+			
+			SUMX(
+			    SUMMARIZE(
+			        fct_saldoEstoque,
+			        fct_saldoEstoque[contrato],
+			        fct_saldoEstoque[projeto],
+			        fct_saldoEstoque[bk_material],
+			        fct_saldoEstoque[descricao_material],
+			        fct_saldoEstoque[categoria_tecnologia],
+			        fct_saldoEstoque[condicao],
+			        fct_saldoEstoque[serializado]
+			    ),
+			        CALCULATE(
+			            [saldoEF_tm],
+			            KEEPFILTERS(fct_saldoEstoque),
+			            fct_saldoEstoque[data_saldo] = MAX(fct_saldoEstoque[data_saldo])
+			        )
+			)
+		formatString: #,0
+		displayFolder: EstoqueFisico
+		lineageTag: ceb0a8e7-5788-4dbd-9b5d-2be3edb1bef1
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure @saldoEF_cor_back_serial = IF(SELECTEDVALUE('fct_saldoEstoque'[tem_caracter_incorreto]) = "SIM", "#E5B389", BLANK())
+		displayFolder: EstoqueFisico
+		lineageTag: 87ce1738-58ac-415b-88fb-e11f0a845982
+
+	measure @saldoEF_cor_txt_serial = IF(SELECTEDVALUE('fct_saldoEstoque'[tem_caracter_incorreto]) = "SIM", "#7F0000", BLANK())
+		displayFolder: EstoqueFisico
+		lineageTag: fb638285-5904-46e5-bd9f-8d23d4135cc5
+
+	measure qtd_aplic = CALCULATE(SUM(fct_MateriaisAplicados[quantidade]))
+		displayFolder: MateriaisAplicados
+		lineageTag: 0dbd3a91-96f6-41bd-a01e-93b6365c505c
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: f5f73772-8feb-4c96-a938-8d4dd97edc99
+		sourceColumn: Ordinal
+
+	column Medidas
+		dataType: string
+		isHidden
+		lineageTag: 3c1add8b-8855-45b2-81bc-e8bdf169dd7a
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
