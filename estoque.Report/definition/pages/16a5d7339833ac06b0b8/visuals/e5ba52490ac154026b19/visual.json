@@ -23,31 +23,16 @@
                       "Entity": "fct_updated"
                     }
                   },
-                  "Property": "AtualizadoEm"
+                  "Property": "Update"
                 }
               },
-              "queryRef": "fct_updated.AtualizadoEm",
-              "nativeQueryRef": "AtualizadoEm"
+              "queryRef": "fct_updated.Atualização",
+              "nativeQueryRef": "Update"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fct_updated"
-                  }
-                },
-                "Property": "AtualizadoEm"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },

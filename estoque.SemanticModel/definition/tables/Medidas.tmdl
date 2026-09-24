@@ -227,8 +227,93 @@ table Medidas
 		lineageTag: fb638285-5904-46e5-bd9f-8d23d4135cc5
 
 	measure qtd_aplic = CALCULATE(SUM(fct_MateriaisAplicados[quantidade]))
+		formatString: #,0
 		displayFolder: MateriaisAplicados
 		lineageTag: 0dbd3a91-96f6-41bd-a01e-93b6365c505c
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure qtd_Aplic_Mes_Anterior = ```
+			
+			VAR MesAnterior = CALCULATE(
+			    [qtd_aplic], 
+			    DATEADD('dim_Calendario'[data_formatada], -1, MONTH)
+			)
+			RETURN
+			MesAnterior
+			```
+		displayFolder: MateriaisAplicados
+		lineageTag: 5c298372-3549-4eac-9790-d6e766b3184d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '{PER} Diff_Aplic_mes_Anterior' =
+			
+			VAR MesAtual = [qtd_aplic]
+			VAR MesAnterior = [qtd_Aplic_Mes_Anterior]
+			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
+			RETURN
+			CalcDiffMes
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: MateriaisAplicados
+		lineageTag: 7c5ced96-452a-4781-8f83-c9e1bc9693fb
+
+	measure '{PER} Aplic_mes' = ```
+			
+			
+			VAR totalmes = 
+			CALCULATE(
+			    --SUM(f_MateriaisAplicados[Qtde. Aplic.]), 
+			    [qtd_aplic],
+			    KEEPFILTERS('dim_calendario'),
+			    REMOVEFILTERS(fct_materiaisAplicados[categoria_tecnologia])
+			    /*,
+			    REMOVEFILTERS(f_MateriaisAplicados[d_DE-PARA-SERVIÇO.CATEGORIA])*/
+			)
+			RETURN
+			
+			DIVIDE([qtd_aplic], totalmes, 0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: MateriaisAplicados
+		lineageTag: 7e0b1a3d-de33-49d7-bb3c-8e1ec1ee7df0
+
+	measure ConsumoMédioMês = ```
+			
+			    VAR TabelaFiltrada = 
+			        CALCULATETABLE(
+			            DISTINCT(
+			                SELECTCOLUMNS(
+			                    'fct_materiaisAplicados',
+			                    "MesRef", DATE(YEAR(fct_materiaisAplicados[data_aplicacao.1]), 
+			                                   MONTH(fct_materiaisAplicados[data_aplicacao.1]), 1)
+			                )
+			            )
+			        )  
+			    VAR _MesesFiltrados = COUNTROWS(TabelaFiltrada)
+			    --VAR qtdAplic = SUM(f_MateriaisAplicados[Qtde. Aplic.])
+			
+			    RETURN
+			    IF(
+			        _MesesFiltrados = 0,
+			        BLANK(),
+			        DIVIDE([qtd_aplic], _MesesFiltrados, 0)
+			    )
+			```
+		displayFolder: MateriaisAplicados
+		lineageTag: ba2dcf8f-f7b5-4bf5-9ac0-5343a151f105
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Count_equipes =
+			
+			
+			CALCULATE(
+			    DISTINCTCOUNT(fct_materiaisAplicados[nome])
+			)
+		formatString: 0
+		displayFolder: MateriaisAplicados
+		lineageTag: e55d28bf-1090-4690-be02-a1644a1b928c
 
 	column Ordinal
 		dataType: int64

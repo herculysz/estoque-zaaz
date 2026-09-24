@@ -4,36 +4,10 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 203,
-        "y": 71
+        "x": 352,
+        "y": 128
       },
       "nodes": [
-        {
-          "location": {
-            "x": 792.36163941535983,
-            "y": 47.4375
-          },
-          "nodeIndex": "dim_calendario",
-          "nodeLineageTag": "3add6b18-ab4a-4839-934c-d03d99bff0e1",
-          "size": {
-            "height": 296,
-            "width": 234
-          },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 229.36163941535983,
-            "y": 410.4375
-          },
-          "nodeIndex": "fct_updated",
-          "nodeLineageTag": "d6feae51-1c8d-421f-8378-65c850354808",
-          "size": {
-            "height": 152,
-            "width": 234
-          },
-          "zIndex": 4
-        },
         {
           "location": {
             "x": 405,
@@ -62,8 +36,8 @@
         },
         {
           "location": {
-            "x": 1080.3616394153598,
-            "y": 454.0625
+            "x": 442.36163941535983,
+            "y": 460.0625
           },
           "nodeIndex": "fct_materiaisAplicados",
           "nodeLineageTag": "8ec4c826-ce06-4210-8d49-1e5b79c9a1c3",
@@ -75,29 +49,55 @@
         },
         {
           "location": {
-            "x": 1143.6383605846402,
-            "y": 256.46875
+            "x": 1129.6383605846402,
+            "y": 78.46875
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "ec89080e-d392-4345-a7ba-04729daf1646",
           "size": {
-            "height": 128,
+            "height": 260,
             "width": 234
           },
           "zIndex": 1
         },
         {
           "location": {
-            "x": 1324.2767211692803,
-            "y": 313.03125
+            "x": 814.9150817539205,
+            "y": 40.03125
           },
-          "nodeIndex": "fact_updated",
+          "nodeIndex": "dim_calendario",
+          "nodeLineageTag": "8eb0c1a4-27ed-481f-a2e2-a697d8bda9ca",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1354.2767211692803,
+            "y": 380.03125
+          },
+          "nodeIndex": "fct_updated",
           "nodeLineageTag": "24aab227-f0c9-4260-9ede-28d7117885fe",
           "size": {
             "height": 128,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1071.9150817539205,
+            "y": 459.53125
+          },
+          "nodeIndex": "fct_materiaisRetirados",
+          "nodeLineageTag": "3a5a0988-41f9-4c12-804d-6365a08d4aa1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "Todas as tabelas",

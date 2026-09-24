@@ -1,0 +1,232 @@
+table fct_materiaisRetirados
+	lineageTag: 3a5a0988-41f9-4c12-804d-6365a08d4aa1
+
+	column sk_movimentacao_material
+		dataType: int64
+		formatString: 0
+		lineageTag: 9001103f-53dd-40da-ab0f-90b81f929da7
+		summarizeBy: sum
+		sourceColumn: sk_movimentacao_material
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_documento
+		dataType: string
+		lineageTag: 256d5308-e98f-4b94-b525-ce4d10ce32e0
+		summarizeBy: none
+		sourceColumn: numero_documento
+
+		annotation SummarizationSetBy = Automatic
+
+	column contrato
+		dataType: string
+		lineageTag: 6cf85cea-7f47-4438-bd4b-cf439ce8dc83
+		summarizeBy: none
+		sourceColumn: contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column projeto
+		dataType: string
+		lineageTag: f39fb41d-b77a-437a-b315-881f042650d2
+		summarizeBy: none
+		sourceColumn: projeto
+
+		annotation SummarizationSetBy = Automatic
+
+	column condicao
+		dataType: string
+		lineageTag: 2d15209d-7e64-4c17-a120-b7a2bf556ed1
+		summarizeBy: none
+		sourceColumn: condicao
+
+		annotation SummarizationSetBy = Automatic
+
+	column serializado
+		dataType: string
+		lineageTag: b4c1a0d2-1851-496d-a515-daf811479161
+		summarizeBy: none
+		sourceColumn: serializado
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'data_aplicacao.1'
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 06ecb52a-648d-4c06-9de0-b3125e0dc44c
+		summarizeBy: none
+		sourceColumn: data_aplicacao.1
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'data_aplicacao.2'
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 8f174477-ef31-4670-98b9-15e139e11469
+		summarizeBy: none
+		sourceColumn: data_aplicacao.2
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column quantidade_removida
+		dataType: double
+		lineageTag: 44f92620-4aa1-4f44-bbb2-44ebc778ecc9
+		summarizeBy: sum
+		sourceColumn: quantidade_removida
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column bk_protocolo
+		dataType: string
+		lineageTag: c747c463-d778-49ad-9090-49c811ed92ae
+		summarizeBy: none
+		sourceColumn: bk_protocolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column fonte_sistema
+		dataType: string
+		lineageTag: 2e2a4bba-08c3-4462-9efe-9c28aa4316ad
+		summarizeBy: none
+		sourceColumn: fonte_sistema
+
+		annotation SummarizationSetBy = Automatic
+
+	column base
+		dataType: string
+		lineageTag: a937e427-8f3a-4348-9000-6eeda127853e
+		summarizeBy: none
+		sourceColumn: base
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_solicitacao
+		dataType: string
+		lineageTag: a21f9509-8e1b-424f-8efd-74b0b6d1d8ae
+		summarizeBy: none
+		sourceColumn: tipo_solicitacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_protocolo
+		dataType: string
+		lineageTag: e15ef751-206d-4e62-bee1-7c56b5814b6b
+		summarizeBy: none
+		sourceColumn: status_protocolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_servico
+		dataType: string
+		lineageTag: 96ce2243-35a3-4713-a3fe-5f7bd98faee6
+		summarizeBy: none
+		sourceColumn: grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_baixa_protocolo
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ebfecf23-8116-4b72-a422-09563439c73d
+		summarizeBy: none
+		sourceColumn: data_baixa_protocolo
+
+		variation Variation
+			isDefault
+			relationship: 9cc23875-08a7-4c57-aee7-682bb83b5624
+			defaultHierarchy: LocalDateTable_4ad13e2c-ea39-4e43-8ed2-9273bd2a6950.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column bk_material
+		dataType: string
+		lineageTag: c69a2616-49c5-4bb3-b30d-3f15c24c092d
+		summarizeBy: none
+		sourceColumn: bk_material
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_material
+		dataType: string
+		lineageTag: 85cb5622-a9fd-4194-a803-a0752f6b0312
+		summarizeBy: none
+		sourceColumn: descricao_material
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_medida
+		dataType: string
+		lineageTag: b9d0a924-8f15-4789-98a7-eb14d697a2b9
+		summarizeBy: none
+		sourceColumn: unidade_medida
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: 01a96291-a35b-4de4-99ef-2655fcc848b8
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria_tecnologia
+		dataType: string
+		lineageTag: a4a56e96-438b-4e35-bf93-9a9002cbbb77
+		summarizeBy: none
+		sourceColumn: categoria_tecnologia
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpf_colaborador
+		dataType: string
+		lineageTag: 1b2d854c-dd45-439e-b3b0-53758e9b09d4
+		summarizeBy: none
+		sourceColumn: cpf_colaborador
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: 6bd7444f-2c77-4901-be1a-7a6a81e60213
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_funcao
+		dataType: string
+		lineageTag: 27236d7c-e4f4-4ca9-93d5-90b15b6cb3bf
+		summarizeBy: none
+		sourceColumn: descricao_funcao
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_serie
+		dataType: string
+		lineageTag: 8e892fc7-cf26-4bce-8940-132f0d9692e4
+		summarizeBy: none
+		sourceColumn: numero_serie
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fct_materiaisRetirados = m
+		mode: import
+		source =
+				let
+				    Fonte = Value.NativeQuery(PostgreSQL.Database(host, database), "select#(lf)    dim_movimentacao_material.sk_movimentacao_material,#(lf)    dim_movimentacao_material.numero_documento,#(lf)    dim_movimentacao_material.contrato,#(lf)    dim_movimentacao_material.projeto,#(lf)    dim_movimentacao_material.condicao,#(lf)    dim_movimentacao_material.serializado,#(lf)    dim_movimentacao_material.data_movimento as data_aplicacao,#(lf)    fct_movimentacao_material_retirado.quantidade_removida,#(lf)    dim_solicitacao.bk_protocolo,#(lf)    dim_solicitacao.fonte_sistema,#(lf)    dim_solicitacao.base,#(lf)    dim_solicitacao.tipo_solicitacao,#(lf)    dim_solicitacao.status_protocolo,#(lf)    dim_solicitacao.grupo_servico,#(lf)    dim_solicitacao.data_fechamento as data_baixa_protocolo,#(lf)    dim_material.bk_material,#(lf)    dim_material.descricao_material,#(lf)    dim_material.unidade_medida,#(lf)    dim_material.familia,#(lf)    dim_material.categoria_tecnologia,#(lf)    dim_colaborador.cpf_colaborador,#(lf)    dim_colaborador.nome,#(lf)    dim_colaborador.descricao_funcao,#(lf)    dim_serial_equipamento.numero_serie#(lf)from gold.dim_movimentacao_material as dim_movimentacao_material#(lf)inner join gold.fct_movimentacao_material_retirado AS fct_movimentacao_material_retirado ON (fct_movimentacao_material_retirado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)#(lf)left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimentacao_material_retirado.sk_material)#(lf)left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimentacao_material_retirado.sk_colaborador)#(lf)left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_retirado.sk_numero_serie)#(lf)left join gold.dim_solicitacao as dim_solicitacao on (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_retirado.sk_protocolo)#(lf)WHERE#(lf)#(tab)data_movimento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 month') AND data_movimento < CURRENT_DATE", null, [EnableFolding=true]),
+				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_aplicacao", type text}}, "pt-BR"), "data_aplicacao", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_aplicacao.1", "data_aplicacao.2"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"data_aplicacao.1", type date}, {"data_aplicacao.2", type time}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

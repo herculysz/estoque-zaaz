@@ -26,6 +26,20 @@
           "selector": {
             "id": "2076613d8e81505e416d"
           }
+        },
+        {
+          "properties": {
+            "showPage": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "9b0e040659b155a84400"
+          }
         }
       ],
       "fill": [

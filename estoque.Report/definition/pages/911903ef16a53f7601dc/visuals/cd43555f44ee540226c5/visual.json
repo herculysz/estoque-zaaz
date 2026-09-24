@@ -263,127 +263,13 @@
           }
         }
       ],
-      "columnWidth": [
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "66.31712176396928D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.contrato"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "172.32558139534882D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.projeto"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "95.5813953488372D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.bk_material"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "282.5477047606039D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.descricao_material"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "190.1724958012866D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.numero_serie"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "159.7674418604651D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.categoria_tecnologia"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "140.2325581395349D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.serializado"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "52.325581395348834D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "fct_saldoEstoque.unidade_medida"
-          }
-        }
-      ],
       "columnHeaders": [
         {
           "properties": {
             "columnAdjustment": {
               "expr": {
                 "Literal": {
-                  "Value": "'fixedWidth'"
+                  "Value": "'growToFit'"
                 }
               }
             },

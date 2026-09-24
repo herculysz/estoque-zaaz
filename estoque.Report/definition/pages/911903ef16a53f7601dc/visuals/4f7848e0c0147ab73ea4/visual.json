@@ -61,7 +61,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Filtro: OP ZAAZ NE'"
+                  "Value": "'Predefinição: OP ZAAZ NE'"
                 }
               }
             }

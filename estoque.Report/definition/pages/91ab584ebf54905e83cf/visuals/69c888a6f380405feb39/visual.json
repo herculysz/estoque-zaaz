@@ -354,7 +354,6 @@
                       }
                     }
                   ],
-                  "isToggled": true,
                   "children": [
                     {
                       "identityValues": [
@@ -364,7 +363,6 @@
                           }
                         }
                       ],
-                      "isToggled": true,
                       "children": [
                         {
                           "identityValues": [
@@ -374,7 +372,6 @@
                               }
                             }
                           ],
-                          "isToggled": true,
                           "children": [
                             {
                               "identityValues": [

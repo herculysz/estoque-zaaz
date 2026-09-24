@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "ae3309d917d70aa86b9c",
   "position": {
-    "x": 30.157068062827221,
-    "y": 639.04263275991025,
+    "x": 25.268761358622019,
+    "y": 762.398633625832,
     "z": 3012,
-    "height": 110.38931797355674,
-    "width": 200.87236549286555,
+    "height": 110.23255813953489,
+    "width": 200.93023255813952,
     "tabOrder": 3012
   },
   "visual": {
@@ -23,15 +23,33 @@
                       "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "Data"
+                  "Property": "data_formatada"
                 }
               },
-              "queryRef": "dim_calendario.Data",
-              "nativeQueryRef": "Data",
+              "queryRef": "dim_calendario.data_formatada",
+              "nativeQueryRef": "data_formatada",
               "active": true
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_calendario"
+                  }
+                },
+                "Property": "data_formatada"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -64,24 +82,43 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 0,
-                        "Left": {
+                      "Between": {
+                        "Expression": {
                           "Column": {
                             "Expression": {
                               "SourceRef": {
                                 "Source": "d"
                               }
                             },
-                            "Property": "Data"
+                            "Property": "data_formatada"
                           }
                         },
-                        "Right": {
+                        "LowerBound": {
                           "DateSpan": {
                             "Expression": {
-                              "Now": {}
+                              "DateAdd": {
+                                "Expression": {
+                                  "Now": {}
+                                },
+                                "Amount": -6,
+                                "TimeUnit": 2
+                              }
                             },
-                            "TimeUnit": 3
+                            "TimeUnit": 2
+                          }
+                        },
+                        "UpperBound": {
+                          "DateSpan": {
+                            "Expression": {
+                              "DateAdd": {
+                                "Expression": {
+                                  "Now": {}
+                                },
+                                "Amount": -1,
+                                "TimeUnit": 2
+                              }
+                            },
+                            "TimeUnit": 2
                           }
                         }
                       }
@@ -293,6 +330,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "data_formatada",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

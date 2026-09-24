@@ -1,33 +1,55 @@
 table fct_updated
-	lineageTag: d6feae51-1c8d-421f-8378-65c850354808
+	lineageTag: 24aab227-f0c9-4260-9ede-28d7117885fe
 
-	measure AtualizadoEm = MAX(fct_updated[DataHoraAtualização])
+	measure Update = MAX(fct_updated[DataHoraAtualização])
 		formatString: General Date
-		lineageTag: d9049f0e-fa60-432f-b8a9-9ebc045f0fb4
+		lineageTag: e002cf9e-a6a5-40ef-8319-f87551f5e8c3
 
 	column DataHoraAtualização
 		dataType: dateTime
 		formatString: General Date
-		lineageTag: d88b89b2-b08c-4b5b-9c3b-784bb6c52826
+		lineageTag: 7557e928-680e-437f-b9d0-68a4499f1a71
 		summarizeBy: none
 		sourceColumn: DataHoraAtualização
 
 		variation Variation
 			isDefault
-			relationship: a3e03801-0554-42a3-8e41-aa921117f6a5
-			defaultHierarchy: LocalDateTable_3b7f8a50-803d-4cdf-9581-4dff7e59846e.'Hierarquia de datas'
+			relationship: 12866435-6987-4fdf-8e76-32c56c1778af
+			defaultHierarchy: LocalDateTable_9cfbe248-d5ed-44de-948e-1089db6ec2eb.'Hierarquia de datas'
 
 	partition fct_updated = m
 		mode: import
 		source =
 				let
-				    Fonte = #table(
-				        type table [DataHoraAtualização = datetime],
-				        {{ DateTime.LocalNow() }}
-				    ),
-				    #"Tipo Alterado com Localidade" = Table.TransformColumnTypes(Fonte, {{"DataHoraAtualização", type datetimezone}}, "pt-BR")
+				    HorarioUTC =
+				        DateTimeZone.FixedUtcNow(),
+				
+				    HorarioBrasilia =
+				        DateTimeZone.SwitchZone(
+				            HorarioUTC,
+				            -3
+				        ),
+				
+				    DataHoraSemFuso =
+				        DateTimeZone.RemoveZone(
+				            HorarioBrasilia
+				        ),
+				
+				    Fonte =
+				        #table(
+				            type table [
+				                DataHoraAtualização = datetime
+				            ],
+				            {
+				                {
+				                    DataHoraSemFuso
+				                }
+				            }
+				        )
 				in
-				    #"Tipo Alterado com Localidade"
+				    Fonte
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

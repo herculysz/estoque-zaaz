@@ -315,6 +315,8 @@ table fct_materiaisAplicados
 				        left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimentacao_material_aplicado.sk_colaborador)
 				        left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_aplicado.sk_numero_serie)
 				        left join gold.dim_solicitacao as dim_solicitacao on (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_aplicado.sk_protocolo)
+						WHERE
+								data_movimento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 month') AND data_movimento < CURRENT_DATE
 				    "
 				    ]),
 				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_aplicacao", type text}}, "pt-BR"), "data_aplicacao", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_aplicacao.1", "data_aplicacao.2"}),

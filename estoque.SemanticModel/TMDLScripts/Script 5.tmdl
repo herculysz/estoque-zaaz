@@ -1,15 +1,17 @@
 createOrReplace
 
 	table fact_updated
+		lineageTag: 24aab227-f0c9-4260-9ede-28d7117885fe
 
 		measure Atualização = "Atualizado em: "& MAX(fact_updated[DataHoraAtualização])
+			lineageTag: e002cf9e-a6a5-40ef-8319-f87551f5e8c3
 
 		column DataHoraAtualização
 			dataType: dateTime
 			formatString: General Date
+			lineageTag: 7557e928-680e-437f-b9d0-68a4499f1a71
 			summarizeBy: none
 			sourceColumn: DataHoraAtualização
-
 
 		partition fact_updated = m
 			mode: import

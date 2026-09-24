@@ -23,11 +23,41 @@
                       "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "Ano-Mês"
+                  "Property": "ano"
                 }
               },
-              "queryRef": "dim_calendario.Ano-Mês",
-              "nativeQueryRef": "Ano-Mês",
+              "queryRef": "dim_calendario.ano",
+              "nativeQueryRef": "ano",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_calendario"
+                    }
+                  },
+                  "Property": "trimestre"
+                }
+              },
+              "queryRef": "dim_calendario.trimestre",
+              "nativeQueryRef": "trimestre",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_calendario"
+                    }
+                  },
+                  "Property": "mes"
+                }
+              },
+              "queryRef": "dim_calendario.mes",
+              "nativeQueryRef": "mes",
               "active": true
             }
           ]
@@ -79,7 +109,20 @@
                     "Entity": "dim_calendario"
                   }
                 },
-                "Property": "Ano-Mês"
+                "Property": "ano"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_calendario"
+                  }
+                },
+                "Property": "mes"
               }
             },
             "direction": "Ascending"
@@ -505,9 +548,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
+                    "Literal": {
+                      "Value": "'#808080'"
                     }
                   }
                 }
@@ -670,9 +712,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#808080'"
                     }
                   }
                 }
@@ -780,6 +821,171 @@
                     "Right": {
                       "Literal": {
                         "Value": "null"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#000000'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "fct_materiaisAplicados"
+                          }
+                        },
+                        "Property": "categoria_tecnologia"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'OBSOLETO'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#06981E'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "fct_materiaisAplicados"
+                          }
+                        },
+                        "Property": "categoria_tecnologia"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ONT WIFI 5'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0FBBFF'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "fct_materiaisAplicados"
+                          }
+                        },
+                        "Property": "categoria_tecnologia"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'ROTEADOR WIFI 5'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0.4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "fct_materiaisAplicados"
+                          }
+                        },
+                        "Property": "categoria_tecnologia"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'FERRAMENTAL'"
                       }
                     }
                   }
@@ -1243,7 +1449,7 @@
             "section": {
               "expr": {
                 "Literal": {
-                  "Value": "'___AUTO___'"
+                  "Value": "'b7abf7a67562ec708219'"
                 }
               }
             }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
   "name": "b5e028f0274d70305c4b",
   "position": {
-    "x": 284.33807030665668,
-    "y": 910.45624532535521,
+    "x": 284.6511627906977,
+    "y": 909.767441860465,
     "z": 3011,
-    "height": 41.645474943904262,
-    "width": 205.35527299925204,
+    "height": 45,
+    "width": 256.74418604651163,
     "tabOrder": 3011
   },
   "visual": {
@@ -273,6 +273,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fct_materiaisAplicados"
+                  }
+                },
+                "Property": "data_aplicacao.1"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -387,7 +404,7 @@
             "spaceAbovePlotArea": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "20D"
                 }
               }
             },

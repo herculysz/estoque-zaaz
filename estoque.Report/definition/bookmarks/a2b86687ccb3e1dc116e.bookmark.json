@@ -368,12 +368,6 @@
               }
             }
           },
-          "468a0a054d8a85d20242": {
-            "singleVisual": {
-              "visualType": "pageNavigator",
-              "objects": {}
-            }
-          },
           "5f3a79e4e768e492ce35": {
             "filters": {
               "byExpr": [

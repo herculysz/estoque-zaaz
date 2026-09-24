@@ -3,8 +3,9 @@ createOrReplace
 	table fct_updated
 		lineageTag: d6feae51-1c8d-421f-8378-65c850354808
 
-		measure Atualização = "Atualizado em: "& MAX(fct_updated[DataHoraAtualização])
-			lineageTag: 89522af1-0c54-4b92-9d35-0c8e97625650
+		measure AtualizadoEm = MAX(fct_updated[DataHoraAtualização])
+			formatString: General Date
+			lineageTag: d9049f0e-fa60-432f-b8a9-9ebc045f0fb4
 
 		column DataHoraAtualização
 			dataType: dateTime
