@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "ConsumoMédioMês"
+                  "Property": "AplicMediaMes"
                 }
               },
               "queryRef": "Medidas.ConsumoMédioMês",
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "ConsumoMédioMês"
+                "Property": "AplicMediaMes"
               }
             },
             "direction": "Descending"
@@ -135,7 +135,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CONSUMO MÉDIO'"
+                  "Value": "'MÉDIA APLICADOS'"
                 }
               }
             },

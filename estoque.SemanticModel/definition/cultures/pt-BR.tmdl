@@ -8279,22 +8279,22 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.consumo_médio_mês": {
+			    "medida.aplic_media_mes": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "ConsumoMédioMês"
+			          "ConceptualProperty": "AplicMediaMes"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "consumo médio mês": {
+			          "aplic media mes": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "ConsumoMédioMês": {
+			          "AplicMediaMes": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -8302,35 +8302,1581 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.count_equipes": {
+			    "medida.aplic_equipes": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Count_equipes"
+			          "ConceptualProperty": "Aplic_equipes"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "count equipes": {
+			          "aplic equipes": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "Count_equipes": {
+			          "Aplic_equipes": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "amount equipe": {
+			          "Equipes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.qtd_remov": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "qtd_remov"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd remov": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd_remov": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Qtde. Remov.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fct materiais retirado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fct_materiaisRetirados": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.sk_movimentacao_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "sk_movimentacao_material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sk movimentacao material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sk_movimentacao_material": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "sk movimentacao fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "sk movimentacao cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "sk movimentacao textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.numero_documento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "numero_documento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero documento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_documento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.contrato": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "contrato"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "contrato": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.projeto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "projeto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "projeto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.condicao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "condicao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "condicao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.serializado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "serializado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "serializado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.data_aplicacao_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "data_aplicacao.1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data_aplicacao.1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "data_aplicacao": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_materiais_retirado.data_aplicacao_2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "data_aplicacao.2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data_aplicacao.2": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "time": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "hora_aplicacao": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_materiais_retirado.quantidade_removida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "quantidade_removida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quantidade removida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quantidade_removida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.bk_protocolo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "bk_protocolo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bk protocolo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bk_protocolo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Protocolo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.fonte_sistema": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "fonte_sistema"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fonte sistema": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fonte_sistema": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.base": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "base"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "base": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "headquarters": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "center": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "seat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.tipo_solicitacao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "tipo_solicitacao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo solicitacao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_solicitacao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Tipo de Solicitação": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.status_protocolo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "status_protocolo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "status protocolo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "status_protocolo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "importance protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prestige protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "prominence protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "condition protocolo": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "class protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "grade protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "level protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "position protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "rank protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.grupo_servico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "grupo_servico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo servico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "grupo_servico": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.data_baixa_protocolo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "data_baixa_protocolo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data baixa protocolo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data_baixa_protocolo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record baixa protocolo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "VariationSource": "data_baixa_protocolo",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "hierarquia de data": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "hierarquia de information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "hierarquia de document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "hierarquia de record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.data_baixa_protocolo.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "VariationSource": "data_baixa_protocolo",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data baixa protocolo ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record baixa protocolo ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.data_baixa_protocolo.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "VariationSource": "data_baixa_protocolo",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data baixa protocolo trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record baixa protocolo trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.data_baixa_protocolo.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "VariationSource": "data_baixa_protocolo",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data baixa protocolo mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record baixa protocolo mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.data_baixa_protocolo.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "VariationSource": "data_baixa_protocolo",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data baixa protocolo dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "fact baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "info baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "statistic baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "document baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "figure baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "record baixa protocolo dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.bk_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "bk_material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "bk material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bk_material": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "bk fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "bk cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "bk textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.descricao_material": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "descricao_material"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descricao material": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "descricao_material": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "descricao fabric": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "descricao cloth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "descricao textile": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        },
+			        {
+			          "Material": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.unidade_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "unidade_medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidade medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "unidade_medida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.familia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "familia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "familia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.categoria_tecnologia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "categoria_tecnologia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "categoria tecnologia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "categoria_tecnologia": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Tecnologia": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.cpf_colaborador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "cpf_colaborador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cpf colaborador": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cpf_colaborador": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "nome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.descricao_funcao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "descricao_funcao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descricao funcao": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "descricao_funcao": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.numero_serie": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "numero_serie"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero serie": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero_serie": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Número de Série": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado.tem_caracter_incorreto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fct_materiaisRetirados",
+			          "ConceptualProperty": "tem_caracter_incorreto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tem caracter incorreto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tem_caracter_incorreto": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Remov_mes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Remov_mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Remov_mes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.PER_Diff_Remov_mes_Anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "{PER} Diff_Remov_mes_Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "{PER} Diff_Remov_mes_Anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.qtd_remov_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "qtd_Remov_Mes_Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd remov mes anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtd_Remov_Mes_Anterior": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.remov_media_mes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "RemovMediaMes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "remov media mes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RemovMediaMes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.remov_equipes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Remov_equipes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "remov equipes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Remov_equipes": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
 			          }
 			        },
 			        {
@@ -8347,6 +9893,369 @@ cultureInfo pt-BR
 			    }
 			  },
 			  "Relationships": {
+			    "fct_materiais_retirado_data_baixa_protocolo_mê_has_fct_materiais_retirado_data_baixa_protocolo_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.mê": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.dia": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.dia"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê12"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_trimestre_has_fct_materiais_retirado_data_baixa_protocolo_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.trimestre": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.mê": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres12"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_ano_has_fct_materiais_retirado_data_baixa_protocolo_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.ano": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.ano"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.trimestre": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.ano"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos12"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_hierarquia_de_data_has_fct_materiais_retirado_data_baixa_protocolo_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.dia": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_hierarquia_de_data_has_fct_materiais_retirado_data_baixa_protocolo_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.mê": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_hierarquia_de_data_has_fct_materiais_retirado_data_baixa_protocolo_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.trimestre": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_hierarquia_de_data_has_fct_materiais_retirado_data_baixa_protocolo_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.ano": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_data_baixa_protocolo_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.data_baixa_protocolo": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_baixa_protocolos_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
 			    "dim_calendario_fim_trimestre_mê_has_dim_calendario_fim_trimestre_dia": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_calendario"
@@ -8376,7 +10285,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -8389,7 +10298,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -8442,7 +10351,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -8455,7 +10364,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -8508,7 +10417,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
+			          "ID": "anos_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -8521,7 +10430,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
+			          "ID": "trimestres_have_anos1"
 			        },
 			        {
 			          "Preposition": {
@@ -8574,7 +10483,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
+			          "ID": "hierarquia_de_data_have_dias1"
 			        }
 			      ]
 			    },
@@ -8607,7 +10516,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
+			          "ID": "hierarquia_de_data_have_mê1"
 			        }
 			      ]
 			    },
@@ -8640,7 +10549,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
+			          "ID": "hierarquia_de_data_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -8673,7 +10582,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },
@@ -8739,7 +10648,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
@@ -8752,7 +10661,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
@@ -8805,7 +10714,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
@@ -8818,7 +10727,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -8871,7 +10780,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres1"
+			          "ID": "anos_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -8884,7 +10793,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos1"
+			          "ID": "trimestres_have_anos2"
 			        },
 			        {
 			          "Preposition": {
@@ -8937,7 +10846,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias1"
+			          "ID": "hierarquia_de_data_have_dias2"
 			        }
 			      ]
 			    },
@@ -8970,7 +10879,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê1"
+			          "ID": "hierarquia_de_data_have_mê2"
 			        }
 			      ]
 			    },
@@ -9003,7 +10912,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres1"
+			          "ID": "hierarquia_de_data_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -9036,7 +10945,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
+			          "ID": "hierarquia_de_data_have_anos2"
 			        }
 			      ]
 			    },
@@ -9102,7 +11011,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias3"
 			        },
 			        {
 			          "Attribute": {
@@ -9115,7 +11024,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê3"
 			        },
 			        {
 			          "Preposition": {
@@ -9168,7 +11077,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê3"
 			        },
 			        {
 			          "Attribute": {
@@ -9181,7 +11090,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -9234,7 +11143,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres2"
+			          "ID": "anos_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -9247,7 +11156,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos2"
+			          "ID": "trimestres_have_anos3"
 			        },
 			        {
 			          "Preposition": {
@@ -9300,7 +11209,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias2"
+			          "ID": "hierarquia_de_data_have_dias3"
 			        }
 			      ]
 			    },
@@ -9333,7 +11242,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê2"
+			          "ID": "hierarquia_de_data_have_mê3"
 			        }
 			      ]
 			    },
@@ -9366,7 +11275,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres2"
+			          "ID": "hierarquia_de_data_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -9399,7 +11308,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos2"
+			          "ID": "hierarquia_de_data_have_anos3"
 			        }
 			      ]
 			    },
@@ -9465,7 +11374,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias4"
 			        },
 			        {
 			          "Attribute": {
@@ -9478,7 +11387,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê4"
 			        },
 			        {
 			          "Preposition": {
@@ -9531,7 +11440,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê4"
 			        },
 			        {
 			          "Attribute": {
@@ -9544,7 +11453,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -9597,7 +11506,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres3"
+			          "ID": "anos_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
@@ -9610,7 +11519,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos3"
+			          "ID": "trimestres_have_anos4"
 			        },
 			        {
 			          "Preposition": {
@@ -9663,7 +11572,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias3"
+			          "ID": "hierarquia_de_data_have_dias4"
 			        }
 			      ]
 			    },
@@ -9696,7 +11605,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê3"
+			          "ID": "hierarquia_de_data_have_mê4"
 			        }
 			      ]
 			    },
@@ -9729,7 +11638,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres3"
+			          "ID": "hierarquia_de_data_have_trimestres4"
 			        }
 			      ]
 			    },
@@ -9762,7 +11671,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos3"
+			          "ID": "hierarquia_de_data_have_anos4"
 			        }
 			      ]
 			    },
@@ -9828,7 +11737,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias4"
+			          "ID": "mê_have_dias5"
 			        },
 			        {
 			          "Attribute": {
@@ -9841,7 +11750,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê4"
+			          "ID": "dias_have_mê5"
 			        },
 			        {
 			          "Preposition": {
@@ -9894,7 +11803,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê4"
+			          "ID": "trimestres_have_mê5"
 			        },
 			        {
 			          "Attribute": {
@@ -9907,7 +11816,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres4"
+			          "ID": "mê_have_trimestres5"
 			        },
 			        {
 			          "Preposition": {
@@ -9960,7 +11869,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres4"
+			          "ID": "anos_have_trimestres5"
 			        },
 			        {
 			          "Attribute": {
@@ -9973,7 +11882,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos4"
+			          "ID": "trimestres_have_anos5"
 			        },
 			        {
 			          "Preposition": {
@@ -10026,7 +11935,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias4"
+			          "ID": "hierarquia_de_data_have_dias5"
 			        }
 			      ]
 			    },
@@ -10059,7 +11968,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê4"
+			          "ID": "hierarquia_de_data_have_mê5"
 			        }
 			      ]
 			    },
@@ -10092,7 +12001,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres4"
+			          "ID": "hierarquia_de_data_have_trimestres5"
 			        }
 			      ]
 			    },
@@ -10125,7 +12034,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos4"
+			          "ID": "hierarquia_de_data_have_anos5"
 			        }
 			      ]
 			    },
@@ -10191,7 +12100,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias5"
+			          "ID": "mê_have_dias6"
 			        },
 			        {
 			          "Attribute": {
@@ -10204,7 +12113,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê5"
+			          "ID": "dias_have_mê6"
 			        },
 			        {
 			          "Preposition": {
@@ -10257,7 +12166,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê5"
+			          "ID": "trimestres_have_mê6"
 			        },
 			        {
 			          "Attribute": {
@@ -10270,7 +12179,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres5"
+			          "ID": "mê_have_trimestres6"
 			        },
 			        {
 			          "Preposition": {
@@ -10323,7 +12232,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres5"
+			          "ID": "anos_have_trimestres6"
 			        },
 			        {
 			          "Attribute": {
@@ -10336,7 +12245,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos5"
+			          "ID": "trimestres_have_anos6"
 			        },
 			        {
 			          "Preposition": {
@@ -10389,7 +12298,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias5"
+			          "ID": "hierarquia_de_data_have_dias6"
 			        }
 			      ]
 			    },
@@ -10422,7 +12331,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê5"
+			          "ID": "hierarquia_de_data_have_mê6"
 			        }
 			      ]
 			    },
@@ -10455,7 +12364,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres5"
+			          "ID": "hierarquia_de_data_have_trimestres6"
 			        }
 			      ]
 			    },
@@ -10488,7 +12397,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos5"
+			          "ID": "hierarquia_de_data_have_anos6"
 			        }
 			      ]
 			    },
@@ -10554,7 +12463,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias6"
+			          "ID": "mê_have_dias7"
 			        },
 			        {
 			          "Attribute": {
@@ -10567,7 +12476,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê6"
+			          "ID": "dias_have_mê7"
 			        },
 			        {
 			          "Preposition": {
@@ -10620,7 +12529,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê6"
+			          "ID": "trimestres_have_mê7"
 			        },
 			        {
 			          "Attribute": {
@@ -10633,7 +12542,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres6"
+			          "ID": "mê_have_trimestres7"
 			        },
 			        {
 			          "Preposition": {
@@ -10686,7 +12595,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres6"
+			          "ID": "anos_have_trimestres7"
 			        },
 			        {
 			          "Attribute": {
@@ -10699,7 +12608,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos6"
+			          "ID": "trimestres_have_anos7"
 			        },
 			        {
 			          "Preposition": {
@@ -10752,7 +12661,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias6"
+			          "ID": "hierarquia_de_data_have_dias7"
 			        }
 			      ]
 			    },
@@ -10785,7 +12694,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê6"
+			          "ID": "hierarquia_de_data_have_mê7"
 			        }
 			      ]
 			    },
@@ -10818,7 +12727,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres6"
+			          "ID": "hierarquia_de_data_have_trimestres7"
 			        }
 			      ]
 			    },
@@ -10851,7 +12760,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos6"
+			          "ID": "hierarquia_de_data_have_anos7"
 			        }
 			      ]
 			    },
@@ -10917,7 +12826,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias7"
+			          "ID": "mê_have_dias8"
 			        },
 			        {
 			          "Attribute": {
@@ -10930,7 +12839,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê7"
+			          "ID": "dias_have_mê8"
 			        },
 			        {
 			          "Preposition": {
@@ -10983,7 +12892,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê7"
+			          "ID": "trimestres_have_mê8"
 			        },
 			        {
 			          "Attribute": {
@@ -10996,7 +12905,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres7"
+			          "ID": "mê_have_trimestres8"
 			        },
 			        {
 			          "Preposition": {
@@ -11049,7 +12958,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres7"
+			          "ID": "anos_have_trimestres8"
 			        },
 			        {
 			          "Attribute": {
@@ -11062,7 +12971,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos7"
+			          "ID": "trimestres_have_anos8"
 			        },
 			        {
 			          "Preposition": {
@@ -11115,7 +13024,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias7"
+			          "ID": "hierarquia_de_data_have_dias8"
 			        }
 			      ]
 			    },
@@ -11148,7 +13057,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê7"
+			          "ID": "hierarquia_de_data_have_mê8"
 			        }
 			      ]
 			    },
@@ -11181,7 +13090,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres7"
+			          "ID": "hierarquia_de_data_have_trimestres8"
 			        }
 			      ]
 			    },
@@ -11214,7 +13123,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos7"
+			          "ID": "hierarquia_de_data_have_anos8"
 			        }
 			      ]
 			    },
@@ -11280,7 +13189,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias8"
+			          "ID": "mê_have_dias9"
 			        },
 			        {
 			          "Attribute": {
@@ -11293,7 +13202,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê8"
+			          "ID": "dias_have_mê9"
 			        },
 			        {
 			          "Preposition": {
@@ -11346,7 +13255,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê8"
+			          "ID": "trimestres_have_mê9"
 			        },
 			        {
 			          "Attribute": {
@@ -11359,7 +13268,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres8"
+			          "ID": "mê_have_trimestres9"
 			        },
 			        {
 			          "Preposition": {
@@ -11412,7 +13321,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres8"
+			          "ID": "anos_have_trimestres9"
 			        },
 			        {
 			          "Attribute": {
@@ -11425,7 +13334,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos8"
+			          "ID": "trimestres_have_anos9"
 			        },
 			        {
 			          "Preposition": {
@@ -11478,7 +13387,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias8"
+			          "ID": "hierarquia_de_data_have_dias9"
 			        }
 			      ]
 			    },
@@ -11511,7 +13420,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê8"
+			          "ID": "hierarquia_de_data_have_mê9"
 			        }
 			      ]
 			    },
@@ -11544,7 +13453,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres8"
+			          "ID": "hierarquia_de_data_have_trimestres9"
 			        }
 			      ]
 			    },
@@ -11577,7 +13486,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos8"
+			          "ID": "hierarquia_de_data_have_anos9"
 			        }
 			      ]
 			    },
@@ -11643,7 +13552,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias9"
+			          "ID": "mê_have_dias10"
 			        },
 			        {
 			          "Attribute": {
@@ -11656,7 +13565,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê9"
+			          "ID": "dias_have_mê10"
 			        },
 			        {
 			          "Preposition": {
@@ -11709,7 +13618,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê9"
+			          "ID": "trimestres_have_mê10"
 			        },
 			        {
 			          "Attribute": {
@@ -11722,7 +13631,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres9"
+			          "ID": "mê_have_trimestres10"
 			        },
 			        {
 			          "Preposition": {
@@ -11775,7 +13684,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres9"
+			          "ID": "anos_have_trimestres10"
 			        },
 			        {
 			          "Attribute": {
@@ -11788,7 +13697,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos9"
+			          "ID": "trimestres_have_anos10"
 			        },
 			        {
 			          "Preposition": {
@@ -11841,7 +13750,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias9"
+			          "ID": "hierarquia_de_data_have_dias10"
 			        }
 			      ]
 			    },
@@ -11874,7 +13783,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê9"
+			          "ID": "hierarquia_de_data_have_mê10"
 			        }
 			      ]
 			    },
@@ -11907,7 +13816,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres9"
+			          "ID": "hierarquia_de_data_have_trimestres10"
 			        }
 			      ]
 			    },
@@ -11940,7 +13849,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos9"
+			          "ID": "hierarquia_de_data_have_anos10"
 			        }
 			      ]
 			    },
@@ -11973,7 +13882,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_baixa_protocolos_have_hierarquia_de_data"
+			          "ID": "data_baixa_protocolos_have_hierarquia_de_data1"
 			        }
 			      ]
 			    },
@@ -12006,7 +13915,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias10"
+			          "ID": "mê_have_dias11"
 			        },
 			        {
 			          "Attribute": {
@@ -12019,7 +13928,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê10"
+			          "ID": "dias_have_mê11"
 			        },
 			        {
 			          "Preposition": {
@@ -12072,7 +13981,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê10"
+			          "ID": "trimestres_have_mê11"
 			        },
 			        {
 			          "Attribute": {
@@ -12085,7 +13994,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres10"
+			          "ID": "mê_have_trimestres11"
 			        },
 			        {
 			          "Preposition": {
@@ -12138,7 +14047,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres10"
+			          "ID": "anos_have_trimestres11"
 			        },
 			        {
 			          "Attribute": {
@@ -12151,7 +14060,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos10"
+			          "ID": "trimestres_have_anos11"
 			        },
 			        {
 			          "Preposition": {
@@ -12204,7 +14113,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias10"
+			          "ID": "hierarquia_de_data_have_dias11"
 			        }
 			      ]
 			    },
@@ -12237,7 +14146,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê10"
+			          "ID": "hierarquia_de_data_have_mê11"
 			        }
 			      ]
 			    },
@@ -12270,7 +14179,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres10"
+			          "ID": "hierarquia_de_data_have_trimestres11"
 			        }
 			      ]
 			    },
@@ -12303,7 +14212,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos10"
+			          "ID": "hierarquia_de_data_have_anos11"
 			        }
 			      ]
 			    },
@@ -12369,7 +14278,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias11"
+			          "ID": "mê_have_dias12"
 			        },
 			        {
 			          "Attribute": {
@@ -12382,7 +14291,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê11"
+			          "ID": "dias_have_mê12"
 			        },
 			        {
 			          "Preposition": {
@@ -12435,7 +14344,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê11"
+			          "ID": "trimestres_have_mê12"
 			        },
 			        {
 			          "Attribute": {
@@ -12448,7 +14357,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres11"
+			          "ID": "mê_have_trimestres12"
 			        },
 			        {
 			          "Preposition": {
@@ -12501,7 +14410,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres11"
+			          "ID": "anos_have_trimestres12"
 			        },
 			        {
 			          "Attribute": {
@@ -12514,7 +14423,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos11"
+			          "ID": "trimestres_have_anos12"
 			        },
 			        {
 			          "Preposition": {
@@ -12567,7 +14476,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias11"
+			          "ID": "hierarquia_de_data_have_dias12"
 			        }
 			      ]
 			    },
@@ -12600,7 +14509,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê11"
+			          "ID": "hierarquia_de_data_have_mê12"
 			        }
 			      ]
 			    },
@@ -12633,7 +14542,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres11"
+			          "ID": "hierarquia_de_data_have_trimestres12"
 			        }
 			      ]
 			    },
@@ -12666,7 +14575,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos11"
+			          "ID": "hierarquia_de_data_have_anos12"
 			        }
 			      ]
 			    },
@@ -12700,6 +14609,59 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "data_saldos_have_hierarquia_de_data1"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "data_aplicacao.1": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fct_materiais_retirados"
 			        }
 			      ]
 			    },
@@ -12756,20 +14718,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fct_materiais_aplicado_has_medida_count_equipes": {
+			    "fct_materiais_retirado_has_medida_remov_equipes": {
 			      "Binding": {
-			        "ConceptualEntity": "fct_materiaisAplicados"
+			        "ConceptualEntity": "fct_materiaisRetirados"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fct_materiais_aplicado": {
+			        "fct_materiais_retirado": {
 			          "Target": {
-			            "Entity": "fct_materiais_aplicado"
+			            "Entity": "fct_materiais_retirado"
 			          }
 			        },
-			        "medida.count_equipes": {
+			        "medida.remov_equipes": {
 			          "Target": {
-			            "Entity": "medida.count_equipes"
+			            "Entity": "medida.remov_equipes"
 			          }
 			        }
 			      },
@@ -12777,19 +14739,1042 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fct_materiais_aplicado"
+			              "Role": "fct_materiais_retirado"
 			            },
 			            "Object": {
-			              "Role": "medida.count_equipes"
+			              "Role": "medida.remov_equipes"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fct_materiais_aplicados_have_count_equipes"
+			          "ID": "fct_materiais_retirados_have_remov_equipes"
 			        }
 			      ]
 			    },
-			    "fct_materiais_aplicado_has_medida_consumo_médio_mês": {
+			    "fct_materiais_retirado_has_medida_remov_media_mes": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "medida.remov_media_mes": {
+			          "Target": {
+			            "Entity": "medida.remov_media_mes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "medida.remov_media_mes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_remov_media_mes"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_medida_qtd_remov_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "medida.qtd_remov_mes_anterior": {
+			          "Target": {
+			            "Entity": "medida.qtd_remov_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_remov_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_qtd_remov_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_medida_PER_Diff_Remov_mes_Anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "medida.PER_Diff_Remov_mes_Anterior": {
+			          "Target": {
+			            "Entity": "medida.PER_Diff_Remov_mes_Anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Diff_Remov_mes_Anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_PER_Diff_Remov_mes_Anterior"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_medida_PER_Remov_mes": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "medida.PER_Remov_mes": {
+			          "Target": {
+			            "Entity": "medida.PER_Remov_mes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "medida.PER_Remov_mes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_PER_Remov_mes"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_tem_caracter_incorreto": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.tem_caracter_incorreto": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.tem_caracter_incorreto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.tem_caracter_incorreto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_tem_caracter_incorretos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_numero_serie": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.numero_serie": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.numero_serie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.numero_serie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_numero_series"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_descricao_funcao": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.descricao_funcao": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.descricao_funcao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.descricao_funcao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_descricao_funcaos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.nome": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_nome"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_cpf_colaborador": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.cpf_colaborador": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.cpf_colaborador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.cpf_colaborador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_cpf_colaboradors"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_categoria_tecnologia": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.categoria_tecnologia": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.categoria_tecnologia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.categoria_tecnologia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_categoria_tecnologias"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_familia": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.familia": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.familia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.familia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_familias"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_unidade_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.unidade_medida": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.unidade_medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.unidade_medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_unidade_medidas"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_descricao_material": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.descricao_material": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.descricao_material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.descricao_material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_descricao_materials"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_bk_material": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.bk_material": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.bk_material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.bk_material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_bk_materials"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_data_baixa_protocolo": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.data_baixa_protocolo": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_baixa_protocolo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_baixa_protocolo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_data_baixa_protocolos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_grupo_servico": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.grupo_servico": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.grupo_servico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.grupo_servico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_grupo_servicos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_status_protocolo": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.status_protocolo": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.status_protocolo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.status_protocolo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_status_protocolos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_tipo_solicitacao": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.tipo_solicitacao": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.tipo_solicitacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.tipo_solicitacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_tipo_solicitacaos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_base": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.base": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.base"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.base"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_bases"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_fonte_sistema": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.fonte_sistema": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.fonte_sistema"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.fonte_sistema"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_fonte_sistemas"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_bk_protocolo": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.bk_protocolo": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.bk_protocolo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.bk_protocolo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_bk_protocolos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_quantidade_removida": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.quantidade_removida": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.quantidade_removida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.quantidade_removida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_quantidade_removidas"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_data_aplicacao_2": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.data_aplicacao_2": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_aplicacao_2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_aplicacao_2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_data_aplicacao_2"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_data_aplicacao_1": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.data_aplicacao_1": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.data_aplicacao_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.data_aplicacao_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_data_aplicacao_1"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_serializado": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.serializado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.serializado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.serializado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_serializados"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_condicao": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.condicao": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.condicao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.condicao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_condicaos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_projeto": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.projeto": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.projeto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.projeto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_projetos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_contrato": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.contrato": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.contrato"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.contrato"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_contratos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_numero_documento": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.numero_documento": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.numero_documento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.numero_documento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_numero_documentos"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_sk_movimentacao_material": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "fct_materiais_retirado.sk_movimentacao_material": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.sk_movimentacao_material"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.sk_movimentacao_material"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_sk_movimentacao_materials"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_has_medida_qtd_remov": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado"
+			          }
+			        },
+			        "medida.qtd_remov": {
+			          "Target": {
+			            "Entity": "medida.qtd_remov"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_remov"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_retirados_have_qtd_remov"
+			        }
+			      ]
+			    },
+			    "fct_materiais_aplicado_has_medida_aplic_equipes": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_materiaisAplicados"
 			      },
@@ -12800,9 +15785,9 @@ cultureInfo pt-BR
 			            "Entity": "fct_materiais_aplicado"
 			          }
 			        },
-			        "medida.consumo_médio_mês": {
+			        "medida.aplic_equipes": {
 			          "Target": {
-			            "Entity": "medida.consumo_médio_mês"
+			            "Entity": "medida.aplic_equipes"
 			          }
 			        }
 			      },
@@ -12813,12 +15798,45 @@ cultureInfo pt-BR
 			              "Role": "fct_materiais_aplicado"
 			            },
 			            "Object": {
-			              "Role": "medida.consumo_médio_mês"
+			              "Role": "medida.aplic_equipes"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fct_materiais_aplicados_have_consumo_médio_mês"
+			          "ID": "fct_materiais_aplicados_have_aplic_equipes"
+			        }
+			      ]
+			    },
+			    "fct_materiais_aplicado_has_medida_aplic_media_mes": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisAplicados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_aplicado": {
+			          "Target": {
+			            "Entity": "fct_materiais_aplicado"
+			          }
+			        },
+			        "medida.aplic_media_mes": {
+			          "Target": {
+			            "Entity": "medida.aplic_media_mes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_aplicado"
+			            },
+			            "Object": {
+			              "Role": "medida.aplic_media_mes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fct_materiais_aplicados_have_aplic_media_mes"
 			        }
 			      ]
 			    },

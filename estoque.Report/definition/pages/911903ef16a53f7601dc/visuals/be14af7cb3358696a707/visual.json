@@ -101,98 +101,112 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ARÊS-RN'"
+                                "Value": "'OP-BAEPENDI'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'CAICÓ-RN'"
+                                "Value": "'OP-BOITUVA'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'CAMPINA-GRANDE-PB'"
+                                "Value": "'OP-GOIOERE'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'FILADELFIA'"
+                                "Value": "'OP-IBAITI'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'GARANHUNS-PE'"
+                                "Value": "'OP-ITAPEVA'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'GUARABIRA-PB'"
+                                "Value": "'OP-IVAIPORA'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'LAJEDO-PE'"
+                                "Value": "'OP-LARANJAL'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'MONTEIRO-PB'"
+                                "Value": "'OP-LONDRINA'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'NATAL-RN'"
+                                "Value": "'OP-OSASCO'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'PICUI-PB'"
+                                "Value": "'OP-OUROFINO'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'SANTA CRUZ-RN'"
+                                "Value": "'OP-PARDINHO'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'SANTA LUZIA-PB'"
+                                "Value": "'OP-POUSO-ALEGRE'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'SJ-RIO DO PEIXE-PB'"
+                                "Value": "'OP-SANTA-RITA'"
                               }
                             }
                           ],
                           [
                             {
                               "Literal": {
-                                "Value": "'TOUROS-RN'"
+                                "Value": "'OP-STO-ANT-PLATINA'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'OP-TAQUARITUBA'"
+                              }
+                            }
+                          ],
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'OP-AVARE'"
                               }
                             }
                           ]

@@ -42,7 +42,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Count_equipes"
+                  "Property": "Aplic_equipes"
                 }
               },
               "queryRef": "Medidas.Count_equipes",

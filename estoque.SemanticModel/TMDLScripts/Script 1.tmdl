@@ -1,28 +1,36 @@
 createOrReplace
 
-	table fct_materiaisAplicados
-		lineageTag: 8ec4c826-ce06-4210-8d49-1e5b79c9a1c3
+	table fct_saldoEstoque
+		lineageTag: 4ff5f1f0-78f1-4533-b2dc-7f9dd5349c20
 
-		column sk_movimentacao_material
+		column sk_saldo
 			dataType: int64
 			formatString: 0
-			lineageTag: 613f1d9e-a313-417f-93a2-15bc8dfce3cd
+			lineageTag: 2571101a-38a1-4282-8393-b9bfca62901e
 			summarizeBy: sum
-			sourceColumn: sk_movimentacao_material
+			sourceColumn: sk_saldo
 
 			annotation SummarizationSetBy = Automatic
 
-		column numero_documento
-			dataType: string
-			lineageTag: 124ee5f6-7c4f-4b00-a983-faf7838300e7
+		column data_saldo
+			dataType: dateTime
+			formatString: Short Date
+			lineageTag: 410df620-f53a-47fc-b92e-3ecd421206ed
 			summarizeBy: none
-			sourceColumn: numero_documento
+			sourceColumn: data_saldo
+
+			variation Variation
+				isDefault
+				relationship: 08479615-b912-4b6a-b853-fe11788b05b0
+				defaultHierarchy: LocalDateTable_b83fbf0c-0c88-43f9-8c77-68ad5ff5fe3f.'Hierarquia de datas'
 
 			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
 
 		column contrato
 			dataType: string
-			lineageTag: 42aaaf4b-7bd1-4f9b-8534-d18286db21f7
+			lineageTag: 58dd7be4-1251-4dd3-a02b-dc7a5dc94d23
 			summarizeBy: none
 			sourceColumn: contrato
 
@@ -30,125 +38,23 @@ createOrReplace
 
 		column projeto
 			dataType: string
-			lineageTag: ea272e2d-c12f-42c6-bfcf-391ba7933d40
+			lineageTag: 56c820a6-5e62-4fb1-ab6a-49e23563baa1
 			summarizeBy: none
 			sourceColumn: projeto
 
 			annotation SummarizationSetBy = Automatic
 
-		column condicao
+		column numero_serie
 			dataType: string
-			lineageTag: 4dabc1ff-a26e-4ad1-85af-3d4a1ef54fbb
+			lineageTag: 83b3d100-7731-4521-9300-aded93fe8d90
 			summarizeBy: none
-			sourceColumn: condicao
-
-			annotation SummarizationSetBy = Automatic
-
-		column serializado
-			dataType: string
-			lineageTag: c7e3dba7-d2af-470b-9573-c25a2770b1a7
-			summarizeBy: none
-			sourceColumn: serializado
-
-			annotation SummarizationSetBy = Automatic
-
-		column 'data_aplicacao.1'
-			dataType: dateTime
-			formatString: Short Date
-			lineageTag: 70348fc5-f08f-4f20-a751-6d48a70c702e
-			summarizeBy: none
-			sourceColumn: data_aplicacao.1
-
-			annotation SummarizationSetBy = Automatic
-
-			annotation UnderlyingDateTimeDataType = Date
-
-		column 'data_aplicacao.2'
-			dataType: dateTime
-			formatString: Long Time
-			lineageTag: 4f348ac1-e950-4a49-b275-82ad013c7a77
-			summarizeBy: none
-			sourceColumn: data_aplicacao.2
-
-			annotation SummarizationSetBy = Automatic
-
-			annotation UnderlyingDateTimeDataType = Time
-
-		column quantidade
-			dataType: double
-			lineageTag: 5b5bb338-2e14-4e12-9bab-65322903c377
-			summarizeBy: sum
-			sourceColumn: quantidade
-
-			annotation SummarizationSetBy = Automatic
-
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		column bk_protocolo
-			dataType: string
-			lineageTag: b3b9d290-b108-448a-b478-16562c62f4e7
-			summarizeBy: none
-			sourceColumn: bk_protocolo
-
-			annotation SummarizationSetBy = Automatic
-
-		column fonte_sistema
-			dataType: string
-			lineageTag: 2024b894-1540-4ea5-a188-00a91a704be2
-			summarizeBy: none
-			sourceColumn: fonte_sistema
-
-			annotation SummarizationSetBy = Automatic
-
-		column base
-			dataType: string
-			lineageTag: 19d80c1a-3bfe-4548-8fdc-3179ea6f251f
-			summarizeBy: none
-			sourceColumn: base
-
-			annotation SummarizationSetBy = Automatic
-
-		column tipo_solicitacao
-			dataType: string
-			lineageTag: 7e0578dd-0415-4616-8c0f-24e2e9d0c439
-			summarizeBy: none
-			sourceColumn: tipo_solicitacao
-
-			annotation SummarizationSetBy = Automatic
-
-		column status_protocolo
-			dataType: string
-			lineageTag: 67903dfa-e96d-491a-867a-18ec25281d9b
-			summarizeBy: none
-			sourceColumn: status_protocolo
-
-			annotation SummarizationSetBy = Automatic
-
-		column grupo_servico
-			dataType: string
-			lineageTag: 3a9e08e1-a17e-47f8-8fb8-dbb946a2ade8
-			summarizeBy: none
-			sourceColumn: grupo_servico
-
-			annotation SummarizationSetBy = Automatic
-
-		column data_baixa_protocolo
-			dataType: dateTime
-			formatString: General Date
-			lineageTag: 07985877-e7b0-40e2-8d4f-e45355910372
-			summarizeBy: none
-			sourceColumn: data_baixa_protocolo
-
-			variation Variation
-				isDefault
-				relationship: 77f9c1b7-e7dd-493e-ae2a-70f76da173f1
-				defaultHierarchy: LocalDateTable_dd36a252-f2fd-4a5c-b7c9-a31babb489a5.'Hierarquia de datas'
+			sourceColumn: numero_serie
 
 			annotation SummarizationSetBy = Automatic
 
 		column bk_material
 			dataType: string
-			lineageTag: 0a537821-253a-4861-b0c1-b2c48f819362
+			lineageTag: e785dc40-7310-4061-8468-e64b027fd55c
 			summarizeBy: none
 			sourceColumn: bk_material
 
@@ -156,7 +62,7 @@ createOrReplace
 
 		column descricao_material
 			dataType: string
-			lineageTag: 00dfd34f-f251-4ac5-b413-24964e6f0d74
+			lineageTag: 1d31e698-7808-4c96-a381-a6b7cad75945
 			summarizeBy: none
 			sourceColumn: descricao_material
 
@@ -164,67 +70,83 @@ createOrReplace
 
 		column unidade_medida
 			dataType: string
-			lineageTag: eb2b9837-b135-4bfd-9497-d02964cf0569
+			lineageTag: 6a7167de-9879-44cc-bfc3-187ccd9618f1
 			summarizeBy: none
 			sourceColumn: unidade_medida
 
 			annotation SummarizationSetBy = Automatic
 
-		column familia
-			dataType: string
-			lineageTag: 80702d87-7abb-4060-a972-46c319cc2490
-			summarizeBy: none
-			sourceColumn: familia
+		column saldo_estoque
+			dataType: double
+			lineageTag: fad3234d-3436-4e89-a685-b5fc41d01327
+			summarizeBy: sum
+			sourceColumn: saldo_estoque
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column programado_rm
+			dataType: double
+			lineageTag: 57155623-e545-4ded-862b-c9b70b2b601a
+			summarizeBy: sum
+			sourceColumn: programado_rm
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column programado_tm
+			dataType: double
+			lineageTag: bf10602b-850e-4b36-b2e3-62efb4947f25
+			summarizeBy: sum
+			sourceColumn: programado_tm
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column saldo_disponivel
+			dataType: double
+			formatString: #,0.00
+			lineageTag: 1fa6bb88-0a82-420b-aa82-e02ea07567dd
+			summarizeBy: sum
+			sourceColumn: saldo_disponivel
 
 			annotation SummarizationSetBy = Automatic
 
 		column categoria_tecnologia
 			dataType: string
-			lineageTag: cf5c5cd3-4824-4fc9-8411-e942af9e274b
+			lineageTag: 4c718766-a530-44d1-8a38-4783b5634273
 			summarizeBy: none
 			sourceColumn: categoria_tecnologia
 
 			annotation SummarizationSetBy = Automatic
 
-		column cpf_colaborador
+		column condicao
 			dataType: string
-			lineageTag: e843b150-697b-4ad4-b6ca-9ca82ddd67e2
+			lineageTag: 78a2e896-4833-4149-9657-c7a46412bcf1
 			summarizeBy: none
-			sourceColumn: cpf_colaborador
+			sourceColumn: condicao
 
 			annotation SummarizationSetBy = Automatic
 
-		column nome
+		column serializado
 			dataType: string
-			lineageTag: 28c56b52-8e39-4a96-ac50-a391e9cf7038
+			lineageTag: 0623d621-c3bd-485a-a1d2-f44e4147188b
 			summarizeBy: none
-			sourceColumn: nome
-
-			annotation SummarizationSetBy = Automatic
-
-		column descricao_funcao
-			dataType: string
-			lineageTag: f52a1371-9e6a-4b12-8309-81ac2613d686
-			summarizeBy: none
-			sourceColumn: descricao_funcao
-
-			annotation SummarizationSetBy = Automatic
-
-		column numero_serie
-			dataType: string
-			lineageTag: 71ccc29a-ef30-403c-81bf-f104748d9737
-			summarizeBy: none
-			sourceColumn: numero_serie
+			sourceColumn: serializado
 
 			annotation SummarizationSetBy = Automatic
 
 		column tem_caracter_incorreto = ```
 				
+				--IF(CONTAINSSTRING(fct_saldoEstoque[numero_serie], " "), "SIM", "NÃO")
 				
-				VAR ignorarCategorias = NOT(fct_materiaisAplicados[categoria_tecnologia] IN {"SEM INFORMACAO", "MISCELANEA", "INSUMO"})
-				VAR ignorarNaoSerializados = fct_materiaisAplicados[numero_serie] <> "-"
+				VAR ignorarCategorias = NOT(fct_saldoEstoque[categoria_tecnologia] IN {"SEM INFORMACAO", "MISCELANEA", "INSUMO", ""})
+				VAR ignorarNaoSerializados = fct_saldoEstoque[numero_serie] <> "-"
 				
-				VAR serialAtual = fct_materiaisAplicados[numero_serie]
+				VAR serialAtual = fct_saldoEstoque[numero_serie]
 				VAR tamanhoSerial = LEN(serialAtual)
 				
 				
@@ -268,64 +190,65 @@ createOrReplace
 				    CONTAINSSTRING(serialAtual, "}") ||
 				    ehRepeticaoInvalida ||
 				    (serialAtual = "SN" && ignorarCategorias) ||
+				    (ignorarNaoSerializados && [saldoEF_disponivel] > 1) ||
 				    (tamanhoSerial < 8 && ignorarNaoSerializados && ignorarCategorias) ||
 				    (ignorarNaoSerializados && CONTAINSSTRING(serialAtual, "-") && ignorarCategorias), 
 				    "SIM", 
 				    "NÃO"
 				)
 				```
-			lineageTag: 7a16921d-5ffd-4832-a031-4fff5e25ee7f
+			lineageTag: f667dd09-8dae-41f6-9f67-7725587cc9f5
 			summarizeBy: none
 
 			annotation SummarizationSetBy = Automatic
 
-		partition fct_materiaisAplicados = m
+		column base
+			dataType: string
+			lineageTag: ce149e03-1244-4da8-91dc-844a661032d1
+			summarizeBy: none
+			sourceColumn: base
+
+			annotation SummarizationSetBy = Automatic
+
+		partition fct_saldoEstoque = m
 			mode: import
 			source = ```
 					let
 					    Fonte = PostgreSQL.Database(host, database, 
 					    [Query=
 					    "
-					        select
-					            dim_movimentacao_material.sk_movimentacao_material,
-					            dim_movimentacao_material.numero_documento,
-					            dim_movimentacao_material.contrato,
-					            dim_movimentacao_material.projeto,
-					            dim_movimentacao_material.condicao,
-					            dim_movimentacao_material.serializado,
-					            dim_movimentacao_material.data_movimento as data_aplicacao,
-					            fct_movimentacao_material_aplicado.quantidade,
-					            dim_solicitacao.bk_protocolo,
-					            dim_solicitacao.fonte_sistema,
-					            dim_solicitacao.base,
-					            dim_solicitacao.tipo_solicitacao,
-					            dim_solicitacao.status_protocolo,
-					            dim_solicitacao.grupo_servico,
-					            dim_solicitacao.data_fechamento as data_baixa_protocolo,
+					        select distinct
+					            dim_saldo_tecnico_estoque.sk_saldo,
+					            dim_saldo_tecnico_estoque.data_saldo,
+								dim_saldo_tecnico_estoque.base,
+					            dim_saldo_tecnico_estoque.contrato,
+					            dim_saldo_tecnico_estoque.projeto,
+					            dim_serial_equipamento.numero_serie,
 					            dim_material.bk_material,
 					            dim_material.descricao_material,
 					            dim_material.unidade_medida,
-					            dim_material.familia,
+					            fct_saldo_estoque.saldo_estoque,
+					            fct_saldo_estoque.programado_rm,
+					            fct_saldo_estoque.programado_tm,
+					            fct_saldo_estoque.saldo_disponivel,
 					            dim_material.categoria_tecnologia,
-					            dim_colaborador.cpf_colaborador,
-					            dim_colaborador.nome,
-					            dim_colaborador.descricao_funcao,
-					            dim_serial_equipamento.numero_serie
-					        from gold.dim_movimentacao_material as dim_movimentacao_material
-					        inner join gold.fct_movimentacao_material_aplicado AS fct_movimentacao_material_aplicado ON (fct_movimentacao_material_aplicado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)
-					        left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimentacao_material_aplicado.sk_material)
-					        left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimentacao_material_aplicado.sk_colaborador)
-					        left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_aplicado.sk_numero_serie)
-					        left join gold.dim_solicitacao as dim_solicitacao on (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_aplicado.sk_protocolo)
-							WHERE
-									data_movimento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 month') AND data_movimento < CURRENT_DATE
+					            dim_saldo_tecnico_estoque.condicao,
+					            dim_saldo_tecnico_estoque.serializado
+					        from gold.dim_saldo_tecnico_estoque as dim_saldo_tecnico_estoque
+					        inner join gold.fct_saldo_estoque as fct_saldo_estoque on (fct_saldo_estoque.sk_saldo = dim_saldo_tecnico_estoque.sk_saldo)
+					        left join gold.dim_material as dim_material on (dim_material.sk_material = fct_saldo_estoque.sk_material)
+					        left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_saldo_estoque.sk_numero_serie)
+							/*
+							WHERE dim_saldo_tecnico_estoque.data_saldo = (
+								SELECT MAX(sub.data_saldo) 
+								FROM gold.dim_saldo_tecnico_estoque AS sub
+								WHERE sub.base = dim_saldo_tecnico_estoque.base
+							)*/
 					    "
 					    ]),
-					    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_aplicacao", type text}}, "pt-BR"), "data_aplicacao", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_aplicacao.1", "data_aplicacao.2"}),
-					    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"data_aplicacao.1", type date}, {"data_aplicacao.2", type time}}),
-					    #"Texto Extraído Antes do Delimitador" = Table.TransformColumns(#"Tipo Alterado", {{"bk_protocolo", each Text.BeforeDelimiter(_, "/"), type text}})
+					    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"data_saldo", type date}})
 					in
-					    #"Texto Extraído Antes do Delimitador"
+					    #"Tipo Alterado"
 					```
 
 		annotation PBI_NavigationStepName = Navegação

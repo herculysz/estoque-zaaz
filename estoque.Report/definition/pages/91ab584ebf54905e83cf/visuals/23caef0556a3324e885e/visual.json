@@ -842,6 +842,62 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "616248c0c17c57b69840",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "987b0921b92067530748",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "descricao_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8725a353dc12278e50b1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "condicao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "60ed9a9a8d7502b26376",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "saldoV_disponivel_graph"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

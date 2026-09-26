@@ -55,6 +55,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -360,5 +367,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cf129d2be070a8164c20",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "base"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

@@ -11,7 +11,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["database","host","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fct_updated","dim_calendario","fct_materiaisRetirados"]
+annotation PBI_QueryOrder = ["database","host","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fct_materiaisRetirados","fct_updated","dim_calendario"]
 
 annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","MCP-PBIModeling"]
 

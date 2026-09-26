@@ -405,7 +405,7 @@
             "levelSubtotalEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -419,7 +419,7 @@
             "levelSubtotalEnabled": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -735,5 +735,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fb55d4ee49a4150ea2ae",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "ano_mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8cefaf4ab585c6ea4a0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisAplicados"
+              }
+            },
+            "Property": "condicao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7133a64c0a0d9dc1dab0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisAplicados"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e2e23f0050cdd008be82",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisAplicados"
+              }
+            },
+            "Property": "descricao_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e177407779165b1ec40e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "qtd_aplic"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

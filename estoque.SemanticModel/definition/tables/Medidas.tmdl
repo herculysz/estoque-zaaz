@@ -94,11 +94,11 @@ table Medidas
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure @saldoV_cor_back_serial = IF(SELECTEDVALUE('fct_saldoVolante'[tem_caracter_incorreto]) = "SIM", "#E5B389", BLANK())
-		displayFolder: Volante
+		displayFolder: Volante\Cores
 		lineageTag: 96de49e2-2eba-4f32-8033-8ca432d294ae
 
 	measure @saldoV_cor_txt_serial = IF(SELECTEDVALUE('fct_saldoVolante'[tem_caracter_incorreto]) = "SIM", "#7F0000", BLANK())
-		displayFolder: Volante
+		displayFolder: Volante\Cores
 		lineageTag: 4d9b675e-99ec-4fcf-bf7e-b5ae0c77a6a8
 
 	measure saldoEF_tm = ```
@@ -219,16 +219,16 @@ table Medidas
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure @saldoEF_cor_back_serial = IF(SELECTEDVALUE('fct_saldoEstoque'[tem_caracter_incorreto]) = "SIM", "#E5B389", BLANK())
-		displayFolder: EstoqueFisico
+		displayFolder: EstoqueFisico\Cores
 		lineageTag: 87ce1738-58ac-415b-88fb-e11f0a845982
 
 	measure @saldoEF_cor_txt_serial = IF(SELECTEDVALUE('fct_saldoEstoque'[tem_caracter_incorreto]) = "SIM", "#7F0000", BLANK())
-		displayFolder: EstoqueFisico
+		displayFolder: EstoqueFisico\Cores
 		lineageTag: fb638285-5904-46e5-bd9f-8d23d4135cc5
 
 	measure qtd_aplic = CALCULATE(SUM(fct_MateriaisAplicados[quantidade]))
 		formatString: #,0
-		displayFolder: MateriaisAplicados
+		displayFolder: Aplicados
 		lineageTag: 0dbd3a91-96f6-41bd-a01e-93b6365c505c
 
 		annotation PBI_FormatHint = {"isDecimal":true}
@@ -242,7 +242,7 @@ table Medidas
 			RETURN
 			MesAnterior
 			```
-		displayFolder: MateriaisAplicados
+		displayFolder: Aplicados
 		lineageTag: 5c298372-3549-4eac-9790-d6e766b3184d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -255,7 +255,7 @@ table Medidas
 			RETURN
 			CalcDiffMes
 		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: MateriaisAplicados
+		displayFolder: Aplicados
 		lineageTag: 7c5ced96-452a-4781-8f83-c9e1bc9693fb
 
 	measure '{PER} Aplic_mes' = ```
@@ -275,10 +275,10 @@ table Medidas
 			DIVIDE([qtd_aplic], totalmes, 0)
 			```
 		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: MateriaisAplicados
+		displayFolder: Aplicados
 		lineageTag: 7e0b1a3d-de33-49d7-bb3c-8e1ec1ee7df0
 
-	measure ConsumoMédioMês = ```
+	measure AplicMediaMes = ```
 			
 			    VAR TabelaFiltrada = 
 			        CALCULATETABLE(
@@ -300,20 +300,109 @@ table Medidas
 			        DIVIDE([qtd_aplic], _MesesFiltrados, 0)
 			    )
 			```
-		displayFolder: MateriaisAplicados
+		displayFolder: Aplicados
 		lineageTag: ba2dcf8f-f7b5-4bf5-9ac0-5343a151f105
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure Count_equipes =
+	measure Aplic_equipes =
 			
 			
 			CALCULATE(
 			    DISTINCTCOUNT(fct_materiaisAplicados[nome])
 			)
 		formatString: 0
-		displayFolder: MateriaisAplicados
+		displayFolder: Aplicados
 		lineageTag: e55d28bf-1090-4690-be02-a1644a1b928c
+
+	measure qtd_remov = CALCULATE(SUM(fct_materiaisRetirados[quantidade_removida]))
+		formatString: #,0
+		displayFolder: Retirados
+		lineageTag: 8f1398ed-9b2a-4b6e-8974-0df0667bdba2
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '{PER} Remov_mes' = ```
+			
+			
+			VAR totalmes = 
+			CALCULATE(
+			    --SUM(f_MateriaisAplicados[Qtde. Aplic.]), 
+			    [qtd_remov],
+			    KEEPFILTERS('dim_calendario'),
+			    REMOVEFILTERS(fct_materiaisRetirados[categoria_tecnologia])
+			    /*,
+			    REMOVEFILTERS(f_MateriaisAplicados[d_DE-PARA-SERVIÇO.CATEGORIA])*/
+			)
+			RETURN
+			
+			DIVIDE([qtd_remov], totalmes, 0)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Retirados
+		lineageTag: c8470ef8-3b9a-4f83-8968-402e87cdc4e2
+
+	measure '{PER} Diff_Remov_mes_Anterior' =
+			
+			VAR MesAtual = [qtd_remov]
+			VAR MesAnterior = [qtd_Remov_Mes_Anterior]
+			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
+			RETURN
+			CalcDiffMes
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Retirados
+		lineageTag: e98b782a-decd-49ca-a082-695bf110924a
+
+	measure qtd_Remov_Mes_Anterior = ```
+			
+			VAR MesAnterior = CALCULATE(
+			    [qtd_remov], 
+			    DATEADD('dim_Calendario'[data_formatada], -1, MONTH)
+			)
+			RETURN
+			MesAnterior
+			```
+		displayFolder: Retirados
+		lineageTag: 94019f5c-0384-4a42-87a4-7a7356baa992
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure RemovMediaMes = ```
+			
+			    VAR TabelaFiltrada = 
+			        CALCULATETABLE(
+			            DISTINCT(
+			                SELECTCOLUMNS(
+			                    'fct_materiaisRetirados',
+			                    "MesRef", DATE(YEAR(fct_materiaisRetirados[data_aplicacao.1]), 
+			                                   MONTH(fct_materiaisRetirados[data_aplicacao.1]), 1)
+			                )
+			            )
+			        )  
+			    VAR _MesesFiltrados = COUNTROWS(TabelaFiltrada)
+			    --VAR qtdAplic = SUM(f_MateriaisAplicados[Qtde. Aplic.])
+			
+			    RETURN
+			    IF(
+			        _MesesFiltrados = 0,
+			        BLANK(),
+			        DIVIDE([qtd_remov], _MesesFiltrados, 0)
+			    )
+			```
+		displayFolder: Retirados
+		lineageTag: 60fbaa58-603d-4533-b1d6-0073f339702d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Remov_equipes =
+			
+			
+			CALCULATE(
+			    DISTINCTCOUNT(fct_materiaisRetirados[nome])
+			)
+		formatString: 0
+		displayFolder: Retirados
+		lineageTag: f3f0b66e-c1e5-462f-a0b3-7014653b72da
 
 	column Ordinal
 		dataType: int64

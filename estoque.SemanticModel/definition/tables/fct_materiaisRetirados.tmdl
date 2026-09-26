@@ -216,15 +216,118 @@ table fct_materiaisRetirados
 
 		annotation SummarizationSetBy = Automatic
 
+	column tem_caracter_incorreto = ```
+			
+			
+			VAR ignorarCategorias = NOT(fct_materiaisRetirados[categoria_tecnologia] IN {"SEM INFORMACAO", "MISCELANEA", "INSUMO"})
+			VAR ignorarNaoSerializados = fct_materiaisRetirados[numero_serie] <> "-"
+			
+			VAR serialAtual = fct_materiaisRetirados[numero_serie]
+			VAR tamanhoSerial = LEN(serialAtual)
+			
+			
+			VAR sequenciaZeros = REPT("0", tamanhoSerial)
+			VAR sequenciaUns = REPT("1", tamanhoSerial)
+			
+			VAR ehRepeticaoInvalida = 
+			    tamanhoSerial >= 1 && 
+			    tamanhoSerial <= 7 && 
+			    (serialAtual = sequenciaZeros || serialAtual = sequenciaUns)
+			
+			RETURN
+			IF(
+			    CONTAINSSTRING(serialAtual, " ") ||
+			    CONTAINSSTRING(serialAtual, "/") ||
+			    CONTAINSSTRING(serialAtual, "\") ||
+			    CONTAINSSTRING(serialAtual, ".") ||
+			    CONTAINSSTRING(serialAtual, ",") ||
+			    CONTAINSSTRING(serialAtual, "+") ||
+			    CONTAINSSTRING(serialAtual, ":") ||
+			    CONTAINSSTRING(serialAtual, ";") ||
+			    CONTAINSSTRING(serialAtual, "!") ||
+			    CONTAINSSTRING(serialAtual, "(") ||
+			    CONTAINSSTRING(serialAtual, ")") ||
+			    CONTAINSSTRING(serialAtual, "&") ||
+			    CONTAINSSTRING(serialAtual, "$") ||
+			    CONTAINSSTRING(serialAtual, "@") ||
+			    CONTAINSSTRING(serialAtual, "~*") ||
+			    CONTAINSSTRING(serialAtual, "~?") ||
+			    CONTAINSSTRING(serialAtual, "~~") || 
+			    CONTAINSSTRING(serialAtual, "^") ||
+			    CONTAINSSTRING(serialAtual, "<") ||
+			    CONTAINSSTRING(serialAtual, ">") ||
+			    CONTAINSSTRING(serialAtual, "´") ||
+			    CONTAINSSTRING(serialAtual, "`") ||
+			    CONTAINSSTRING(serialAtual, "'") ||
+			    CONTAINSSTRING(serialAtual, "%") ||
+			    CONTAINSSTRING(serialAtual, "[") ||
+			    CONTAINSSTRING(serialAtual, "]") ||
+			    CONTAINSSTRING(serialAtual, "{") ||
+			    CONTAINSSTRING(serialAtual, "}") ||
+			    ehRepeticaoInvalida ||
+			    (serialAtual = "SN" && ignorarCategorias) ||
+			    (tamanhoSerial < 8 && ignorarNaoSerializados && ignorarCategorias) ||
+			    (ignorarNaoSerializados && CONTAINSSTRING(serialAtual, "-") && ignorarCategorias), 
+			    "SIM", 
+			    "NÃO"
+			)
+			```
+		lineageTag: 2cebb913-e6ce-4bad-8826-3fee6f3c41c3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_materiaisRetirados = m
 		mode: import
-		source =
+		source = ```
 				let
-				    Fonte = Value.NativeQuery(PostgreSQL.Database(host, database), "select#(lf)    dim_movimentacao_material.sk_movimentacao_material,#(lf)    dim_movimentacao_material.numero_documento,#(lf)    dim_movimentacao_material.contrato,#(lf)    dim_movimentacao_material.projeto,#(lf)    dim_movimentacao_material.condicao,#(lf)    dim_movimentacao_material.serializado,#(lf)    dim_movimentacao_material.data_movimento as data_aplicacao,#(lf)    fct_movimentacao_material_retirado.quantidade_removida,#(lf)    dim_solicitacao.bk_protocolo,#(lf)    dim_solicitacao.fonte_sistema,#(lf)    dim_solicitacao.base,#(lf)    dim_solicitacao.tipo_solicitacao,#(lf)    dim_solicitacao.status_protocolo,#(lf)    dim_solicitacao.grupo_servico,#(lf)    dim_solicitacao.data_fechamento as data_baixa_protocolo,#(lf)    dim_material.bk_material,#(lf)    dim_material.descricao_material,#(lf)    dim_material.unidade_medida,#(lf)    dim_material.familia,#(lf)    dim_material.categoria_tecnologia,#(lf)    dim_colaborador.cpf_colaborador,#(lf)    dim_colaborador.nome,#(lf)    dim_colaborador.descricao_funcao,#(lf)    dim_serial_equipamento.numero_serie#(lf)from gold.dim_movimentacao_material as dim_movimentacao_material#(lf)inner join gold.fct_movimentacao_material_retirado AS fct_movimentacao_material_retirado ON (fct_movimentacao_material_retirado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)#(lf)left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimentacao_material_retirado.sk_material)#(lf)left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimentacao_material_retirado.sk_colaborador)#(lf)left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_retirado.sk_numero_serie)#(lf)left join gold.dim_solicitacao as dim_solicitacao on (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_retirado.sk_protocolo)#(lf)WHERE#(lf)#(tab)data_movimento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 month') AND data_movimento < CURRENT_DATE", null, [EnableFolding=true]),
+				    Fonte = Value.NativeQuery(PostgreSQL.Database(host, database), "
+				    SELECT
+				        dim_movimentacao_material.sk_movimentacao_material,
+				        dim_movimentacao_material.numero_documento,
+				        dim_movimentacao_material.contrato,
+				        dim_movimentacao_material.projeto,
+				        dim_movimentacao_material.condicao,
+				        dim_movimentacao_material.serializado,
+				        dim_movimentacao_material.data_movimento AS data_aplicacao,
+				        fct_movimentacao_material_retirado.quantidade_removida,
+				        dim_solicitacao.bk_protocolo,
+				        dim_solicitacao.fonte_sistema,
+				        --dim_solicitacao.base,
+						coalesce(dim_solicitacao.base, dim_movimentacao_material.base) as base,
+				        dim_solicitacao.tipo_solicitacao,
+				        dim_solicitacao.status_protocolo,
+				        dim_solicitacao.grupo_servico,
+				        dim_solicitacao.data_fechamento AS data_baixa_protocolo,
+				        dim_material.bk_material,
+				        dim_material.descricao_material,
+				        dim_material.unidade_medida,
+				        dim_material.familia,
+				        dim_material.categoria_tecnologia,
+				        dim_colaborador.cpf_colaborador,
+				        dim_colaborador.nome,
+				        dim_colaborador.descricao_funcao,
+				        dim_serial_equipamento.numero_serie
+				    FROM gold.dim_movimentacao_material AS dim_movimentacao_material
+				    INNER JOIN gold.fct_movimentacao_material_retirado AS fct_movimentacao_material_retirado 
+				        ON (fct_movimentacao_material_retirado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)
+				    LEFT JOIN gold.dim_material AS dim_material 
+				        ON (dim_material.sk_material = fct_movimentacao_material_retirado.sk_material)
+				    LEFT JOIN gold.dim_colaborador AS dim_colaborador 
+				        ON (dim_colaborador.sk_colaborador = fct_movimentacao_material_retirado.sk_colaborador)
+				    LEFT JOIN gold.dim_serial_equipamento AS dim_serial_equipamento 
+				        ON (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_retirado.sk_numero_serie)
+				    LEFT JOIN gold.dim_solicitacao AS dim_solicitacao 
+				        ON (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_retirado.sk_protocolo)
+				    WHERE
+				        data_movimento >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 month') 
+				        AND data_movimento < CURRENT_DATE
+				    ", null, [EnableFolding=true]),
 				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_aplicacao", type text}}, "pt-BR"), "data_aplicacao", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_aplicacao.1", "data_aplicacao.2"}),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"data_aplicacao.1", type date}, {"data_aplicacao.2", type time}})
 				in
 				    #"Tipo Alterado"
+				```
 
 	annotation PBI_NavigationStepName = Navegação
 
