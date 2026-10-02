@@ -4,7 +4,7 @@
   "displayName": "#4SaldoDisp",
   "displayOption": "ActualSize",
   "height": 350,
-  "width": 640,
+  "width": 400,
   "visibility": "HiddenInViewMode",
   "type": "Tooltip"
 }

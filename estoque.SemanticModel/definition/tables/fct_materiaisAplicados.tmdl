@@ -283,7 +283,7 @@ table fct_materiaisAplicados
 				let
 				    Fonte = PostgreSQL.Database(host, database, 
 				    [Query=
-				    "
+				    "	
 				        select
 				            dim_movimentacao_material.sk_movimentacao_material,
 				            dim_movimentacao_material.numero_documento,
@@ -295,7 +295,6 @@ table fct_materiaisAplicados
 				            fct_movimentacao_material_aplicado.quantidade,
 				            dim_solicitacao.bk_protocolo,
 				            dim_solicitacao.fonte_sistema,
-				            --dim_solicitacao.base,
 							coalesce(dim_solicitacao.base, dim_movimentacao_material.base) as base,
 				            dim_solicitacao.tipo_solicitacao,
 				            dim_solicitacao.status_protocolo,
@@ -309,7 +308,7 @@ table fct_materiaisAplicados
 				            dim_colaborador.cpf_colaborador,
 				            dim_colaborador.nome,
 				            dim_colaborador.descricao_funcao,
-				            dim_serial_equipamento.numero_serie
+				            COALESCE(dim_serial_equipamento.numero_serie, dim_movimentacao_material.numero_serie) as numero_serie
 				        from gold.dim_movimentacao_material as dim_movimentacao_material
 				        inner join gold.fct_movimentacao_material_aplicado AS fct_movimentacao_material_aplicado ON (fct_movimentacao_material_aplicado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)
 				        left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimentacao_material_aplicado.sk_material)
