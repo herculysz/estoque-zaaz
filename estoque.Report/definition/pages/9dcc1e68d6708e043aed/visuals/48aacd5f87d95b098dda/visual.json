@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "48aacd5f87d95b098dda",
   "position": {
     "x": 1652.0930232558139,
     "y": 909.767441860465,
-    "z": 17,
+    "z": 17000,
     "height": 135.34883720930233,
     "width": 233.02325581395348,
-    "tabOrder": 17
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "card",
@@ -440,23 +440,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b9285c2be27ce0bdda45",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_remov"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

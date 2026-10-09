@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "f8d5b18009757b0076d5",
   "position": {
-    "x": 1486.046511627907,
-    "y": 36.279069767441861,
-    "z": 2,
-    "height": 429.76744186046511,
-    "width": 399.06976744186045,
-    "tabOrder": 2
+    "x": 1485.7068062827225,
+    "y": 128.63874345549738,
+    "z": 2000,
+    "height": 449.52879581151836,
+    "width": 400.05235602094245,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -248,7 +248,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CIDADES DETALHADAS'"
+                  "Value": "'PROJETOS DETALHADOS'"
                 }
               }
             },
@@ -546,37 +546,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b1e4cd1b7712447655b0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_remov"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "29bc0ac1ed77e651edd4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisRetirados"
-              }
-            },
-            "Property": "projeto"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "59544f869c0603bd91e4",
   "position": {
-    "x": 891.62790697674416,
-    "y": 36.279069767441861,
-    "z": 5,
-    "height": 429.76744186046511,
-    "width": 558.1395348837209,
-    "tabOrder": 5
+    "x": 890.57591623036649,
+    "y": 128.63874345549738,
+    "z": 2000,
+    "height": 449.52879581151836,
+    "width": 559.79057591623041,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -23,12 +23,93 @@
                       "Entity": "fct_materiaisAplicados"
                     }
                   },
+                  "Property": "base"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.base",
+              "nativeQueryRef": "Regional",
+              "active": true,
+              "displayName": "Regional"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "diretor"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.diretor",
+              "nativeQueryRef": "Diretor",
+              "active": true,
+              "displayName": "Diretor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "gerente"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.gerente",
+              "nativeQueryRef": "Gerente",
+              "active": false,
+              "displayName": "Gerente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "coordenador"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.coordenador",
+              "nativeQueryRef": "Coordenador",
+              "active": false,
+              "displayName": "Coordenador"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "supervisor"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.supervisor",
+              "nativeQueryRef": "Supervisor",
+              "active": false,
+              "displayName": "Supervisor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
                   "Property": "nome"
                 }
               },
               "queryRef": "fct_materiaisAplicados.nome",
-              "nativeQueryRef": "nome",
-              "active": true
+              "nativeQueryRef": "Nome",
+              "active": false,
+              "displayName": "Nome"
             }
           ]
         },
@@ -85,6 +166,119 @@
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.base"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "base"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.diretor"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.gerente"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "gerente"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.coordenador"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "coordenador"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.supervisor"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "supervisor"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.nome"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'ZAAZ NORDESTE'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "columnHeaders": [
         {
@@ -262,7 +456,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'EQUIPES DETALHADAS'"
+                  "Value": "'HIERARQUIA DE APLICAÇÃO'"
                 }
               }
             },

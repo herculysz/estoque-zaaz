@@ -11,7 +11,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["database","host","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fct_materiaisRetirados","fct_updated","dim_calendario"]
+annotation PBI_QueryOrder = ["db","hostname","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fct_materiaisRetirados","fct_conversaoMateriais","fct_updated","dim_calendario","fct_requisicaoMaterial","fct_devolucaoMaterial"]
 
 annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","MCP-PBIModeling"]
 
@@ -23,7 +23,6 @@ ref table LocalDateTable_b83fbf0c-0c88-43f9-8c77-68ad5ff5fe3f
 ref table fct_saldoVolante
 ref table LocalDateTable_2a3bc3d7-a451-4bce-a706-e928d9c6f175
 ref table fct_materiaisAplicados
-ref table LocalDateTable_dd36a252-f2fd-4a5c-b7c9-a31babb489a5
 ref table Medidas
 ref table fct_updated
 ref table dim_calendario
@@ -37,7 +36,11 @@ ref table LocalDateTable_92ca2e77-b7fd-4e98-b164-815b1173dce7
 ref table LocalDateTable_3e7f19f1-2206-4b30-a2cd-5f094a077597
 ref table LocalDateTable_a7ce8a40-3168-4357-9f7d-b044b27f4adc
 ref table fct_materiaisRetirados
-ref table LocalDateTable_4ad13e2c-ea39-4e43-8ed2-9273bd2a6950
+ref table LocalDateTable_9583eaf6-2318-4a73-b023-f45ea0228a56
+ref table LocalDateTable_82621324-0f8d-4eb6-a95b-c2bc62ee4c4a
+ref table fct_conversaoMateriais
+ref table fct_requisicaoMaterial
+ref table fct_devolucaoMaterial
 
 ref cultureInfo pt-BR
 

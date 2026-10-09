@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "57866487d1dd300c6260",
   "position": {
-    "x": 35.714285714285715,
-    "y": 35.714285714285715,
-    "z": 2,
-    "height": 430,
-    "width": 820,
-    "tabOrder": 2
+    "x": 35.340314136125656,
+    "y": 128.63874345549738,
+    "z": 1000,
+    "height": 449.52879581151836,
+    "width": 819.8952879581152,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "pivotTable",
@@ -165,7 +165,6 @@
             "queryRefs": [
               "dim_calendario.ano_mes"
             ],
-            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
@@ -188,20 +187,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'2026-08'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -735,79 +721,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fb55d4ee49a4150ea2ae",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_calendario"
-              }
-            },
-            "Property": "ano_mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "8cefaf4ab585c6ea4a0c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "condicao"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7133a64c0a0d9dc1dab0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "categoria_tecnologia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e2e23f0050cdd008be82",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "descricao_material"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e177407779165b1ec40e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_aplic"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 25.11627906976744,
     "y": 160.46511627906978,
-    "z": 20001,
+    "z": 19000,
     "height": 115.81395348837209,
     "width": 200.93023255813952,
-    "tabOrder": 20001
+    "tabOrder": 19000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -99,7 +99,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ZAAZ SUL E SUDESTE'"
+                                "Value": "'ZAAZ NORDESTE'"
                               }
                             }
                           ]
@@ -367,23 +367,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cf129d2be070a8164c20",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_saldoVolante"
-              }
-            },
-            "Property": "base"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

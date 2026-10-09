@@ -8,11 +8,6 @@ relationship 39e81751-7957-4fb7-8e8e-62a3dec8b08c
 	fromColumn: fct_saldoVolante.data_saldo
 	toColumn: LocalDateTable_2a3bc3d7-a451-4bce-a706-e928d9c6f175.Date
 
-relationship 77f9c1b7-e7dd-493e-ae2a-70f76da173f1
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fct_materiaisAplicados.data_baixa_protocolo
-	toColumn: LocalDateTable_dd36a252-f2fd-4a5c-b7c9-a31babb489a5.Date
-
 relationship 12866435-6987-4fdf-8e76-32c56c1778af
 	joinOnDateBehavior: datePartOnly
 	fromColumn: fct_updated.DataHoraAtualização
@@ -53,21 +48,38 @@ relationship 5b97659e-83da-4bc1-ba50-2868f9efa39e
 	fromColumn: dim_calendario.fim_trimestre
 	toColumn: LocalDateTable_3e7f19f1-2206-4b30-a2cd-5f094a077597.Date
 
-relationship 35abbbc9-8bad-3f29-27c3-28f258b0f87f
-	fromColumn: fct_materiaisAplicados.'data_aplicacao.1'
-	toColumn: dim_calendario.data_formatada
-
 relationship 5289f65c-65e1-4728-83e8-a008f551fa8f
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dim_calendario.data_formatada
 	toColumn: LocalDateTable_a7ce8a40-3168-4357-9f7d-b044b27f4adc.Date
 
-relationship 9cc23875-08a7-4c57-aee7-682bb83b5624
-	joinOnDateBehavior: datePartOnly
-	fromColumn: fct_materiaisRetirados.data_baixa_protocolo
-	toColumn: LocalDateTable_4ad13e2c-ea39-4e43-8ed2-9273bd2a6950.Date
+relationship 298df276-d134-8759-c7da-b328ccad6b45
+	fromColumn: fct_materiaisAplicados.baixa_protocolo_data
+	toColumn: dim_calendario.data_formatada
 
-relationship 48cb8a11-9a87-e137-f5b7-5f27ba58c99b
-	fromColumn: fct_materiaisRetirados.'data_aplicacao.1'
+relationship fb3dcce6-0c07-4b8e-b202-1a5f0383bfa8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_materiaisAplicados.inclusao_material_data
+	toColumn: LocalDateTable_9583eaf6-2318-4a73-b023-f45ea0228a56.Date
+
+relationship 2dc28445-1d06-4f02-ab67-4b137e4572b6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_materiaisRetirados.inclusao_material_data
+	toColumn: LocalDateTable_82621324-0f8d-4eb6-a95b-c2bc62ee4c4a.Date
+
+relationship 8dad3769-1b7f-8440-4910-4ffa10df72c5
+	fromColumn: fct_materiaisRetirados.baixa_protocolo_data
+	toColumn: dim_calendario.data
+
+relationship d37cdc0e-44f9-8e80-85f8-f592608995b1
+	fromColumn: fct_requisicaoMaterial.data_movimentacao_rmdm
+	toColumn: dim_calendario.data_formatada
+
+relationship 32e883b9-ca54-9fdd-f032-857e385174c2
+	fromColumn: fct_devolucaoMaterial.data_movimentacao_rmdm
+	toColumn: dim_calendario.data_formatada
+
+relationship b4ebe5b8-0c85-0fea-708f-737facfe22e7
+	fromColumn: fct_conversaoMateriais.data_conversao
 	toColumn: dim_calendario.data_formatada
 

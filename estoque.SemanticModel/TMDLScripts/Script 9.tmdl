@@ -1,0 +1,201 @@
+createOrReplace
+
+	table fct_requisicaoMaterial
+		lineageTag: 136702cd-d135-4759-84eb-363d2f6eae1c
+
+		column sk_movimento_rmdm
+			dataType: int64
+			formatString: 0
+			lineageTag: f4ceee56-aa6d-4222-a7c0-40ffd383523f
+			summarizeBy: sum
+			sourceColumn: sk_movimento_rmdm
+
+			annotation SummarizationSetBy = Automatic
+
+		column base
+			dataType: string
+			lineageTag: 9dea6fea-561e-47fa-9ad2-fe0c5471c096
+			summarizeBy: none
+			sourceColumn: base
+
+			annotation SummarizationSetBy = Automatic
+
+		column contrato
+			dataType: string
+			lineageTag: f0a6e57f-50e0-4759-8acf-f3a02d22e696
+			summarizeBy: none
+			sourceColumn: contrato
+
+			annotation SummarizationSetBy = Automatic
+
+		column projeto
+			dataType: string
+			lineageTag: 3692a6c8-d545-4cff-9a38-5ba343bf612d
+			summarizeBy: none
+			sourceColumn: projeto
+
+			annotation SummarizationSetBy = Automatic
+
+		column data_movimentacao_rmdm
+			dataType: dateTime
+			formatString: General Date
+			lineageTag: b7ef7061-74ba-4d1e-b798-d122dd65346b
+			summarizeBy: none
+			sourceColumn: data_movimentacao_rmdm
+
+			variation Variation
+				isDefault
+				relationship: 31432b30-987f-4e0f-ab3f-ecdc5eac9a6e
+				defaultHierarchy: LocalDateTable_bdfec90c-452f-47e7-accd-794cee948a5b.'Hierarquia de datas'
+
+			annotation SummarizationSetBy = Automatic
+
+		column categoria_tecnologia
+			dataType: string
+			lineageTag: 6decf662-00c0-471c-b21e-b66ddab998a9
+			summarizeBy: none
+			sourceColumn: categoria_tecnologia
+
+			annotation SummarizationSetBy = Automatic
+
+		column condicao
+			dataType: string
+			lineageTag: 6ed4d161-3bff-4389-b2e4-8faad53f7b9e
+			summarizeBy: none
+			sourceColumn: condicao
+
+			annotation SummarizationSetBy = Automatic
+
+		column bk_material
+			dataType: string
+			lineageTag: 6c22d2ab-56e7-4523-b598-f59ebc86ad0a
+			summarizeBy: none
+			sourceColumn: bk_material
+
+			annotation SummarizationSetBy = Automatic
+
+		column descricao_material
+			dataType: string
+			lineageTag: 54a4e93b-b9c5-4ca9-9355-31484b97c2fb
+			summarizeBy: none
+			sourceColumn: descricao_material
+
+			annotation SummarizationSetBy = Automatic
+
+		column unidade_medida
+			dataType: string
+			lineageTag: 82752f60-556b-416d-8390-a7b1bc87a7fa
+			summarizeBy: none
+			sourceColumn: unidade_medida
+
+			annotation SummarizationSetBy = Automatic
+
+		column numero_serie
+			dataType: string
+			lineageTag: b725295e-5242-48cf-b2a5-eb0ed62038d6
+			summarizeBy: none
+			sourceColumn: numero_serie
+
+			annotation SummarizationSetBy = Automatic
+
+		column serializado
+			dataType: string
+			lineageTag: 57d15a26-01dd-48fa-ba94-9d7647b9651f
+			summarizeBy: none
+			sourceColumn: serializado
+
+			annotation SummarizationSetBy = Automatic
+
+		column quantidade_solicitada
+			dataType: double
+			lineageTag: e642d964-af02-43e5-8c87-9ae1c613f10e
+			summarizeBy: sum
+			sourceColumn: quantidade_solicitada
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column quantidade_executada
+			dataType: double
+			lineageTag: f59859bc-7678-4f35-99d3-9db9696bae8d
+			summarizeBy: sum
+			sourceColumn: quantidade_executada
+
+			annotation SummarizationSetBy = Automatic
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		column nome
+			dataType: string
+			lineageTag: 22134a67-406b-464c-92d9-6c096b1eb2e0
+			summarizeBy: none
+			sourceColumn: nome
+
+			annotation SummarizationSetBy = Automatic
+
+		column descricao_funcao
+			dataType: string
+			lineageTag: 656b486b-f720-4456-9e2f-2a4e30cd8572
+			summarizeBy: none
+			sourceColumn: descricao_funcao
+
+			annotation SummarizationSetBy = Automatic
+
+		column status_baixada
+			dataType: string
+			lineageTag: 2e73a1dc-9740-4286-a614-f2ce840e4b76
+			summarizeBy: none
+			sourceColumn: status_baixada
+
+			annotation SummarizationSetBy = Automatic
+
+		column status_cancelado
+			dataType: string
+			lineageTag: 147a520a-054a-482f-9b28-35efc40bb0c2
+			summarizeBy: none
+			sourceColumn: status_cancelado
+
+			annotation SummarizationSetBy = Automatic
+
+		partition fct_requisicaoMaterial = m
+			mode: import
+			source = ```
+					let
+					    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), 
+					    "
+					    SELECT DISTINCT
+					        dim_movimento_rmdm.sk_movimento_rmdm,
+					        --dim_movimento_rmdm.numero_documento,
+					        dim_movimento_rmdm.base,
+					        dim_movimento_rmdm.contrato,
+					        dim_movimento_rmdm.projeto,
+					        dim_movimento_rmdm.data_movimentacao_rmdm,
+					        dim_material.categoria_tecnologia,
+					        dim_movimento_rmdm.condicao,
+					        dim_material.bk_material,
+					        dim_material.descricao_material,
+					        dim_material.unidade_medida,
+					        dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
+					        dim_movimento_rmdm.serializado,
+					        fct_movimento_requisicao.quantidade_solicitada,
+					        fct_movimento_requisicao.quantidade_executada,
+					        dim_colaborador.nome,
+					        dim_colaborador.descricao_funcao,
+					        dim_movimento_rmdm.status_baixada,
+					        dim_movimento_rmdm.status_cancelado 
+					    FROM gold.dim_movimento_rmdm AS dim_movimento_rmdm
+					    inner join gold.fct_movimento_requisicao as fct_movimento_requisicao on (fct_movimento_requisicao.sk_movimento_rmdm = dim_movimento_rmdm.sk_movimento_rmdm)
+					    left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimento_requisicao.sk_material)
+					    left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimento_requisicao.sk_colaborador_requisitante)
+					    left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimento_requisicao.sk_numero_serie)
+						
+						", null, [EnableFolding=true])
+					in
+					    Fonte
+					```
+
+		annotation PBI_NavigationStepName = Navegação
+
+		annotation PBI_ResultType = Exception
+

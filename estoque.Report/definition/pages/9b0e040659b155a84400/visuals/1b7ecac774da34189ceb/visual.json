@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "1b7ecac774da34189ceb",
   "position": {
-    "x": 1420.4651162790697,
-    "y": 500.93023255813955,
-    "z": 14,
-    "height": 542.79069767441865,
-    "width": 463.25581395348837,
-    "tabOrder": 14
+    "x": 1419.8802395209582,
+    "y": 613.65269461077844,
+    "z": 6000,
+    "height": 429.70059880239523,
+    "width": 464.19161676646706,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "tableEx",
@@ -42,7 +42,8 @@
                 }
               },
               "queryRef": "fct_materiaisAplicados.numero_serie",
-              "nativeQueryRef": "numero_serie"
+              "nativeQueryRef": "Serial",
+              "displayName": "Serial"
             },
             {
               "field": {

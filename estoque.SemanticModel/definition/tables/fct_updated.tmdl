@@ -49,8 +49,6 @@ table fct_updated
 				in
 				    Fonte
 
-	changedProperty = Name
-
 	annotation PBI_NavigationStepName = Navegação
 
 	annotation PBI_ResultType = Table

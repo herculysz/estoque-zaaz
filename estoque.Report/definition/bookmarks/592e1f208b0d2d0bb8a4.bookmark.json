@@ -21,7 +21,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9aeb107803b500053800",
+                  "name": "2f87bc0a85a9495895fe",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -88,7 +88,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f4b2f0e93a248a088dc7",
+                  "name": "91037e2a5c634c00659a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -143,7 +143,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "18f194fe37107255941e",
+                  "name": "19f1d1e3ed6267486347",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -258,7 +258,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ea606e60820b65933ce0",
+                  "name": "5ff6a1940b38e1bcf6bd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -283,7 +283,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "28c09e17bac1023cbc60",
+                  "name": "5cee9bc449273a4f03da",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -358,7 +358,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "89739c45542c4aa7c285",
+                  "name": "90b8065d54d6b4f248d4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -474,7 +474,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "948281af6939e3dbc4b4",
+                  "name": "3320c09b9d4ead6cd925",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -555,7 +555,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0eb113b2800ab9d618e0",
+                  "name": "6974c0a11b506535fa35",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -676,7 +676,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "78d1dce9b963ba792090",
+                  "name": "350a7fc56f1b4b4df72b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -691,7 +691,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c84c789fbdeb3eaee9a5",
+                  "name": "2d17b356c874924b1073",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -706,7 +706,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5b4bb99a694cba54b2eb",
+                  "name": "3a72db95a0d180061c67",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -721,7 +721,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "326f359fe0c4a370bca5",
+                  "name": "6a4c7b7837afc28f6892",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -736,7 +736,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f7d5b4a1b8a85462a57d",
+                  "name": "c94c8227a8421d469b14",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -816,7 +816,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e209f60285718debaeab",
+                  "name": "03fd17403490a37c4e89",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -867,7 +867,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c40f55cc2a4acdd0d00e",
+                  "name": "7fb2ffea4c180b5fa2f3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -887,158 +887,6 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "f",
-                                "Entity": "fct_saldoEstoque",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "In": {
-                                    "Expressions": [
-                                      {
-                                        "Column": {
-                                          "Expression": {
-                                            "SourceRef": {
-                                              "Source": "f"
-                                            }
-                                          },
-                                          "Property": "projeto"
-                                        }
-                                      }
-                                    ],
-                                    "Values": [
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-BAEPENDI'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-BOITUVA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-GOIOERE'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-IBAITI'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-ITAPEVA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-IVAIPORA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-LARANJAL'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-LONDRINA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-OSASCO'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-OUROFINO'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-PARDINHO'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-POUSO-ALEGRE'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-SANTA-RITA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-STO-ANT-PLATINA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-TAQUARITUBA'"
-                                          }
-                                        }
-                                      ],
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'OP-AVARE'"
-                                          }
-                                        }
-                                      ]
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
                   "data": [
                     {
                       "properties": {
@@ -1074,7 +922,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7830cf76c00ae24968b4",
+                  "name": "dea76f4b4d002ddcddc2",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1119,7 +967,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7ffa193e0d019b680914",
+                  "name": "46cd768c51f59fb3a6c9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1170,7 +1018,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cbb7e55b5dce957053d4",
+                  "name": "93af6fbf098cbfd79b7e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1185,7 +1033,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b95219435c4be27d5222",
+                  "name": "c29611a2f6b48612bd20",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1200,7 +1048,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c7c24ff78e78b1394409",
+                  "name": "0096096ac2b4e8971ffa",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_saldoEstoque"
+                        }
+                      },
+                      "Property": "data_saldo"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9919846be3a9753ea998",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1215,7 +1078,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c62c7269c3494b070ee0",
+                  "name": "2468cf78e30645842c56",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1230,7 +1093,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bac3bdc475102dd3759e",
+                  "name": "b94a0cac9cbac0d4b878",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1245,7 +1108,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "93cc0b789381e3d9ab99",
+                  "name": "12ef701b108ead18d9e5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1260,7 +1123,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7444f5c3c05ebe1182ad",
+                  "name": "2547e2ba5f4653ffb6f4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1275,7 +1138,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0a372f01ae78a1be544b",
+                  "name": "729fa46bcd9022d39f29",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1290,7 +1153,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e925a11ba1161573e5b0",
+                  "name": "0ae66383388487ee3271",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1305,7 +1168,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7f909216342c07060a36",
+                  "name": "77815141bb439b7f7021",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1320,7 +1183,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7768316106496766e326",
+                  "name": "637f02a93f5941c38d07",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1335,7 +1198,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cbc33472e7e134d510b0",
+                  "name": "8c02b91ddd48c786bf3e",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1350,7 +1213,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "13afc39c263bc03c624b",
+                  "name": "57f6c13dd73fad4f3b61",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1375,7 +1238,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9783e37a47c160cae340",
+                  "name": "863e1db2d3a3e714733e",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1425,7 +1288,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "19e0bfafebb40095e071",
+                  "name": "64c9c47c2a1b25595aac",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1480,7 +1343,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8275d0fc344a972806e8",
+                  "name": "7367dbbefb0720d32a8a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1529,12 +1392,6 @@
                   }
                 ]
               }
-            }
-          },
-          "f93d9b20887ddc936805": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
             }
           }
         }

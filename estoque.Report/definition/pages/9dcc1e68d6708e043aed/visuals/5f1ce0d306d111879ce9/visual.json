@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "5f1ce0d306d111879ce9",
   "position": {
     "x": 25.512012550500792,
     "y": 698.68108682237914,
-    "z": 15,
+    "z": 15000,
     "height": 57.142857142857146,
     "width": 201.42857142857144,
-    "tabOrder": 15
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "slicer",
@@ -115,7 +115,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ANALSIAR SERIAL'"
+                  "Value": "'ANALISAR SERIAL'"
                 }
               }
             },

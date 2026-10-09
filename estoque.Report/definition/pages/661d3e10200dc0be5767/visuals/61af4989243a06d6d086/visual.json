@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "61af4989243a06d6d086",
   "position": {
-    "x": 891.62790697674416,
-    "y": 36.279069767441861,
-    "z": 1,
-    "height": 429.76744186046511,
-    "width": 558.1395348837209,
-    "tabOrder": 1
+    "x": 891.98952879581157,
+    "y": 128.63874345549738,
+    "z": 1000,
+    "height": 449.52879581151836,
+    "width": 558.37696335078533,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -23,12 +23,92 @@
                       "Entity": "fct_materiaisRetirados"
                     }
                   },
+                  "Property": "base"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.base",
+              "nativeQueryRef": "Regional",
+              "active": true,
+              "displayName": "Regional"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "diretor"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.diretor",
+              "nativeQueryRef": "Diretor",
+              "active": true,
+              "displayName": "Diretor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "gerente"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.gerente",
+              "nativeQueryRef": "Gerente",
+              "active": false,
+              "displayName": "Gerente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "coordenador"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.coordenador",
+              "nativeQueryRef": "Coordenador",
+              "active": false,
+              "displayName": "Coordenador"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "supervisor"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.supervisor",
+              "nativeQueryRef": "Supervisor",
+              "active": false,
+              "displayName": "Supervisor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
                   "Property": "nome"
                 }
               },
               "queryRef": "fct_materiaisRetirados.nome",
               "nativeQueryRef": "Nome",
-              "active": true,
+              "active": false,
               "displayName": "Nome"
             }
           ]
@@ -86,6 +166,92 @@
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "fct_materiaisRetirados.base"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "base"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisRetirados.diretor"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "diretor"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisRetirados.gerente"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisRetirados.coordenador"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisRetirados.supervisor"
+            ],
+            "isCollapsed": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisRetirados.nome"
+            ],
+            "isCollapsed": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'ZAAZ NORDESTE'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "columnHeaders": [
         {
@@ -263,7 +429,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'EQUIPES DETALHADAS'"
+                  "Value": "'HIERARQUIA DE REMOÇÃO'"
                 }
               }
             },
@@ -561,51 +727,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a7ed3b02b00455029d11",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Remov_equipes"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1e1091de067d02b90568",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_remov"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a9816409935597120030",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisRetirados"
-              }
-            },
-            "Property": "nome"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

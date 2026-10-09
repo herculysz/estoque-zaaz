@@ -31,7 +31,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -56,6 +56,56 @@
       "type": "RegisteredResources",
       "items": [
         {
+          "name": "down-right-arrow9241301633293848.png",
+          "path": "down-right-arrow9241301633293848.png",
+          "type": "Image"
+        },
+        {
+          "name": "down-right21527770277104896.png",
+          "path": "down-right21527770277104896.png",
+          "type": "Image"
+        },
+        {
+          "name": "down-right24493190736320858.png",
+          "path": "down-right24493190736320858.png",
+          "type": "Image"
+        },
+        {
+          "name": "love-arrow7764760825631812.png",
+          "path": "love-arrow7764760825631812.png",
+          "type": "Image"
+        },
+        {
+          "name": "right-arrow_(1)5498562241396115.png",
+          "path": "right-arrow_(1)5498562241396115.png",
+          "type": "Image"
+        },
+        {
+          "name": "right-arrow-angle_(1)15960617974555968.png",
+          "path": "right-arrow-angle_(1)15960617974555968.png",
+          "type": "Image"
+        },
+        {
+          "name": "right-arrow-angle_(2)21842926380889205.png",
+          "path": "right-arrow-angle_(2)21842926380889205.png",
+          "type": "Image"
+        },
+        {
+          "name": "right-arrow-angle7567384625310125.png",
+          "path": "right-arrow-angle7567384625310125.png",
+          "type": "Image"
+        },
+        {
+          "name": "right-arrow49184581665843785.png",
+          "path": "right-arrow49184581665843785.png",
+          "type": "Image"
+        },
+        {
+          "name": "scribble_(1)938819979482314.png",
+          "path": "scribble_(1)938819979482314.png",
+          "type": "Image"
+        },
+        {
           "name": "zaaz-icon1291532454041714.jpg",
           "path": "zaaz-icon1291532454041714.jpg",
           "type": "Image"
@@ -69,7 +119,6 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   }
 }

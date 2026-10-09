@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "308e99800041bcbac077",
   "position": {
-    "x": 35.714285714285715,
-    "y": 35.714285714285715,
+    "x": 35.340314136125656,
+    "y": 128.63874345549738,
     "z": 0,
-    "height": 430,
-    "width": 820,
+    "height": 449.52879581151836,
+    "width": 819.8952879581152,
     "tabOrder": 0
   },
   "visual": {
@@ -162,6 +162,16 @@
                 {
                   "Literal": {
                     "Value": "'2026-08'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'2026-05'"
                   }
                 }
               ],
@@ -695,79 +705,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a44f26898b0eebdae9b9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_calendario"
-              }
-            },
-            "Property": "ano_mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a9fb62802d8ae0501e2e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_remov"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "dfccb4fb30e005998e1d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisRetirados"
-              }
-            },
-            "Property": "condicao"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "cf873c83d74a00c83b0d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisRetirados"
-              }
-            },
-            "Property": "categoria_tecnologia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "bb80503c11c698547199",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisRetirados"
-              }
-            },
-            "Property": "descricao_material"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

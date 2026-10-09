@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "69c888a6f380405feb39",
   "position": {
     "x": 1174.2731277533039,
     "y": 129.69162995594715,
-    "z": 15000,
+    "z": 14000,
     "height": 429.95594713656391,
     "width": 714.7136563876652,
-    "tabOrder": 14000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -23,12 +23,44 @@
                       "Entity": "fct_saldoVolante"
                     }
                   },
+                  "Property": "base"
+                }
+              },
+              "queryRef": "fct_saldoVolante.base",
+              "nativeQueryRef": "Regional",
+              "active": true,
+              "displayName": "Regional"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_saldoVolante"
+                    }
+                  },
+                  "Property": "diretor"
+                }
+              },
+              "queryRef": "fct_saldoVolante.diretor",
+              "nativeQueryRef": "Diretor",
+              "active": true,
+              "displayName": "Diretor"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_saldoVolante"
+                    }
+                  },
                   "Property": "gerente"
                 }
               },
               "queryRef": "fct_saldoVolante.gerente",
               "nativeQueryRef": "Gerente",
-              "active": true,
+              "active": false,
               "displayName": "Gerente"
             },
             {
@@ -161,6 +193,44 @@
         "levels": [
           {
             "queryRefs": [
+              "fct_saldoVolante.base"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_saldoVolante"
+                    }
+                  },
+                  "Property": "base"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_saldoVolante.diretor"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_saldoVolante"
+                    }
+                  },
+                  "Property": "diretor"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
               "fct_saldoVolante.gerente"
             ],
             "isCollapsed": true,
@@ -287,209 +357,21 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'WESLEY ARAUJO DA SILVA'"
+                    "Value": "'ZAAZ NORDESTE'"
                   }
                 }
               ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'SEM INFORMACAO'"
-                      }
-                    }
-                  ],
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'SEM INFORMACAO'"
-                          }
-                        }
-                      ],
-                      "children": [
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "'EWERTON BARROS DA SILVA ARAUJO'"
-                              }
-                            }
-                          ],
-                          "children": [
-                            {
-                              "identityValues": [
-                                {
-                                  "Literal": {
-                                    "Value": "'ONT 5G'"
-                                  }
-                                }
-                              ],
-                              "isToggled": true
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "isToggled": true
             },
             {
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "null"
+                    "Value": "'ZAAZ SUL E SUDESTE'"
                   }
                 }
               ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "null"
-                      }
-                    }
-                  ],
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "null"
-                          }
-                        }
-                      ],
-                      "children": [
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "null"
-                              }
-                            }
-                          ],
-                          "children": [
-                            {
-                              "identityValues": [
-                                {
-                                  "Literal": {
-                                    "Value": "'ONT 5G'"
-                                  }
-                                }
-                              ],
-                              "isToggled": true
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'DANIEL MELO GOMES'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'JANIO DANTAS MARTINS'"
-                      }
-                    }
-                  ],
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'JOEL DIAS TAVARES'"
-                          }
-                        }
-                      ],
-                      "isToggled": true,
-                      "children": [
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "'FRANCISCO ANTONIO DA SILVA FILHO'"
-                              }
-                            }
-                          ],
-                          "children": [
-                            {
-                              "identityValues": [
-                                {
-                                  "Literal": {
-                                    "Value": "'SEM INFORMACAO'"
-                                  }
-                                }
-                              ],
-                              "isToggled": true
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'JOAB SOARES DOS SANTOS'"
-                  }
-                }
-              ],
-              "children": [
-                {
-                  "identityValues": [
-                    {
-                      "Literal": {
-                        "Value": "'ALEXANDRE CASTELO BRANCO CHAVES'"
-                      }
-                    }
-                  ],
-                  "isToggled": true,
-                  "children": [
-                    {
-                      "identityValues": [
-                        {
-                          "Literal": {
-                            "Value": "'DANILO ALVES DE ALMEIDA'"
-                          }
-                        }
-                      ],
-                      "isToggled": true,
-                      "children": [
-                        {
-                          "identityValues": [
-                            {
-                              "Literal": {
-                                "Value": "'JOAQUIM MARCELO VASCONCELOS VALDEVINO'"
-                              }
-                            }
-                          ],
-                          "isToggled": true
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "isToggled": true
             }
           ]
         }
@@ -601,7 +483,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'SALDO VOLANTE HIERÁRQUICO [SERIALIZADO]'"
+                  "Value": "'SALDO VOLANTE HIERÁRQUICO'"
                 }
               }
             },
@@ -922,45 +804,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_saldoVolante",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "serializado"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'SERIALIZADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       }
     ]

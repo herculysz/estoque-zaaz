@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "15b4e329470e84abd0e0",
   "position": {
-    "x": 1486.046511627907,
-    "y": 36.279069767441861,
-    "z": 7,
-    "height": 429.76744186046511,
-    "width": 399.06976744186045,
-    "tabOrder": 7
+    "x": 1485.7068062827225,
+    "y": 128.63874345549738,
+    "z": 3000,
+    "height": 449.52879581151836,
+    "width": 400.05235602094245,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -248,7 +248,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CIDADES DETALHADAS'"
+                  "Value": "'PROJETOS DETALHADOS'"
                 }
               }
             },

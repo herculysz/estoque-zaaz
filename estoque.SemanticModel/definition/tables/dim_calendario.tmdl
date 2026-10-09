@@ -369,7 +369,7 @@ table dim_calendario
 		mode: import
 		source =
 				let
-				    Fonte = Value.NativeQuery(PostgreSQL.Database(host, database), "select *#(lf)from gold.dim_calendario", null, [EnableFolding=true]),
+				    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "select *#(lf)from gold.dim_calendario", null, [EnableFolding=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"inicio_semana", type date}, {"fim_semana", type date}, {"inicio_mes", type date}, {"fim_mes", type date}, {"inicio_trimestre", type date}, {"fim_trimestre", type date}})
 				in
 				    #"Tipo Alterado"

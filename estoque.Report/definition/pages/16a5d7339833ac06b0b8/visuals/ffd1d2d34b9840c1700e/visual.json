@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "ffd1d2d34b9840c1700e",
   "position": {
     "x": 284.6511627906977,
     "y": 135.34883720930233,
-    "z": 3010,
+    "z": 10000,
     "height": 739.53488372093022,
     "width": 1600.4651162790697,
-    "tabOrder": 3010
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "columnChart",
@@ -1051,6 +1051,46 @@
                   "Value": "50D"
                 }
               }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "detailLabelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelContentLayout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SingleLine'"
+                }
+              }
+            },
+            "detailColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         },
@@ -1076,6 +1116,32 @@
                 }
               }
             ]
+          }
+        },
+        {
+          "properties": {
+            "dynamicLabelDetail": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Aplic_mes"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
           }
         }
       ],
@@ -1200,6 +1266,19 @@
         }
       ],
       "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
         {
           "properties": {
             "show": {
@@ -1515,49 +1594,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "da09bb019c04966bc625",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_calendario"
-              }
-            },
-            "Property": "ano"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a0e3b109589666c04e33",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_calendario"
-              }
-            },
-            "Property": "trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4fb5ebafed834d3a9e53",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_calendario"
-              }
-            },
-            "Property": "mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "877a3ce7d904a0259a0e",
+        "name": "1de8266a0c051aa6e02c",
         "field": {
           "Column": {
             "Expression": {
@@ -1565,24 +1602,11 @@
                 "Entity": "fct_materiaisAplicados"
               }
             },
-            "Property": "categoria_tecnologia"
+            "Property": "numero_serie"
           }
         },
-        "type": "Categorical"
-      },
-      {
-        "name": "e0a7bc137a71686c6137",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_aplic"
-          }
-        },
-        "type": "Advanced"
+        "type": "Categorical",
+        "howCreated": "User"
       }
     ]
   }

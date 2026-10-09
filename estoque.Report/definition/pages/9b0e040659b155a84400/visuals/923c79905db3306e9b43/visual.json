@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "923c79905db3306e9b43",
   "position": {
-    "x": 34.883720930232556,
-    "y": 500.93023255813955,
-    "z": 12,
-    "height": 542.79069767441865,
-    "width": 1349.3023255813953,
-    "tabOrder": 12
+    "x": 34.491017964071858,
+    "y": 613.65269461077844,
+    "z": 5000,
+    "height": 429.70059880239523,
+    "width": 1349.4610778443114,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -15,21 +15,6 @@
       "queryState": {
         "Columns": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "grupo_servico"
-                }
-              },
-              "queryRef": "fct_materiaisAplicados.grupo_servico",
-              "nativeQueryRef": "grupo_servico",
-              "active": true
-            },
             {
               "field": {
                 "Column": {
@@ -72,12 +57,29 @@
                       "Entity": "fct_materiaisAplicados"
                     }
                   },
+                  "Property": "grupo_servico"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.grupo_servico",
+              "nativeQueryRef": "Grupo do Serviço",
+              "active": true,
+              "displayName": "Grupo do Serviço"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
                   "Property": "tipo_solicitacao"
                 }
               },
               "queryRef": "fct_materiaisAplicados.tipo_solicitacao",
-              "nativeQueryRef": "tipo_solicitacao",
-              "active": true
+              "nativeQueryRef": "Tipo de Solicitação",
+              "active": false,
+              "displayName": "Tipo de Solicitação"
             }
           ]
         },
@@ -127,24 +129,6 @@
         "levels": [
           {
             "queryRefs": [
-              "fct_materiaisAplicados.grupo_servico"
-            ],
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "grupo_servico"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
               "fct_materiaisAplicados.categoria_tecnologia"
             ],
             "isPinned": true
@@ -152,6 +136,28 @@
           {
             "queryRefs": [
               "fct_materiaisAplicados.condicao"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      },
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.grupo_servico"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.tipo_solicitacao"
             ],
             "isCollapsed": true,
             "isPinned": true
@@ -338,6 +344,48 @@
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_materiaisAplicados.categoria_tecnologia"
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_materiaisAplicados.condicao"
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_materiaisAplicados.grupo_servico"
           }
         }
       ]
@@ -647,79 +695,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b940d7808c189b004076",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "grupo_servico"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2aa451b0ea809108d8d4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "categoria_tecnologia"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ed5c78b8058dbbde00e6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "condicao"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4390ce393070718db701",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "tipo_solicitacao"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "28d88ae50cb0b08dc861",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_aplic"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

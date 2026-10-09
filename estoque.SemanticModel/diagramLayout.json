@@ -4,17 +4,43 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 352,
-        "y": 27
+        "x": 535.9150817539205,
+        "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 405,
-            "y": 0
+            "x": 243,
+            "y": 438
           },
           "nodeIndex": "fct_saldoEstoque",
           "nodeLineageTag": "4ff5f1f0-78f1-4533-b2dc-7f9dd5349c20",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 439
+          },
+          "nodeIndex": "fct_saldoVolante",
+          "nodeLineageTag": "8ff0c403-2137-4554-9567-3c6412bba06c",
+          "size": {
+            "height": 294,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 486.36163941535983,
+            "y": 439.0625
+          },
+          "nodeIndex": "fct_materiaisAplicados",
+          "nodeLineageTag": "8ec4c826-ce06-4210-8d49-1e5b79c9a1c3",
           "size": {
             "height": 300,
             "width": 234
@@ -23,34 +49,8 @@
         },
         {
           "location": {
-            "x": 103.36163941535983,
-            "y": 0
-          },
-          "nodeIndex": "fct_saldoVolante",
-          "nodeLineageTag": "8ff0c403-2137-4554-9567-3c6412bba06c",
-          "size": {
-            "height": 316,
-            "width": 234
-          },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 442.36163941535983,
-            "y": 460.0625
-          },
-          "nodeIndex": "fct_materiaisAplicados",
-          "nodeLineageTag": "8ec4c826-ce06-4210-8d49-1e5b79c9a1c3",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 1129.6383605846402,
-            "y": 78.46875
+            "x": 1103.6383605846402,
+            "y": 40.46875
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "ec89080e-d392-4345-a7ba-04729daf1646",
@@ -58,7 +58,7 @@
             "height": 260,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 10
         },
         {
           "location": {
@@ -71,12 +71,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 1354.2767211692803,
-            "y": 380.03125
+            "x": 1447.2767211692803,
+            "y": 0
           },
           "nodeIndex": "fct_updated",
           "nodeLineageTag": "24aab227-f0c9-4260-9ede-28d7117885fe",
@@ -84,12 +84,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1071.9150817539205,
-            "y": 459.53125
+            "x": 726.9150817539205,
+            "y": 435.53125
           },
           "nodeIndex": "fct_materiaisRetirados",
           "nodeLineageTag": "3a5a0988-41f9-4c12-804d-6365a08d4aa1",
@@ -97,7 +97,46 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1453.9150817539205,
+            "y": 436.03125
+          },
+          "nodeIndex": "fct_conversaoMateriais",
+          "nodeLineageTag": "d3333538-ec51-4308-a585-8f9a0fc39fc1",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1208.9150817539205,
+            "y": 437.03125
+          },
+          "nodeIndex": "fct_devolucaoMaterial",
+          "nodeLineageTag": "01173442-8ccf-413d-8b1b-36a0d36a31c8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 966.91508175392028,
+            "y": 436.03125
+          },
+          "nodeIndex": "fct_requisicaoMaterial",
+          "nodeLineageTag": "136702cd-d135-4759-84eb-363d2f6eae1c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
         }
       ],
       "name": "Todas as tabelas",

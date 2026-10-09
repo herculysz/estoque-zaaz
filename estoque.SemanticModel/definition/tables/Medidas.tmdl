@@ -227,11 +227,10 @@ table Medidas
 		lineageTag: fb638285-5904-46e5-bd9f-8d23d4135cc5
 
 	measure qtd_aplic = CALCULATE(SUM(fct_MateriaisAplicados[quantidade]))
-		formatString: #,0
 		displayFolder: Aplicados
 		lineageTag: 0dbd3a91-96f6-41bd-a01e-93b6365c505c
 
-		annotation PBI_FormatHint = {"isDecimal":true}
+		formatStringDefinition = "#,0"
 
 	measure qtd_Aplic_Mes_Anterior = ```
 			
@@ -247,34 +246,34 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '{PER} Diff_Aplic_mes_Anterior' =
+	measure '% Diff_Aplic_mes_Anterior' =
 			
 			VAR MesAtual = [qtd_aplic]
 			VAR MesAnterior = [qtd_Aplic_Mes_Anterior]
 			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
 			RETURN
-			CalcDiffMes
+			IF(CalcDiffMes >0, "+"&FORMAT(CalcDiffMes, "0.00%"), CalcDiffMes)
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Aplicados
 		lineageTag: 7c5ced96-452a-4781-8f83-c9e1bc9693fb
 
-	measure '{PER} Aplic_mes' = ```
+	measure '% Aplic_mes' = ```
 			
 			
 			VAR totalmes = 
 			CALCULATE(
-			    --SUM(f_MateriaisAplicados[Qtde. Aplic.]), 
 			    [qtd_aplic],
 			    KEEPFILTERS('dim_calendario'),
-			    REMOVEFILTERS(fct_materiaisAplicados[categoria_tecnologia])
-			    /*,
-			    REMOVEFILTERS(f_MateriaisAplicados[d_DE-PARA-SERVIÇO.CATEGORIA])*/
+			    ALLSELECTED(fct_materiaisAplicados[categoria_tecnologia])
 			)
 			RETURN
 			
-			DIVIDE([qtd_aplic], totalmes, 0)
+			" | " &
+			FORMAT(
+			    DIVIDE([qtd_aplic], totalmes, 0),
+			    "0.00%"
+			)
 			```
-		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Aplicados
 		lineageTag: 7e0b1a3d-de33-49d7-bb3c-8e1ec1ee7df0
 
@@ -285,8 +284,8 @@ table Medidas
 			            DISTINCT(
 			                SELECTCOLUMNS(
 			                    'fct_materiaisAplicados',
-			                    "MesRef", DATE(YEAR(fct_materiaisAplicados[data_aplicacao.1]), 
-			                                   MONTH(fct_materiaisAplicados[data_aplicacao.1]), 1)
+			                    "MesRef", DATE(YEAR(fct_materiaisAplicados[baixa_protocolo_data]), 
+			                                   MONTH(fct_materiaisAplicados[baixa_protocolo_data]), 1)
 			                )
 			            )
 			        )  
@@ -322,33 +321,33 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure '{PER} Remov_mes' = ```
+	measure '% Remov_mes' = ```
 			
 			
 			VAR totalmes = 
 			CALCULATE(
-			    --SUM(f_MateriaisAplicados[Qtde. Aplic.]), 
 			    [qtd_remov],
 			    KEEPFILTERS('dim_calendario'),
-			    REMOVEFILTERS(fct_materiaisRetirados[categoria_tecnologia])
-			    /*,
-			    REMOVEFILTERS(f_MateriaisAplicados[d_DE-PARA-SERVIÇO.CATEGORIA])*/
+			    ALLSELECTED(fct_materiaisRetirados[categoria_tecnologia])
 			)
 			RETURN
 			
-			DIVIDE([qtd_remov], totalmes, 0)
+			" | " &
+			FORMAT(
+			    DIVIDE([qtd_remov], totalmes, 0),
+			    "0.00%"
+			)
 			```
-		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Retirados
 		lineageTag: c8470ef8-3b9a-4f83-8968-402e87cdc4e2
 
-	measure '{PER} Diff_Remov_mes_Anterior' =
+	measure '% Diff_Remov_mes_Anterior' =
 			
 			VAR MesAtual = [qtd_remov]
 			VAR MesAnterior = [qtd_Remov_Mes_Anterior]
 			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
 			RETURN
-			CalcDiffMes
+			IF(CalcDiffMes >0, "+"&FORMAT(CalcDiffMes, "0.00%"), CalcDiffMes)
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Retirados
 		lineageTag: e98b782a-decd-49ca-a082-695bf110924a
@@ -374,8 +373,8 @@ table Medidas
 			            DISTINCT(
 			                SELECTCOLUMNS(
 			                    'fct_materiaisRetirados',
-			                    "MesRef", DATE(YEAR(fct_materiaisRetirados[data_aplicacao.1]), 
-			                                   MONTH(fct_materiaisRetirados[data_aplicacao.1]), 1)
+			                    "MesRef", DATE(YEAR(fct_materiaisRetirados[baixa_protocolo_data]), 
+			                                   MONTH(fct_materiaisRetirados[baixa_protocolo_data]), 1)
 			                )
 			            )
 			        )  
@@ -403,6 +402,334 @@ table Medidas
 		formatString: 0
 		displayFolder: Retirados
 		lineageTag: f3f0b66e-c1e5-462f-a0b3-7014653b72da
+
+	measure qtdRequisitada =
+			
+			
+			CALCULATE(
+			    SUM(fct_requisicaoMaterial[quantidade_executada])
+			)
+		formatString: #,0
+		displayFolder: Requisicao
+		lineageTag: 190aceee-c390-4181-bc13-49e3d88d6191
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure RequisitadoMediaMes = ```
+			
+			    VAR TabelaFiltrada = 
+			        CALCULATETABLE(
+			            DISTINCT(
+			                SELECTCOLUMNS(
+			                    'fct_requisicaoMaterial',
+			                    "MesRef", DATE(YEAR(fct_requisicaoMaterial[data_movimentacao_rmdm]), 
+			                                   MONTH(fct_requisicaoMaterial[data_movimentacao_rmdm]), 1)
+			                )
+			            )
+			        )  
+			    VAR _MesesFiltrados = COUNTROWS(TabelaFiltrada)
+			
+			    RETURN
+			    IF(
+			        _MesesFiltrados = 0,
+			        BLANK(),
+			        DIVIDE([qtdRequisitada], _MesesFiltrados, 0)
+			    )
+			```
+		displayFolder: Requisicao
+		lineageTag: 583c01e9-e35c-47f1-90c2-de7d3713ecdd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Requisitado_mes' = ```
+			
+			
+			VAR totalmes = 
+			CALCULATE(
+			    [qtdRequisitada],
+			    KEEPFILTERS('dim_calendario'),
+			    ALLSELECTED(fct_requisicaoMaterial[categoria_tecnologia])
+			)
+			RETURN
+			
+			" | " &
+			FORMAT(
+			    DIVIDE([qtdRequisitada], totalmes, 0),
+			    "0.00%"
+			)
+			```
+		displayFolder: Requisicao
+		lineageTag: 891b4c42-9304-49a8-8d03-921e3d920fc4
+
+	measure qtd_Req_Mes_Anterior = ```
+			
+			VAR MesAnterior = 
+			CALCULATE(
+			    [qtdRequisitada], 
+			    DATEADD('dim_Calendario'[data_formatada], -1, MONTH)
+			)
+			RETURN
+			MesAnterior
+			```
+		displayFolder: Requisicao
+		lineageTag: 30e19a4f-0343-4999-92c0-477bf0675385
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Diff_Req_mes_Anterior' =
+			
+			VAR MesAtual = [qtdRequisitada]
+			VAR MesAnterior = [qtd_Req_Mes_Anterior]
+			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
+			RETURN
+			IF(CalcDiffMes >0, "+"&FORMAT(CalcDiffMes, "0.00%"), CalcDiffMes)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Requisicao
+		lineageTag: 4f86d090-56d1-47a7-b641-a2a60d19282f
+
+	measure @corEvoluçãoReq =
+			
+			
+			VAR variavelCor = [% Diff_Req_mes_Anterior]
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    variavelCor = 0, BLANK(),
+			    variavelCor < 0, "#A50B00",
+			    variavelCor > 0 || CONTAINSSTRING("+", variavelCor), "#00A023",
+			    BLANK()
+			)
+		displayFolder: Requisicao
+		lineageTag: 988112b0-88b9-40c0-8de9-5957ade84a0a
+
+	measure @corEvoluçãoRemov =
+			
+			
+			VAR variavelCor = [% Diff_Remov_mes_Anterior]
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    variavelCor = 0, BLANK(),
+			    variavelCor < 0, "#A50B00",
+			    variavelCor > 0 || CONTAINSSTRING("+", variavelCor), "#00A023",
+			    BLANK()
+			)
+		displayFolder: Retirados
+		lineageTag: baf74db0-7de6-4cbd-aca3-942845d63b61
+
+	measure @corEvoluçãoAplic =
+			
+			VAR variavelCor = [% Diff_Aplic_mes_Anterior]
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    variavelCor = 0, BLANK(),
+			    variavelCor < 0, "#A50B00",
+			    variavelCor > 0 || CONTAINSSTRING("+", variavelCor), "#00A023",
+			    BLANK()
+			)
+		displayFolder: Aplicados
+		lineageTag: d6e78a39-e2a9-4438-a128-fa658f228cbc
+
+	measure qtdDevolvida =
+			
+			
+			CALCULATE(
+			    SUM(fct_devolucaoMaterial[quantidade_executada])
+			)
+		formatString: #,0
+		displayFolder: Devolução
+		lineageTag: 0f8b39ba-9727-4dcf-bdbb-9af8b8a687e3
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure DevolvidoMediaMes = ```
+			
+			    VAR TabelaFiltrada = 
+			        CALCULATETABLE(
+			            DISTINCT(
+			                SELECTCOLUMNS(
+			                    'fct_devolucaoMaterial',
+			                    "MesRef", DATE(YEAR(fct_devolucaoMaterial[data_movimentacao_rmdm]), 
+			                                   MONTH(fct_devolucaoMaterial[data_movimentacao_rmdm]), 1)
+			                )
+			            )
+			        )  
+			    VAR _MesesFiltrados = COUNTROWS(TabelaFiltrada)
+			
+			    RETURN
+			    IF(
+			        _MesesFiltrados = 0,
+			        BLANK(),
+			        DIVIDE([qtdDevolvida], _MesesFiltrados, 0)
+			    )
+			```
+		displayFolder: Devolução
+		lineageTag: ec1f45a1-0f35-4913-a2f5-c09535de6581
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure qtd_Dev_Mes_Anterior = ```
+			
+			VAR MesAnterior = 
+			CALCULATE(
+			    [qtdDevolvida], 
+			    DATEADD('dim_Calendario'[data_formatada], -1, MONTH)
+			)
+			RETURN
+			MesAnterior
+			```
+		displayFolder: Devolução
+		lineageTag: a21e047f-84d5-4979-9eed-23d1f40a1a1c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Diff_Dev_mes_Anterior' =
+			
+			VAR MesAtual = [qtdDevolvida]
+			VAR MesAnterior = [qtd_Dev_Mes_Anterior]
+			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
+			RETURN
+			IF(CalcDiffMes >0, "+"&FORMAT(CalcDiffMes, "0.00%"), CalcDiffMes)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Devolução
+		lineageTag: 2d7effdb-94ad-42ab-b8c5-ee4edda0c501
+
+	measure '% Devolvido_mes' = ```
+			
+			
+			VAR totalmes = 
+			CALCULATE(
+			    [qtdDevolvida],
+			    KEEPFILTERS('dim_calendario'),
+			    ALLSELECTED(fct_devolucaoMaterial[categoria_tecnologia])
+			)
+			RETURN
+			
+			" | " &
+			FORMAT(
+			    DIVIDE([qtdDevolvida], totalmes, 0),
+			    "0.00%"
+			)
+			```
+		displayFolder: Devolução
+		lineageTag: 1fdae0f0-f629-41e2-a0bb-5c46982a3b50
+
+	measure @corEvoluçãoDev =
+			
+			
+			VAR variavelCor = [% Diff_Dev_mes_Anterior]
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    variavelCor = 0, BLANK(),
+			    variavelCor < 0, "#A50B00",
+			    variavelCor > 0 || CONTAINSSTRING("+", variavelCor), "#00A023",
+			    BLANK()
+			)
+		displayFolder: Devolução
+		lineageTag: 820826a0-68e6-418e-b78c-24b9a0bb96c5
+
+	measure qtdConvertida =
+			
+			
+			CALCULATE(
+			    SUM(fct_conversaoMateriais[quantidade_convertido])
+			)
+		formatString: #,0
+		displayFolder: Conversão
+		lineageTag: a80fdb26-901f-4230-83b8-e91aeede2cb9
+
+	measure ConvertidosMediaMes = ```
+			
+			    VAR TabelaFiltrada = 
+			        CALCULATETABLE(
+			            DISTINCT(
+			                SELECTCOLUMNS(
+			                    'fct_conversaoMateriais',
+			                    "MesRef", DATE(YEAR(fct_conversaoMateriais[data_conversao]), 
+			                                   MONTH(fct_conversaoMateriais[data_conversao]), 1)
+			                )
+			            )
+			        )  
+			    VAR _MesesFiltrados = COUNTROWS(TabelaFiltrada)
+			
+			    RETURN
+			    IF(
+			        _MesesFiltrados = 0,
+			        BLANK(),
+			        DIVIDE([qtdConvertida], _MesesFiltrados, 0)
+			    )
+			```
+		displayFolder: Conversão
+		lineageTag: 53971899-147b-445b-8180-6bc4adf3f94a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure qtd_Conv_Mes_Anterior = ```
+			
+			VAR MesAnterior = 
+			CALCULATE(
+			    [qtdConvertida], 
+			    DATEADD('dim_Calendario'[data_formatada], -1, MONTH)
+			)
+			RETURN
+			MesAnterior
+			```
+		formatString: 0
+		displayFolder: Conversão
+		lineageTag: 429d3dec-703a-4b51-8bda-32fd027204c4
+
+	measure '% Diff_Conv_mes_Anterior' =
+			
+			VAR MesAtual = [qtdConvertida]
+			VAR MesAnterior = [qtd_Conv_Mes_Anterior]
+			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
+			RETURN
+			IF(CalcDiffMes >0, "+"&FORMAT(CalcDiffMes, "0.00%"), CalcDiffMes)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Conversão
+		lineageTag: a99ca56a-2192-4a02-a05a-315344001f3a
+
+	measure '% Convertido_mes' = ```
+			
+			
+			VAR totalmes = 
+			CALCULATE(
+			    [qtdConvertida],
+			    KEEPFILTERS('dim_calendario'),
+			    ALLSELECTED(fct_conversaoMateriais[condicao_convertida])
+			)
+			RETURN
+			
+			" | " &
+			FORMAT(
+			    DIVIDE([qtdConvertida], totalmes, 0),
+			    "0.00%"
+			)
+			```
+		displayFolder: Conversão
+		lineageTag: 4061218f-1f31-41ea-ae73-eee151e287c9
+
+	measure @corEvoluçãoConv =
+			
+			
+			VAR variavelCor = [% Diff_Conv_mes_Anterior]
+			RETURN
+			
+			SWITCH(
+			    TRUE(),
+			    variavelCor = 0, BLANK(),
+			    variavelCor < 0, "#A50B00",
+			    variavelCor > 0 || CONTAINSSTRING("+", variavelCor), "#00A023",
+			    BLANK()
+			)
+		displayFolder: Conversão
+		lineageTag: eac5ff47-0a8e-4db7-adcd-2ddae245ae30
 
 	column Ordinal
 		dataType: int64

@@ -1,13 +1,12 @@
-expression database = "dw_empresa" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
-	lineageTag: a5a6b34f-b529-467e-9ca0-59c7ace2e76d
+expression db = "dw_empresa" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: b8a98de3-8814-41c1-8a36-8aceebf78c11
 
 	annotation PBI_NavigationStepName = Navegação
 
 	annotation PBI_ResultType = Text
 
-/// PostGSQL
-expression host = "177.13.0.39:5432" meta [IsParameterQuery=true, List={"10.11.119.20:5432", "177.13.0.39:5432"}, DefaultValue="10.11.119.20:5432", Type="Any", IsParameterQueryRequired=true]
-	lineageTag: f6274e56-28e7-4139-89db-4e4b92816c82
+expression hostname = "177.13.0.39:5432" meta [IsParameterQuery=true, List={"10.11.119.20:5432", "177.13.0.39:5432"}, DefaultValue="10.11.119.20:5432", Type="Text", IsParameterQueryRequired=true]
+	lineageTag: e3c85948-9224-4885-b2a6-32a084aa7eaf
 
 	annotation PBI_NavigationStepName = Navegação
 

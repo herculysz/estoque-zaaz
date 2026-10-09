@@ -1,0 +1,277 @@
+table fct_conversaoMateriais
+	lineageTag: d3333538-ec51-4308-a585-8f9a0fc39fc1
+
+	column sk_conversao_equipamento
+		dataType: int64
+		formatString: 0
+		lineageTag: b758e056-e12c-40d7-b98d-71fd2106ef29
+		summarizeBy: sum
+		sourceColumn: sk_conversao_equipamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column contrato
+		dataType: string
+		lineageTag: 750c8647-fa2e-4c92-9400-bdfb1ff59a41
+		summarizeBy: none
+		sourceColumn: contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column projeto
+		dataType: string
+		lineageTag: e8288b45-c156-4dab-8fa1-9cf2b2a94579
+		summarizeBy: none
+		sourceColumn: projeto
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_conversao
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 79484f1b-61f5-49b1-a01b-c37409c80c60
+		summarizeBy: none
+		sourceColumn: data_conversao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column condicao_original
+		dataType: string
+		lineageTag: 20cd1cb4-9168-45e7-826c-8d39fda01900
+		summarizeBy: none
+		sourceColumn: condicao_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column condicao_convertida
+		dataType: string
+		lineageTag: 5bd9c118-f45f-4443-9357-911c314b4c2d
+		summarizeBy: none
+		sourceColumn: condicao_convertida
+
+		annotation SummarizationSetBy = Automatic
+
+	column conversao_automatica
+		dataType: string
+		lineageTag: 1eec8994-3fb8-4cd1-ae41-5983cd70f8b7
+		summarizeBy: none
+		sourceColumn: conversao_automatica
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_baixa
+		dataType: string
+		lineageTag: 2f1122bb-99c1-43ed-a9e6-f0cc09ba39e6
+		summarizeBy: none
+		sourceColumn: status_baixa
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade_convertido
+		dataType: int64
+		formatString: 0
+		lineageTag: 15e80128-1ea1-4fcc-8573-96d95a1b7ba3
+		summarizeBy: sum
+		sourceColumn: quantidade_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_serie_original
+		dataType: string
+		lineageTag: 0164d678-18ff-423d-a721-1b0ee242293b
+		summarizeBy: none
+		sourceColumn: numero_serie_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_serie_convertido
+		dataType: string
+		lineageTag: e3e4d759-bcc0-443a-8eeb-19a8df5af119
+		summarizeBy: none
+		sourceColumn: numero_serie_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column bk_material_original
+		dataType: string
+		lineageTag: 9f3ec06d-cb4e-40fb-b8ea-1f743ac90c63
+		summarizeBy: none
+		sourceColumn: bk_material_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_material_original
+		dataType: string
+		lineageTag: 77013732-11b9-4a77-837c-1bdc1d2d54ec
+		summarizeBy: none
+		sourceColumn: descricao_material_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_medida_original
+		dataType: string
+		lineageTag: 3abb00f7-0e72-4b31-8974-7e886ba8f9b3
+		summarizeBy: none
+		sourceColumn: unidade_medida_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column bk_material_convertido
+		dataType: string
+		lineageTag: 2db2298c-df39-4d22-ae47-cfc218c98dcb
+		summarizeBy: none
+		sourceColumn: bk_material_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_material_convertido
+		dataType: string
+		lineageTag: 613f3745-e602-4bf2-84f7-f2a11454823b
+		summarizeBy: none
+		sourceColumn: descricao_material_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column unidade_medida_convertido
+		dataType: string
+		lineageTag: 85cce44c-053f-45fb-9575-5bee458b1331
+		summarizeBy: none
+		sourceColumn: unidade_medida_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpf_colaborador
+		dataType: string
+		lineageTag: 1512265b-c7f5-49c5-b0b5-39a95af65470
+		summarizeBy: none
+		sourceColumn: cpf_colaborador
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: 0732d413-3c44-45bd-b8ef-011f0620980f
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_funcao
+		dataType: string
+		lineageTag: 69a79fe5-0629-4ced-b191-039102afb92c
+		summarizeBy: none
+		sourceColumn: descricao_funcao
+
+		annotation SummarizationSetBy = Automatic
+
+	column tem_caracter_incorreto = ```
+			
+			
+			--VAR ignorarCategorias = NOT(fct_conversaoMateriais[categoria_tecnologia] IN {"SEM INFORMACAO", "MISCELANEA", "INSUMO"})
+			VAR ignorarNaoSerializados = fct_conversaoMateriais[numero_serie_convertido] <> "-"
+			VAR ignorarSeriaisVazios = fct_conversaoMateriais[numero_serie_convertido] <> "" && NOT ISBLANK(fct_conversaoMateriais[numero_serie_convertido])
+			VAR ignorarSemInformacao = fct_conversaoMateriais[numero_serie_convertido] <> "SEM INFORMACAO"
+			
+			VAR serialAtual = fct_conversaoMateriais[numero_serie_convertido]
+			VAR tamanhoSerial = LEN(serialAtual)
+			
+			
+			VAR sequenciaZeros = REPT("0", tamanhoSerial)
+			VAR sequenciaUns = REPT("1", tamanhoSerial)
+			
+			VAR ehRepeticaoInvalida = 
+			    tamanhoSerial >= 1 && 
+			    tamanhoSerial <= 7 && 
+			    (serialAtual = sequenciaZeros || serialAtual = sequenciaUns)
+			
+			RETURN
+			IF(
+			    (CONTAINSSTRING(serialAtual, " ") && ignorarSemInformacao)||
+			    CONTAINSSTRING(serialAtual, "/") ||
+			    CONTAINSSTRING(serialAtual, "\") ||
+			    CONTAINSSTRING(serialAtual, ".") ||
+			    CONTAINSSTRING(serialAtual, ",") ||
+			    CONTAINSSTRING(serialAtual, "+") ||
+			    CONTAINSSTRING(serialAtual, ":") ||
+			    CONTAINSSTRING(serialAtual, ";") ||
+			    CONTAINSSTRING(serialAtual, "!") ||
+			    CONTAINSSTRING(serialAtual, "(") ||
+			    CONTAINSSTRING(serialAtual, ")") ||
+			    CONTAINSSTRING(serialAtual, "&") ||
+			    CONTAINSSTRING(serialAtual, "$") ||
+			    CONTAINSSTRING(serialAtual, "@") ||
+			    CONTAINSSTRING(serialAtual, "~*") ||
+			    CONTAINSSTRING(serialAtual, "~?") ||
+			    CONTAINSSTRING(serialAtual, "~~") || 
+			    CONTAINSSTRING(serialAtual, "^") ||
+			    CONTAINSSTRING(serialAtual, "<") ||
+			    CONTAINSSTRING(serialAtual, ">") ||
+			    CONTAINSSTRING(serialAtual, "´") ||
+			    CONTAINSSTRING(serialAtual, "`") ||
+			    CONTAINSSTRING(serialAtual, "'") ||
+			    CONTAINSSTRING(serialAtual, "%") ||
+			    CONTAINSSTRING(serialAtual, "[") ||
+			    CONTAINSSTRING(serialAtual, "]") ||
+			    CONTAINSSTRING(serialAtual, "{") ||
+			    CONTAINSSTRING(serialAtual, "}") ||
+			    ehRepeticaoInvalida ||
+			    (serialAtual = "SN" /*&& ignorarCategorias*/) ||
+			    (tamanhoSerial < 8 && ignorarNaoSerializados /*&& ignorarCategorias*/ && ignorarSeriaisVazios) ||
+			    (ignorarNaoSerializados && CONTAINSSTRING(serialAtual, "-") /*&& ignorarCategorias*/), 
+			    "SIM", 
+			    "NÃO"
+			)
+			```
+		lineageTag: 1b71126f-0b85-4d69-809b-c93778475080
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fct_conversaoMateriais = m
+		mode: import
+		source = ```
+				let
+				    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
+				    
+				    /* CONVERSAO MATERIAL */
+				    SELECT
+				        dim_conversao_equipamento.sk_conversao_equipamento,
+				        dim_conversao_equipamento.contrato,
+				        dim_conversao_equipamento.projeto,
+				        dim_conversao_equipamento.data_conversao::date as data_conversao,
+				        dim_conversao_equipamento.condicao_original,
+				        dim_conversao_equipamento.condicao_convertida,
+				        dim_conversao_equipamento.conversao_automatica,
+				        dim_conversao_equipamento.status_baixa,
+				        fct_conversao_equipamento.quantidade_convertido,
+				        dim_serial_equipamento_original.numero_serie as numero_serie_original,
+				        dim_serial_equipamento_convertido.numero_serie as numero_serie_convertido,
+				        dim_material_original.bk_material as bk_material_original,
+				        dim_material_original.descricao_material as descricao_material_original,
+				        dim_material_original.unidade_medida as unidade_medida_original,
+				        dim_material_convertido.bk_material as bk_material_convertido,
+				        dim_material_convertido.descricao_material as descricao_material_convertido,
+				        dim_material_convertido.unidade_medida as unidade_medida_convertido,
+				        dim_colaborador.cpf_colaborador,
+				        dim_colaborador.nome,
+				        dim_colaborador.descricao_funcao
+				    FROM gold.dim_conversao_equipamento as dim_conversao_equipamento
+				    inner join gold.fct_conversao_equipamento as fct_conversao_equipamento on (fct_conversao_equipamento.sk_conversao_equipamento = dim_conversao_equipamento.sk_conversao_equipamento)
+				    left join gold.dim_serial_equipamento as dim_serial_equipamento_original on (dim_serial_equipamento_original.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie)
+				    left join gold.dim_serial_equipamento as dim_serial_equipamento_convertido on (dim_serial_equipamento_convertido.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie_convertido)
+				    left join gold.dim_material as dim_material_original on (dim_material_original.sk_material = fct_conversao_equipamento.sk_material)
+				    left join gold.dim_material as dim_material_convertido on (dim_material_convertido.sk_material = fct_conversao_equipamento.sk_material_convertido)
+				    left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_conversao_equipamento.sk_colaborador)
+				    
+				    ", null, [EnableFolding=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"data_conversao", type date}})
+				in
+				    #"Tipo Alterado"
+				```
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

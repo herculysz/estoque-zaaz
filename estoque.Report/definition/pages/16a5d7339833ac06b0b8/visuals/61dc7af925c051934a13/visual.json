@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "61dc7af925c051934a13",
   "position": {
     "x": 25.11627906976744,
     "y": 160.46511627906978,
-    "z": 3017,
+    "z": 17000,
     "height": 115.81395348837209,
     "width": 200.93023255813952,
-    "tabOrder": 3017
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -99,7 +99,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ZAAZ SUL E SUDESTE'"
+                                "Value": "'ZAAZ NORDESTE'"
                               }
                             }
                           ]
@@ -367,23 +367,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9828a2102a0bc435ee5a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_materiaisAplicados"
-              }
-            },
-            "Property": "base"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

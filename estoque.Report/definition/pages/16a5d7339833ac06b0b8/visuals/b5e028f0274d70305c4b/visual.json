@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "b5e028f0274d70305c4b",
   "position": {
     "x": 284.6511627906977,
     "y": 909.767441860465,
-    "z": 3011,
+    "z": 11000,
     "height": 45,
     "width": 256.74418604651163,
-    "tabOrder": 3011
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "tableEx",
@@ -122,12 +122,11 @@
                       "Entity": "fct_materiaisAplicados"
                     }
                   },
-                  "Property": "data_aplicacao.1"
+                  "Property": "baixa_protocolo_data"
                 }
               },
-              "queryRef": "fct_materiaisAplicados.data_aplicacao.1",
-              "nativeQueryRef": "data_aplicacao",
-              "displayName": "data_aplicacao"
+              "queryRef": "fct_materiaisAplicados.baixa_protocolo_data",
+              "nativeQueryRef": "baixa_protocolo_data"
             },
             {
               "field": {
@@ -137,12 +136,39 @@
                       "Entity": "fct_materiaisAplicados"
                     }
                   },
-                  "Property": "data_aplicacao.2"
+                  "Property": "baixa_protocolo_hora"
                 }
               },
-              "queryRef": "fct_materiaisAplicados.data_aplicacao.2",
-              "nativeQueryRef": "hora_aplicacao",
-              "displayName": "hora_aplicacao"
+              "queryRef": "fct_materiaisAplicados.baixa_protocolo_hora",
+              "nativeQueryRef": "baixa_protocolo_hora"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "inclusao_material_data"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.inclusao_material_data",
+              "nativeQueryRef": "inclusao_material_data"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "inclusao_material_hora"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.inclusao_material_hora",
+              "nativeQueryRef": "inclusao_material_hora"
             },
             {
               "field": {

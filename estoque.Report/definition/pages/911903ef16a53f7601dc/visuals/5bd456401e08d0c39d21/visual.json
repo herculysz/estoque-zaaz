@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "5bd456401e08d0c39d21",
   "position": {
     "x": 25.11627906976744,
     "y": 160.46511627906978,
-    "z": 27001,
+    "z": 27000,
     "height": 113.02325581395348,
     "width": 200.93023255813952,
-    "tabOrder": 27001
+    "tabOrder": 27000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -92,7 +92,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ZAAZ SUL E SUDESTE'"
+                                "Value": "'ZAAZ NORDESTE'"
                               }
                             }
                           ]
@@ -360,23 +360,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "948281af6939e3dbc4b4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_saldoEstoque"
-              }
-            },
-            "Property": "base"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

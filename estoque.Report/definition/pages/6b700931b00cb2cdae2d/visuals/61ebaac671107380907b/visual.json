@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "61ebaac671107380907b",
   "position": {
     "x": 0,
@@ -143,20 +143,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "c5014fa514a801e82c0d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fct_saldoEstoque"
-              }
-            },
-            "Property": "descricao_material"
-          }
-        },
-        "type": "Categorical"
-      },
       {
         "name": "63953ef071e84975c511",
         "field": {

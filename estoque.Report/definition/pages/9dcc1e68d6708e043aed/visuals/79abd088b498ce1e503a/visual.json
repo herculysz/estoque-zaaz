@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "79abd088b498ce1e503a",
   "position": {
     "x": 1380,
     "y": 909.767441860465,
-    "z": 18,
+    "z": 18000,
     "height": 135.34883720930233,
     "width": 233.02325581395348,
-    "tabOrder": 18
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "card",
@@ -440,23 +440,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7264ffe27b4a92ce82a0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "RemovMediaMes"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
