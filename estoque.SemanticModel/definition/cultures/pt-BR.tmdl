@@ -13793,141 +13793,46 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "empresa.empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Empresa",
+			          "ConceptualProperty": "Empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "empresa name": {
+			            "State": "Generated"
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
 			    }
 			  },
 			  "Relationships": {
-			    "fct_materiais_retirado_inclusao_material_data_mê_has_fct_materiais_retirado_inclusao_material_data_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_materiaisRetirados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_materiais_retirado.inclusao_material_data.mê": {
-			          "Target": {
-			            "Entity": "fct_materiais_retirado.inclusao_material_data.mê"
-			          }
-			        },
-			        "fct_materiais_retirado.inclusao_material_data.dia": {
-			          "Target": {
-			            "Entity": "fct_materiais_retirado.inclusao_material_data.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
-			            },
-			            "Object": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.dia"
-			            },
-			            "Object": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê12"
-			        }
-			      ]
-			    },
-			    "fct_materiais_retirado_inclusao_material_data_trimestre_has_fct_materiais_retirado_inclusao_material_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "fct_materiaisRetirados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fct_materiais_retirado.inclusao_material_data.trimestre": {
-			          "Target": {
-			            "Entity": "fct_materiais_retirado.inclusao_material_data.trimestre"
-			          }
-			        },
-			        "fct_materiais_retirado.inclusao_material_data.mê": {
-			          "Target": {
-			            "Entity": "fct_materiais_retirado.inclusao_material_data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
-			            },
-			            "Object": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "fct_materiais_retirado.inclusao_material_data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres12"
-			        }
-			      ]
-			    },
 			    "fct_materiais_retirado_inclusao_material_data_ano_has_fct_materiais_retirado_inclusao_material_data_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "fct_materiaisRetirados"
@@ -14188,7 +14093,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias1"
+			          "ID": "mê_have_dias"
 			        },
 			        {
 			          "Attribute": {
@@ -14201,7 +14106,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê1"
+			          "ID": "dias_have_mê"
 			        },
 			        {
 			          "Preposition": {
@@ -14254,7 +14159,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê1"
+			          "ID": "trimestres_have_mê"
 			        },
 			        {
 			          "Attribute": {
@@ -14267,7 +14172,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres1"
+			          "ID": "mê_have_trimestres"
 			        },
 			        {
 			          "Preposition": {
@@ -14551,7 +14456,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias2"
+			          "ID": "mê_have_dias1"
 			        },
 			        {
 			          "Attribute": {
@@ -14564,7 +14469,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê2"
+			          "ID": "dias_have_mê1"
 			        },
 			        {
 			          "Preposition": {
@@ -14617,7 +14522,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê2"
+			          "ID": "trimestres_have_mê1"
 			        },
 			        {
 			          "Attribute": {
@@ -14630,7 +14535,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres2"
+			          "ID": "mê_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -14914,7 +14819,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias3"
+			          "ID": "mê_have_dias2"
 			        },
 			        {
 			          "Attribute": {
@@ -14927,7 +14832,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê3"
+			          "ID": "dias_have_mê2"
 			        },
 			        {
 			          "Preposition": {
@@ -14980,7 +14885,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê3"
+			          "ID": "trimestres_have_mê2"
 			        },
 			        {
 			          "Attribute": {
@@ -14993,7 +14898,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres3"
+			          "ID": "mê_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -15277,7 +15182,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias4"
+			          "ID": "mê_have_dias3"
 			        },
 			        {
 			          "Attribute": {
@@ -15290,7 +15195,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê4"
+			          "ID": "dias_have_mê3"
 			        },
 			        {
 			          "Preposition": {
@@ -15343,7 +15248,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê4"
+			          "ID": "trimestres_have_mê3"
 			        },
 			        {
 			          "Attribute": {
@@ -15356,7 +15261,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres4"
+			          "ID": "mê_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -15640,7 +15545,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias5"
+			          "ID": "mê_have_dias4"
 			        },
 			        {
 			          "Attribute": {
@@ -15653,7 +15558,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê5"
+			          "ID": "dias_have_mê4"
 			        },
 			        {
 			          "Preposition": {
@@ -15706,7 +15611,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê5"
+			          "ID": "trimestres_have_mê4"
 			        },
 			        {
 			          "Attribute": {
@@ -15719,7 +15624,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres5"
+			          "ID": "mê_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
@@ -16003,7 +15908,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias6"
+			          "ID": "mê_have_dias5"
 			        },
 			        {
 			          "Attribute": {
@@ -16016,7 +15921,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê6"
+			          "ID": "dias_have_mê5"
 			        },
 			        {
 			          "Preposition": {
@@ -16069,7 +15974,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê6"
+			          "ID": "trimestres_have_mê5"
 			        },
 			        {
 			          "Attribute": {
@@ -16082,7 +15987,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres6"
+			          "ID": "mê_have_trimestres5"
 			        },
 			        {
 			          "Preposition": {
@@ -16366,7 +16271,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias7"
+			          "ID": "mê_have_dias6"
 			        },
 			        {
 			          "Attribute": {
@@ -16379,7 +16284,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê7"
+			          "ID": "dias_have_mê6"
 			        },
 			        {
 			          "Preposition": {
@@ -16432,7 +16337,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê7"
+			          "ID": "trimestres_have_mê6"
 			        },
 			        {
 			          "Attribute": {
@@ -16445,7 +16350,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres7"
+			          "ID": "mê_have_trimestres6"
 			        },
 			        {
 			          "Preposition": {
@@ -16729,7 +16634,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias8"
+			          "ID": "mê_have_dias7"
 			        },
 			        {
 			          "Attribute": {
@@ -16742,7 +16647,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê8"
+			          "ID": "dias_have_mê7"
 			        },
 			        {
 			          "Preposition": {
@@ -16795,7 +16700,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê8"
+			          "ID": "trimestres_have_mê7"
 			        },
 			        {
 			          "Attribute": {
@@ -16808,7 +16713,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres8"
+			          "ID": "mê_have_trimestres7"
 			        },
 			        {
 			          "Preposition": {
@@ -17092,7 +16997,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias9"
+			          "ID": "mê_have_dias8"
 			        },
 			        {
 			          "Attribute": {
@@ -17105,7 +17010,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê9"
+			          "ID": "dias_have_mê8"
 			        },
 			        {
 			          "Preposition": {
@@ -17158,7 +17063,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê9"
+			          "ID": "trimestres_have_mê8"
 			        },
 			        {
 			          "Attribute": {
@@ -17171,7 +17076,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres9"
+			          "ID": "mê_have_trimestres8"
 			        },
 			        {
 			          "Preposition": {
@@ -17455,7 +17360,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias10"
+			          "ID": "mê_have_dias9"
 			        },
 			        {
 			          "Attribute": {
@@ -17468,7 +17373,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê10"
+			          "ID": "dias_have_mê9"
 			        },
 			        {
 			          "Preposition": {
@@ -17521,7 +17426,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê10"
+			          "ID": "trimestres_have_mê9"
 			        },
 			        {
 			          "Attribute": {
@@ -17534,7 +17439,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres10"
+			          "ID": "mê_have_trimestres9"
 			        },
 			        {
 			          "Preposition": {
@@ -17818,7 +17723,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias11"
+			          "ID": "mê_have_dias10"
 			        },
 			        {
 			          "Attribute": {
@@ -17831,7 +17736,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê11"
+			          "ID": "dias_have_mê10"
 			        },
 			        {
 			          "Preposition": {
@@ -17884,7 +17789,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê11"
+			          "ID": "trimestres_have_mê10"
 			        },
 			        {
 			          "Attribute": {
@@ -17897,7 +17802,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres11"
+			          "ID": "mê_have_trimestres10"
 			        },
 			        {
 			          "Preposition": {
@@ -18181,7 +18086,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_dias12"
+			          "ID": "mê_have_dias11"
 			        },
 			        {
 			          "Attribute": {
@@ -18194,7 +18099,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dias_have_mê12"
+			          "ID": "dias_have_mê11"
 			        },
 			        {
 			          "Preposition": {
@@ -18247,7 +18152,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê12"
+			          "ID": "trimestres_have_mê11"
 			        },
 			        {
 			          "Attribute": {
@@ -18260,7 +18165,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres12"
+			          "ID": "mê_have_trimestres11"
 			        },
 			        {
 			          "Preposition": {
@@ -18756,6 +18661,52 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_calendarios_have_fct_materiais_aplicados"
+			        }
+			      ]
+			    },
+			    "empresa_has_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "Empresa"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "empresa": {
+			          "Target": {
+			            "Entity": "empresa"
+			          }
+			        },
+			        "empresa.empresa": {
+			          "Target": {
+			            "Entity": "empresa.empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "empresa"
+			            },
+			            "Object": {
+			              "Role": "empresa.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresas_have_empresas"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "empresa"
+			            },
+			            "Name": {
+			              "Role": "empresa.empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "empresas_are_names_IDs_of_empresas"
 			        }
 			      ]
 			    },
@@ -26775,6 +26726,138 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fct_saldo_estoques_have_programado_rms"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_inclusao_material_data_trimestre_has_fct_materiais_retirado_inclusao_material_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.inclusao_material_data.trimestre": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.inclusao_material_data.trimestre"
+			          }
+			        },
+			        "fct_materiais_retirado.inclusao_material_data.mê": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.inclusao_material_data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê12"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres12"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres12"
+			        }
+			      ]
+			    },
+			    "fct_materiais_retirado_inclusao_material_data_mê_has_fct_materiais_retirado_inclusao_material_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "fct_materiaisRetirados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fct_materiais_retirado.inclusao_material_data.mê": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.inclusao_material_data.mê"
+			          }
+			        },
+			        "fct_materiais_retirado.inclusao_material_data.dia": {
+			          "Target": {
+			            "Entity": "fct_materiais_retirado.inclusao_material_data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias12"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.dia"
+			            },
+			            "Object": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê12"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "fct_materiais_retirado.inclusao_material_data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê12"
 			        }
 			      ]
 			    }

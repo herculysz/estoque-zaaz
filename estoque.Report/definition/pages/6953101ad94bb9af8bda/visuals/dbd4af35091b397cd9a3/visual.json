@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dbd4af35091b397cd9a3",
   "position": {
-    "x": 859.32053175775479,
-    "y": 487.79911373707534,
-    "z": 26004,
-    "height": 150,
-    "width": 200,
-    "tabOrder": 26004
+    "x": 813.58177935704623,
+    "y": 466.49214659685867,
+    "z": 12000,
+    "height": 149.84293193717278,
+    "width": 199.31937172774869,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "card",
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "22D"
                 }
               }
             },
@@ -122,6 +122,19 @@
             "highlightMatching": 1
           }
         }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -131,7 +144,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'CONVERTIDOS'"
+                  "Value": "'TESTADOS'"
                 }
               }
             },
@@ -426,20 +439,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "0d4bc86ce42e909fc9cb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtdConvertida"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "e97a0d4e0fdd482066ff",
         "field": {
           "Column": {
@@ -505,7 +504,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       }
     ]
   }

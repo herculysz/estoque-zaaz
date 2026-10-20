@@ -3,9 +3,7 @@
   "displayName": "RequisitadosOPNE",
   "name": "f404df52b398599f8da3",
   "options": {
-    "targetVisualNames": [
-      "4935448c261a3e7e1a02"
-    ],
+    "targetVisualNames": [],
     "preserveNewVisualVisibility": true
   },
   "explorationState": {
@@ -49,7 +47,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "bcce8fcbfa8092c62699",
+                  "name": "f0b64b30f77986c03257",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -74,7 +72,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "838ced064bd07bf63be9",
+                  "name": "eff79ae482149d99f3cd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -94,6 +92,64 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_requisicaoMaterial",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Not": {
+                                    "Expression": {
+                                      "In": {
+                                        "Expressions": [
+                                          {
+                                            "Column": {
+                                              "Expression": {
+                                                "SourceRef": {
+                                                  "Source": "f"
+                                                }
+                                              },
+                                              "Property": "categoria_tecnologia"
+                                            }
+                                          }
+                                        ],
+                                        "Values": [
+                                          [
+                                            {
+                                              "Literal": {
+                                                "Value": "'FERRAMENTAL'"
+                                              }
+                                            }
+                                          ],
+                                          [
+                                            {
+                                              "Literal": {
+                                                "Value": "null"
+                                              }
+                                            }
+                                          ]
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -136,7 +192,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e5443b9115554534652d",
+                  "name": "ef8a534399ed0c0b883c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -203,7 +259,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "dacb64e5a265e25ed3d5",
+                  "name": "e65f93f023982bfd722c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -243,7 +299,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "900182ce245d8fc7961f",
+                  "name": "93d00b321e2278570835",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -263,6 +319,74 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_requisicaoMaterial",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "f"
+                                            }
+                                          },
+                                          "Property": "contrato"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'OP01'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'OP02'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'OP03'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'OP04'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -298,7 +422,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3693fae8a752816e37f5",
+                  "name": "f883e6dae139fb47851e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -392,7 +516,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c1bd2c84b968cddc5c66",
+                  "name": "12e07b2f373739b26e77",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -465,7 +589,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7a12e0ab00e1fd3f2054",
+                  "name": "1080a3c105e4496539c0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -535,7 +659,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "11c539b225b5fa22c4d4",
+                  "name": "580787647e5c12ed951c",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -550,7 +674,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c8d77e05f3c1bf768cf1",
+                  "name": "1dd4a22f51dd93a5dfaf",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -565,7 +689,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "67cb1414aeb9dcaa2b78",
+                  "name": "7bd1a94faf31ee6b3717",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -580,22 +704,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "223e17065e35169aeacd",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "qtdRequisitada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "1b2dd712527cef7eff77",
+                  "name": "3db3751659c6c6661112",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -605,6 +714,21 @@
                         }
                       },
                       "Property": "categoria_tecnologia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "957c972e8d48ae50dd5d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "qtdRequisitada"
                     }
                   },
                   "howCreated": 0
@@ -688,7 +812,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "613d35cfab8095923335",
+                  "name": "eab76c717f63b8aacd5b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -743,7 +867,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "eada3243013597dfdae3",
+                  "name": "ced3c07ee0680d886a4c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -804,7 +928,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "352e3443dd1a58eec9ae",
+                  "name": "836151ac9f76f4db7c50",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -819,52 +943,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cf9ff3676e8c0548c5bc",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "bk_material"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f115f933104dfa9b7066",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "descricao_material"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "93b84efe2f17fda4588c",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "projeto"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "428069ea6963c3d17d89",
+                  "name": "b6e3181d9fade1cd304e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -879,22 +958,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7af83b5ba1f29da2896e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "quantidade_executada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "5f86448e34311920c34d",
+                  "name": "4b288760b3d7ccb0b843",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -903,148 +967,13 @@
                           "Entity": "fct_requisicaoMaterial"
                         }
                       },
-                      "Property": "serializado"
+                      "Property": "projeto"
                     }
                   },
                   "howCreated": 0
                 },
                 {
-                  "name": "428a6736d905e89abd70",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "status_baixada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "58cedea13fec67bd6a78",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "status_cancelado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "93ed4252657be1304d72",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "quantidade_solicitada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "707e7b5a7947904eb704",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "unidade_medida"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0e438d50d87e4ad83cb1",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "numero_serie"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "c4b332c935c1b87204c9",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "data_movimentacao_rmdm"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0d9b03f2093f04fda27c",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "hora_movimentacao_rmdm"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f5972b222f3bff8e0b31",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "categoria_tecnologia"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "84a24654f61e6d87fb96",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "condicao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f9a74c2491c32d06a387",
+                  "name": "26627127ffb92e6d49c7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1059,7 +988,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "60c9fb1dbb6ee471ebbb",
+                  "name": "0871dcb1ab07ba571f31",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1074,7 +1003,202 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "897d1fe1a2f23cebf1d3",
+                  "name": "e173eaef34b162368d24",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "categoria_tecnologia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "de58014c5d67c8f62627",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "condicao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5f51280783c8c177cf13",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "bk_material"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "778efa097b4fb1a53428",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "descricao_material"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ef20414ce80389f21db7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "44ec47f666787526cef1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "numero_serie"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b426c82ee917fd3c06c4",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "unidade_medida"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "18490e46ba0b12722d9c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "quantidade_solicitada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "02589e096090a658d5fd",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "quantidade_executada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "977fbad4b2ac24e44b16",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "status_baixada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "abc4efdfa4e7631fe876",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "status_cancelado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d86e268a31af0278a33a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "data_movimentacao_rmdm"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "2acf22b9fd9aa595de9a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "hora_movimentacao_rmdm"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d203537a5c637ea720ae",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1099,7 +1223,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "910c51b92aaa423659ce",
+                  "name": "430221fd050dce666126",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1245,7 +1369,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "46a75c9cb11a416cded6",
+                  "name": "c268f5e753e7e4c18108",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1285,7 +1409,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "09ec86a360d0a1e000c2",
+                  "name": "e6fff5346ce1b26985e6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1394,6 +1518,12 @@
                   }
                 ]
               }
+            }
+          },
+          "35fa90b4f051632b66df": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           }
         }

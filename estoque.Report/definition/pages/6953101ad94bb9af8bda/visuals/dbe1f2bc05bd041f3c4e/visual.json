@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dbe1f2bc05bd041f3c4e",
   "position": {
-    "x": 350.25110782865585,
-    "y": 408.3899556868538,
-    "z": 12000,
+    "x": 296.53383034174493,
+    "y": 460.69362060831963,
+    "z": 4000,
     "height": 150,
     "width": 200,
-    "tabOrder": 12000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "22D"
                 }
               }
             },
@@ -120,6 +120,19 @@
               }
             ],
             "highlightMatching": 1
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -426,20 +439,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4ae2553fa08ee5860ebc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_remov"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "5c400682ce07671d1abe",
         "field": {
           "Column": {
@@ -521,7 +520,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       },
       {
         "name": "415e11217e0b539fbc9f",
@@ -536,45 +536,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_materiaisRetirados",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "base"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'ZAAZ NORDESTE'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       }
     ]

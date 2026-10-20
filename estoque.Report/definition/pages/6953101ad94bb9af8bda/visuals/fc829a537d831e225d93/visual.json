@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "fc829a537d831e225d93",
   "position": {
-    "x": 604.07680945347124,
-    "y": 408.3899556868538,
-    "z": 26002,
+    "x": 547.82261705338067,
+    "y": 460.83769633507848,
+    "z": 11000,
     "height": 150.31019202363368,
     "width": 200,
-    "tabOrder": 26002
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "card",
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "22D"
                 }
               }
             },
@@ -120,6 +120,19 @@
               }
             ],
             "highlightMatching": 1
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -426,20 +439,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "6031cd8efba94eb09e72",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtdDevolvida"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "d382b29d561c16bacea8",
         "field": {
           "Column": {
@@ -452,45 +451,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_devolucaoMaterial",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "base"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'ZAAZ NORDESTE'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       },
       {
@@ -545,7 +505,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       },
       {
         "name": "808514c946c6222061f1",
@@ -599,7 +560,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       }
     ]
   }

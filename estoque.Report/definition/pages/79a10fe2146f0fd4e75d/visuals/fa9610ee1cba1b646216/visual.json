@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "fa9610ee1cba1b646216",
   "position": {
     "x": 284.6511627906977,
@@ -93,6 +93,20 @@
                       "Entity": "fct_conversaoMateriais"
                     }
                   },
+                  "Property": "categoria_tecnologia_original"
+                }
+              },
+              "queryRef": "fct_conversaoMateriais.categoria_tecnologia_original",
+              "nativeQueryRef": "categoria_tecnologia_original"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_conversaoMateriais"
+                    }
+                  },
                   "Property": "numero_serie_original"
                 }
               },
@@ -140,6 +154,20 @@
               },
               "queryRef": "fct_conversaoMateriais.condicao_convertida",
               "nativeQueryRef": "condicao_convertida"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_conversaoMateriais"
+                    }
+                  },
+                  "Property": "categoria_tecnologia_convertido"
+                }
+              },
+              "queryRef": "fct_conversaoMateriais.categoria_tecnologia_convertido",
+              "nativeQueryRef": "categoria_tecnologia_convertido"
             },
             {
               "field": {
@@ -240,6 +268,20 @@
               },
               "queryRef": "fct_conversaoMateriais.descricao_funcao",
               "nativeQueryRef": "descricao_funcao"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_conversaoMateriais"
+                    }
+                  },
+                  "Property": "serializado"
+                }
+              },
+              "queryRef": "fct_conversaoMateriais.serializado",
+              "nativeQueryRef": "serializado"
             },
             {
               "field": {

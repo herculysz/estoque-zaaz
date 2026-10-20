@@ -51,11 +51,6 @@
   },
   "visualInteractions": [
     {
-      "source": "04d522a5508fdc9644a4",
-      "target": "23caef0556a3324e885e",
-      "type": "NoFilter"
-    },
-    {
       "source": "69c888a6f380405feb39",
       "target": "23caef0556a3324e885e",
       "type": "DataFilter"
@@ -64,21 +59,6 @@
       "source": "23caef0556a3324e885e",
       "target": "69c888a6f380405feb39",
       "type": "DataFilter"
-    },
-    {
-      "source": "04d522a5508fdc9644a4",
-      "target": "69c888a6f380405feb39",
-      "type": "NoFilter"
-    },
-    {
-      "source": "04d522a5508fdc9644a4",
-      "target": "6d176407254ddc5e2bc6",
-      "type": "DataFilter"
-    },
-    {
-      "source": "04d522a5508fdc9644a4",
-      "target": "143673851465e1b5d079",
-      "type": "NoFilter"
     },
     {
       "source": "92c82bf2d7200a334600",

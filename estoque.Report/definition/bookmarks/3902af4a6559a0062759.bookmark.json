@@ -26,68 +26,16 @@
                 }
               },
               "howCreated": 1
-            },
-            {
-              "name": "0476ddd0ebbcd960465d",
-              "type": "Categorical",
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "f",
-                    "Entity": "fct_materiaisAplicados",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "Not": {
-                        "Expression": {
-                          "In": {
-                            "Expressions": [
-                              {
-                                "Column": {
-                                  "Expression": {
-                                    "SourceRef": {
-                                      "Source": "f"
-                                    }
-                                  },
-                                  "Property": "bk_material"
-                                }
-                              }
-                            ],
-                            "Values": [
-                              [
-                                {
-                                  "Literal": {
-                                    "Value": "null"
-                                  }
-                                }
-                              ]
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
-              },
-              "expression": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "bk_material"
-                }
-              },
-              "howCreated": 1
             }
           ]
         },
         "visualContainers": {
+          "07f0d2292eb4f09247e4": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
           "10a0ce0f090a9105debe": {
             "singleVisual": {
               "visualType": "shape",
@@ -104,7 +52,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "906ae15fe7c86e13b9fc",
+                  "name": "3b911c41c1ff4120525a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -159,7 +107,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b46f8353f2ac59cf83a6",
+                  "name": "49bd2658ea90de631f39",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -275,7 +223,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6addb0349f41aa3b797a",
+                  "name": "01d9a1789d1322513fbd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -336,7 +284,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "e3e42bc67790bd72a689",
+                  "name": "f80f2a7414a3b05eec83",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -376,7 +324,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8c2a44b2f223ac7ee43f",
+                  "name": "db3488ea383dea08c5e5",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -412,11 +360,17 @@
               ]
             }
           },
+          "54b2438e12d576134327": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
           "57707e0c6e55336b05a3": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "70bf340c2518c4af50bf",
+                  "name": "372badc8b131a22031e8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -477,7 +431,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "956d50027469f40987ef",
+                  "name": "a1e635f4ee8eef733977",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -565,7 +519,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "395d954799479030c04d",
+                  "name": "4365353108b20a80f3bd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -638,7 +592,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "35335ffa91b629dfed44",
+                  "name": "e31ff5e20089b9072aab",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -753,7 +707,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "925f82d06585c70ef0ba",
+                  "name": "8810ec5cf7ffe6c6ee88",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -893,7 +847,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ef7763ea4bea5489d0a6",
+                  "name": "990c6d09a7d27bc0c053",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -908,7 +862,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "551bcd685948e7862746",
+                  "name": "5d51f57f45e1e267edfa",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -923,7 +877,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ad103559482eca809ad2",
+                  "name": "9ab6b399bfe37412ef26",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -938,7 +892,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "18a305e606284e741f4c",
+                  "name": "8f1e9818a3a25a05c20d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -953,7 +907,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ea91ad2a91a773e923bd",
+                  "name": "41d99956a1d90e348ae6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -968,7 +922,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b02af6a3321530f72629",
+                  "name": "265866b9a390937269bb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -983,7 +937,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c79ac4b3c294fcef367c",
+                  "name": "ff7ce5429800fc5cdef2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -998,142 +952,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8b418d05e067c5fc1193",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "bk_material"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "2b9928dbc0b455a8fb14",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "descricao_material"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "aa86ff300b90aa4c7080",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "numero_serie"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7f712c7269481e05bfff",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "categoria_tecnologia"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "e2b5ae1104b1f71d8ae2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "condicao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "82afd6a7f75e0d78df0d",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "unidade_medida"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "15bce19a403017bd6290",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "quantidade"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "c9f7df0786e51bd82641",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "serializado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ebca3dd25ef409b7bc70",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "tem_caracter_incorreto"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "1f7609bcb50eebcd05e7",
+                  "name": "c68dd0ea5d46a27c1a9a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1148,7 +967,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b94b538227b3ddc5ba9e",
+                  "name": "18ce1f555fa588ab39a9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1163,7 +982,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1cdd268400ae89586984",
+                  "name": "abc647865ed0b866b42c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1178,7 +997,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "70d8daff30323966290b",
+                  "name": "62197c6aa9c49c09f8b5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1188,6 +1007,141 @@
                         }
                       },
                       "Property": "inclusao_material_hora"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "89350c3ed78b6fa00798",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "bk_material"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4ed8428bca4112bfefb7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "descricao_material"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "6de1baaea4f6411b5ff6",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "numero_serie"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "220231994dd36f6584cc",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "categoria_tecnologia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "214a5ec9b81d3653cb81",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "condicao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8cf94520c507b6ad374e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "unidade_medida"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "33f12f7dae8321a13e8f",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "quantidade"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d02b9eee97f75746075f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f0ce3e7635de76fb0808",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "tem_caracter_incorreto"
                     }
                   },
                   "howCreated": 0
@@ -1218,7 +1172,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f14f88449f88678c227a",
+                  "name": "b86db45e3132bd086b0d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1275,11 +1229,17 @@
               "objects": {}
             }
           },
+          "cf642eb3377760959151": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
           "e5ba52490ac154026b19": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "cc8ddd9f6772edfcb8cc",
+                  "name": "94700ad0b5a87acba4a3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1304,7 +1264,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "abda08005a3f575d8df2",
+                  "name": "aecfc76023c691c2ae79",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1359,7 +1319,22 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "1f5f23a55a2f64b036ae",
+                  "name": "1de8266a0c051aa6e02c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "numero_serie"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "b175c2404e6ba2434f5b",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1374,7 +1349,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a828d298e02ee7709d52",
+                  "name": "e23183a16e4c85ea1f08",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1389,7 +1364,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "18adc68fdf65474837e0",
+                  "name": "738b7f2802577b686e5a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1404,7 +1379,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6ee9e4c65fad623917ca",
+                  "name": "376fb2286b9c2bc547ab",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1419,7 +1394,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e2c41bc4168f275cfb3a",
+                  "name": "9d7a077f5c94a69416f3",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1434,19 +1409,34 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1de8266a0c051aa6e02c",
-                  "type": "Categorical",
+                  "name": "da35b0d5bdf9b848f546",
+                  "type": "Advanced",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
+                          "Entity": "dim_calendario"
                         }
                       },
-                      "Property": "numero_serie"
+                      "Property": "semana_ano"
                     }
                   },
-                  "howCreated": 1
+                  "howCreated": 0
+                },
+                {
+                  "name": "d85102813b633ccd42e9",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "dia"
+                    }
+                  },
+                  "howCreated": 0
                 }
               ]
             },
@@ -1515,6 +1505,12 @@
                   }
                 ]
               }
+            }
+          },
+          "8e0bbd2f8d88a8b49060": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
             }
           }
         }

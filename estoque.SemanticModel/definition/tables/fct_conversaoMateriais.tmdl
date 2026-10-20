@@ -229,6 +229,38 @@ table fct_conversaoMateriais
 
 		annotation SummarizationSetBy = Automatic
 
+	column base
+		dataType: string
+		lineageTag: 4fb7099c-7ef7-4e74-8393-4db7df6cbcc2
+		summarizeBy: none
+		sourceColumn: base
+
+		annotation SummarizationSetBy = Automatic
+
+	column serializado
+		dataType: string
+		lineageTag: 00eec31d-ab59-4277-8c1d-b44b6bda31cd
+		summarizeBy: none
+		sourceColumn: serializado
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria_tecnologia_original
+		dataType: string
+		lineageTag: dcaa88f3-aa8b-4d45-8a90-33a55fb7bcba
+		summarizeBy: none
+		sourceColumn: categoria_tecnologia_original
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria_tecnologia_convertido
+		dataType: string
+		lineageTag: 95fa8361-1057-4a16-af00-447588593858
+		summarizeBy: none
+		sourceColumn: categoria_tecnologia_convertido
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_conversaoMateriais = m
 		mode: import
 		source = ```
@@ -237,33 +269,37 @@ table fct_conversaoMateriais
 				    
 				    /* CONVERSAO MATERIAL */
 				    SELECT
-				        dim_conversao_equipamento.sk_conversao_equipamento,
-				        dim_conversao_equipamento.contrato,
-				        dim_conversao_equipamento.projeto,
-				        dim_conversao_equipamento.data_conversao::date as data_conversao,
-				        dim_conversao_equipamento.condicao_original,
-				        dim_conversao_equipamento.condicao_convertida,
-				        dim_conversao_equipamento.conversao_automatica,
-				        dim_conversao_equipamento.status_baixa,
-				        fct_conversao_equipamento.quantidade_convertido,
-				        dim_serial_equipamento_original.numero_serie as numero_serie_original,
-				        dim_serial_equipamento_convertido.numero_serie as numero_serie_convertido,
-				        dim_material_original.bk_material as bk_material_original,
-				        dim_material_original.descricao_material as descricao_material_original,
-				        dim_material_original.unidade_medida as unidade_medida_original,
-				        dim_material_convertido.bk_material as bk_material_convertido,
-				        dim_material_convertido.descricao_material as descricao_material_convertido,
-				        dim_material_convertido.unidade_medida as unidade_medida_convertido,
-				        dim_colaborador.cpf_colaborador,
-				        dim_colaborador.nome,
-				        dim_colaborador.descricao_funcao
-				    FROM gold.dim_conversao_equipamento as dim_conversao_equipamento
-				    inner join gold.fct_conversao_equipamento as fct_conversao_equipamento on (fct_conversao_equipamento.sk_conversao_equipamento = dim_conversao_equipamento.sk_conversao_equipamento)
-				    left join gold.dim_serial_equipamento as dim_serial_equipamento_original on (dim_serial_equipamento_original.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie)
-				    left join gold.dim_serial_equipamento as dim_serial_equipamento_convertido on (dim_serial_equipamento_convertido.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie_convertido)
-				    left join gold.dim_material as dim_material_original on (dim_material_original.sk_material = fct_conversao_equipamento.sk_material)
-				    left join gold.dim_material as dim_material_convertido on (dim_material_convertido.sk_material = fct_conversao_equipamento.sk_material_convertido)
-				    left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_conversao_equipamento.sk_colaborador)
+						dim_conversao_equipamento.sk_conversao_equipamento,
+						dim_conversao_equipamento.base,
+						dim_conversao_equipamento.contrato,
+						dim_conversao_equipamento.projeto,
+						dim_conversao_equipamento.data_conversao::date as data_conversao,
+						dim_conversao_equipamento.condicao_original,
+						dim_conversao_equipamento.condicao_convertida,
+						dim_conversao_equipamento.conversao_automatica,
+						dim_conversao_equipamento.status_baixa,
+						fct_conversao_equipamento.quantidade_convertido,
+						dim_conversao_equipamento.serializado,
+						dim_serial_equipamento_original.numero_serie as numero_serie_original,
+						dim_serial_equipamento_convertido.numero_serie as numero_serie_convertido,
+						dim_material_original.bk_material as bk_material_original,
+						dim_material_original.descricao_material as descricao_material_original,
+						dim_material_original.unidade_medida as unidade_medida_original,
+						dim_material_original.categoria_tecnologia as categoria_tecnologia_original,
+						dim_material_convertido.bk_material as bk_material_convertido,
+						dim_material_convertido.descricao_material as descricao_material_convertido,
+						dim_material_convertido.unidade_medida as unidade_medida_convertido,
+						dim_material_convertido.categoria_tecnologia as categoria_tecnologia_convertido,
+						dim_colaborador.cpf_colaborador,
+						dim_colaborador.nome,
+						dim_colaborador.descricao_funcao
+					FROM gold.dim_conversao_equipamento as dim_conversao_equipamento
+					inner join gold.fct_conversao_equipamento as fct_conversao_equipamento on (fct_conversao_equipamento.sk_conversao_equipamento = dim_conversao_equipamento.sk_conversao_equipamento)
+					left join gold.dim_serial_equipamento as dim_serial_equipamento_original on (dim_serial_equipamento_original.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie)
+					left join gold.dim_serial_equipamento as dim_serial_equipamento_convertido on (dim_serial_equipamento_convertido.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie_convertido)
+					left join gold.dim_material as dim_material_original on (dim_material_original.sk_material = fct_conversao_equipamento.sk_material)
+					left join gold.dim_material as dim_material_convertido on (dim_material_convertido.sk_material = fct_conversao_equipamento.sk_material_convertido)
+					left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_conversao_equipamento.sk_colaborador)
 				    
 				    ", null, [EnableFolding=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"data_conversao", type date}})

@@ -1,0 +1,34 @@
+table Empresa
+	lineageTag: 0019f09d-c182-4f0d-9664-293e7df00410
+
+	column Empresa
+		lineageTag: 3077608a-ceb4-44ce-9261-4d03ba07926c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Empresa]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Empresa = calculated
+		mode: import
+		source = ```
+				
+				
+				DISTINCT(
+				    UNION(
+				        SELECTCOLUMNS(fct_saldoEstoque, "Empresa", fct_saldoEstoque[base]),
+				        SELECTCOLUMNS(fct_saldoVolante, "Empresa", fct_saldoVolante[base]),
+				        SELECTCOLUMNS(fct_materiaisRetirados, "Empresa", fct_materiaisRetirados[base]),
+				        SELECTCOLUMNS(fct_materiaisAplicados, "Empresa", fct_materiaisAplicados[base]),
+				        SELECTCOLUMNS(fct_devolucaoMaterial, "Empresa", fct_devolucaoMaterial[base]),
+				        SELECTCOLUMNS(fct_requisicaoMaterial, "Empresa", fct_requisicaoMaterial[base]),
+				        SELECTCOLUMNS(fct_conversaoMateriais, "Empresa", fct_conversaoMateriais[base])
+				    )
+				)
+				
+				
+				
+				```
+
+	annotation PBI_Id = 99d3c7c9d05b4308990e7a0943918659
+

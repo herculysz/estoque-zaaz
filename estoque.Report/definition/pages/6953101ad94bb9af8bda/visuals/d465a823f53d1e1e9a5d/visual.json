@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "d465a823f53d1e1e9a5d",
   "position": {
-    "x": 1392.2428330522766,
-    "y": 407.95952782462058,
-    "z": 26013,
-    "height": 150,
-    "width": 200,
-    "tabOrder": 26013
+    "x": 1345.1001039643761,
+    "y": 472.14659685863853,
+    "z": 16000,
+    "height": 149.84293193717278,
+    "width": 223.35078534031416,
+    "tabOrder": 16000
   },
   "visual": {
     "visualType": "card",
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "22D"
                 }
               }
             },
@@ -120,6 +120,19 @@
               }
             ],
             "highlightMatching": 1
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -426,20 +439,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e9894dccabfc82b569aa",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtdRequisitada"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "5c8be73325a1a61c2ba1",
         "field": {
           "Column": {
@@ -491,7 +490,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       },
       {
         "name": "c0b6e9d9a5877b9bc33d",
@@ -506,45 +506,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_requisicaoMaterial",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "base"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'ZAAZ NORDESTE'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       },
       {
@@ -599,7 +560,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       },
       {
         "name": "2276841770caedeac3b5",
@@ -658,6 +620,7 @@
           ]
         },
         "howCreated": "User",
+        "isLockedInViewMode": true,
         "objects": {
           "general": [
             {

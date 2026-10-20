@@ -67,10 +67,6 @@ relationship 2dc28445-1d06-4f02-ab67-4b137e4572b6
 	fromColumn: fct_materiaisRetirados.inclusao_material_data
 	toColumn: LocalDateTable_82621324-0f8d-4eb6-a95b-c2bc62ee4c4a.Date
 
-relationship 8dad3769-1b7f-8440-4910-4ffa10df72c5
-	fromColumn: fct_materiaisRetirados.baixa_protocolo_data
-	toColumn: dim_calendario.data
-
 relationship d37cdc0e-44f9-8e80-85f8-f592608995b1
 	fromColumn: fct_requisicaoMaterial.data_movimentacao_rmdm
 	toColumn: dim_calendario.data_formatada
@@ -82,4 +78,44 @@ relationship 32e883b9-ca54-9fdd-f032-857e385174c2
 relationship b4ebe5b8-0c85-0fea-708f-737facfe22e7
 	fromColumn: fct_conversaoMateriais.data_conversao
 	toColumn: dim_calendario.data_formatada
+
+relationship 91e403ce-d0a6-4132-2681-5242f39a15b6
+	fromColumn: fct_materiaisRetirados.baixa_protocolo_data
+	toColumn: dim_calendario.data_formatada
+
+relationship 90e1e89e-2419-4a87-7d9f-eba651e0df3b
+	fromColumn: fct_historico_equipamento.data
+	toColumn: dim_calendario.data_formatada
+
+relationship 28a4f1db-ba64-f957-76f9-e070d0b4a15e
+	fromColumn: fct_materiaisAplicados.base
+	toColumn: Empresa.Empresa
+
+relationship 9be34c10-28da-d5b6-8d2c-4da925097f70
+	fromColumn: fct_materiaisRetirados.base
+	toColumn: Empresa.Empresa
+
+relationship 7a554611-b998-fda6-639c-44ca5931cab4
+	fromColumn: fct_requisicaoMaterial.base
+	toColumn: Empresa.Empresa
+
+relationship e13481f4-caa1-ac97-4964-c56550e7e096
+	fromColumn: fct_devolucaoMaterial.base
+	toColumn: Empresa.Empresa
+
+relationship eddbea96-1e07-8a94-1f02-5d9a795d61e9
+	fromColumn: fct_historico_equipamento.base
+	toColumn: Empresa.Empresa
+
+relationship 31006579-c4d1-eb3c-ba94-774810a3f473
+	fromColumn: fct_saldoEstoque.base
+	toColumn: Empresa.Empresa
+
+relationship c6e2510a-73b1-c4fd-258d-9f5fce567147
+	fromColumn: fct_saldoVolante.base
+	toColumn: Empresa.Empresa
+
+relationship 269f7950-f582-93d4-4e73-a9e89265d7fe
+	fromColumn: fct_conversaoMateriais.base
+	toColumn: Empresa.Empresa
 

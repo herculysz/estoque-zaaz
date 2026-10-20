@@ -30,17 +30,14 @@ createOrReplace
 
 		column data_conversao
 			dataType: dateTime
-			formatString: General Date
+			formatString: Short Date
 			lineageTag: 79484f1b-61f5-49b1-a01b-c37409c80c60
 			summarizeBy: none
 			sourceColumn: data_conversao
 
-			variation Variation
-				isDefault
-				relationship: dd72cda5-3a6d-422b-be27-fe77f1b3a79c
-				defaultHierarchy: LocalDateTable_e5dbd5b9-006d-4ae7-8236-d1cea682dc60.'Hierarquia de datas'
-
 			annotation SummarizationSetBy = Automatic
+
+			annotation UnderlyingDateTimeDataType = Date
 
 		column condicao_original
 			dataType: string
@@ -171,6 +168,69 @@ createOrReplace
 
 			annotation SummarizationSetBy = Automatic
 
+		column tem_caracter_incorreto = ```
+				
+				
+				--VAR ignorarCategorias = NOT(fct_conversaoMateriais[categoria_tecnologia] IN {"SEM INFORMACAO", "MISCELANEA", "INSUMO"})
+				VAR ignorarNaoSerializados = fct_conversaoMateriais[numero_serie_convertido] <> "-"
+				VAR ignorarSeriaisVazios = fct_conversaoMateriais[numero_serie_convertido] <> "" && NOT ISBLANK(fct_conversaoMateriais[numero_serie_convertido])
+				VAR ignorarSemInformacao = fct_conversaoMateriais[numero_serie_convertido] <> "SEM INFORMACAO"
+				
+				VAR serialAtual = fct_conversaoMateriais[numero_serie_convertido]
+				VAR tamanhoSerial = LEN(serialAtual)
+				
+				
+				VAR sequenciaZeros = REPT("0", tamanhoSerial)
+				VAR sequenciaUns = REPT("1", tamanhoSerial)
+				
+				VAR ehRepeticaoInvalida = 
+				    tamanhoSerial >= 1 && 
+				    tamanhoSerial <= 7 && 
+				    (serialAtual = sequenciaZeros || serialAtual = sequenciaUns)
+				
+				RETURN
+				IF(
+				    (CONTAINSSTRING(serialAtual, " ") && ignorarSemInformacao)||
+				    CONTAINSSTRING(serialAtual, "/") ||
+				    CONTAINSSTRING(serialAtual, "\") ||
+				    CONTAINSSTRING(serialAtual, ".") ||
+				    CONTAINSSTRING(serialAtual, ",") ||
+				    CONTAINSSTRING(serialAtual, "+") ||
+				    CONTAINSSTRING(serialAtual, ":") ||
+				    CONTAINSSTRING(serialAtual, ";") ||
+				    CONTAINSSTRING(serialAtual, "!") ||
+				    CONTAINSSTRING(serialAtual, "(") ||
+				    CONTAINSSTRING(serialAtual, ")") ||
+				    CONTAINSSTRING(serialAtual, "&") ||
+				    CONTAINSSTRING(serialAtual, "$") ||
+				    CONTAINSSTRING(serialAtual, "@") ||
+				    CONTAINSSTRING(serialAtual, "~*") ||
+				    CONTAINSSTRING(serialAtual, "~?") ||
+				    CONTAINSSTRING(serialAtual, "~~") || 
+				    CONTAINSSTRING(serialAtual, "^") ||
+				    CONTAINSSTRING(serialAtual, "<") ||
+				    CONTAINSSTRING(serialAtual, ">") ||
+				    CONTAINSSTRING(serialAtual, "´") ||
+				    CONTAINSSTRING(serialAtual, "`") ||
+				    CONTAINSSTRING(serialAtual, "'") ||
+				    CONTAINSSTRING(serialAtual, "%") ||
+				    CONTAINSSTRING(serialAtual, "[") ||
+				    CONTAINSSTRING(serialAtual, "]") ||
+				    CONTAINSSTRING(serialAtual, "{") ||
+				    CONTAINSSTRING(serialAtual, "}") ||
+				    ehRepeticaoInvalida ||
+				    (serialAtual = "SN" /*&& ignorarCategorias*/) ||
+				    (tamanhoSerial < 8 && ignorarNaoSerializados /*&& ignorarCategorias*/ && ignorarSeriaisVazios) ||
+				    (ignorarNaoSerializados && CONTAINSSTRING(serialAtual, "-") /*&& ignorarCategorias*/), 
+				    "SIM", 
+				    "NÃO"
+				)
+				```
+			lineageTag: 1b71126f-0b85-4d69-809b-c93778475080
+			summarizeBy: none
+
+			annotation SummarizationSetBy = Automatic
+
 		partition fct_conversaoMateriais = m
 			mode: import
 			source = ```
@@ -179,40 +239,45 @@ createOrReplace
 					    
 					    /* CONVERSAO MATERIAL */
 					    SELECT
-					        dim_conversao_equipamento.sk_conversao_equipamento,
-					        dim_conversao_equipamento.contrato,
-					        dim_conversao_equipamento.projeto,
-					        dim_conversao_equipamento.data_conversao::date as data_conversao,
-					        dim_conversao_equipamento.condicao_original,
-					        dim_conversao_equipamento.condicao_convertida,
-					        dim_conversao_equipamento.conversao_automatica,
-					        dim_conversao_equipamento.status_baixa,
-					        fct_conversao_equipamento.quantidade_convertido,
-					        dim_serial_equipamento_original.numero_serie as numero_serie_original,
-					        dim_serial_equipamento_convertido.numero_serie as numero_serie_convertido,
-					        dim_material_original.bk_material as bk_material_original,
-					        dim_material_original.descricao_material as descricao_material_original,
-					        dim_material_original.unidade_medida as unidade_medida_original,
-					        dim_material_convertido.bk_material as bk_material_convertido,
-					        dim_material_convertido.descricao_material as descricao_material_convertido,
-					        dim_material_convertido.unidade_medida as unidade_medida_convertido,
-					        dim_colaborador.cpf_colaborador,
-					        dim_colaborador.nome,
-					        dim_colaborador.descricao_funcao
-					    FROM gold.dim_conversao_equipamento as dim_conversao_equipamento
-					    inner join gold.fct_conversao_equipamento as fct_conversao_equipamento on (fct_conversao_equipamento.sk_conversao_equipamento = dim_conversao_equipamento.sk_conversao_equipamento)
-					    left join gold.dim_serial_equipamento as dim_serial_equipamento_original on (dim_serial_equipamento_original.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie)
-					    left join gold.dim_serial_equipamento as dim_serial_equipamento_convertido on (dim_serial_equipamento_convertido.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie_convertido)
-					    left join gold.dim_material as dim_material_original on (dim_material_original.sk_material = fct_conversao_equipamento.sk_material)
-					    left join gold.dim_material as dim_material_convertido on (dim_material_convertido.sk_material = fct_conversao_equipamento.sk_material_convertido)
-					    left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_conversao_equipamento.sk_colaborador)
+							dim_conversao_equipamento.sk_conversao_equipamento,
+							dim_conversao_equipamento.base,
+							dim_conversao_equipamento.contrato,
+							dim_conversao_equipamento.projeto,
+							dim_conversao_equipamento.data_conversao::date as data_conversao,
+							dim_conversao_equipamento.condicao_original,
+							dim_conversao_equipamento.condicao_convertida,
+							dim_conversao_equipamento.conversao_automatica,
+							dim_conversao_equipamento.status_baixa,
+							fct_conversao_equipamento.quantidade_convertido,
+							dim_conversao_equipamento.serializado,
+							dim_serial_equipamento_original.numero_serie as numero_serie_original,
+							dim_serial_equipamento_convertido.numero_serie as numero_serie_convertido,
+							dim_material_original.bk_material as bk_material_original,
+							dim_material_original.descricao_material as descricao_material_original,
+							dim_material_original.unidade_medida as unidade_medida_original,
+							dim_material_original.categoria_tecnologia as categoria_tecnologia_original,
+							dim_material_convertido.bk_material as bk_material_convertido,
+							dim_material_convertido.descricao_material as descricao_material_convertido,
+							dim_material_convertido.unidade_medida as unidade_medida_convertido,
+							dim_material_convertido.categoria_tecnologia as categoria_tecnologia_convertido,
+							dim_colaborador.cpf_colaborador,
+							dim_colaborador.nome,
+							dim_colaborador.descricao_funcao
+						FROM gold.dim_conversao_equipamento as dim_conversao_equipamento
+						inner join gold.fct_conversao_equipamento as fct_conversao_equipamento on (fct_conversao_equipamento.sk_conversao_equipamento = dim_conversao_equipamento.sk_conversao_equipamento)
+						left join gold.dim_serial_equipamento as dim_serial_equipamento_original on (dim_serial_equipamento_original.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie)
+						left join gold.dim_serial_equipamento as dim_serial_equipamento_convertido on (dim_serial_equipamento_convertido.sk_numero_serie = fct_conversao_equipamento.sk_numero_serie_convertido)
+						left join gold.dim_material as dim_material_original on (dim_material_original.sk_material = fct_conversao_equipamento.sk_material)
+						left join gold.dim_material as dim_material_convertido on (dim_material_convertido.sk_material = fct_conversao_equipamento.sk_material_convertido)
+						left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_conversao_equipamento.sk_colaborador)
 					    
-					    ", null, [EnableFolding=true])
+					    ", null, [EnableFolding=true]),
+					    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"data_conversao", type date}})
 					in
-					    Fonte
+					    #"Tipo Alterado"
 					```
 
 		annotation PBI_NavigationStepName = Navegação
 
-		annotation PBI_ResultType = Exception
+		annotation PBI_ResultType = Table
 

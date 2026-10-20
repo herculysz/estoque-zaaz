@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "69a0ea42358b9abdbe46",
   "position": {
-    "x": 1665.8347386172009,
-    "y": 407.95952782462058,
-    "z": 26024,
-    "height": 150,
-    "width": 200,
-    "tabOrder": 26024
+    "x": 1642.617801047121,
+    "y": 472.14659685863853,
+    "z": 25000,
+    "height": 149.84293193717278,
+    "width": 217.69633507853405,
+    "tabOrder": 25000
   },
   "visual": {
     "visualType": "card",
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "22D"
                 }
               }
             },
@@ -120,6 +120,19 @@
               }
             ],
             "highlightMatching": 1
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -426,20 +439,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a52dadf246ad4f304797",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtd_aplic"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "7964e2bc61c1e4bed5e0",
         "field": {
           "Column": {
@@ -482,45 +481,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_materiaisAplicados",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "base"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'ZAAZ NORDESTE'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User"
       },
       {
@@ -575,7 +535,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       },
       {
         "name": "2c9f223100a9a317f04e",
@@ -629,7 +590,8 @@
             }
           ]
         },
-        "howCreated": "User"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       }
     ]
   }

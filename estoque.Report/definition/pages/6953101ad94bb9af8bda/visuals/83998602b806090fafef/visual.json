@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "83998602b806090fafef",
   "position": {
-    "x": 1128.7444608567209,
-    "y": 487.79911373707534,
-    "z": 26010,
+    "x": 1082.1681667916016,
+    "y": 463.66492146596863,
+    "z": 15000,
     "height": 150,
     "width": 200,
-    "tabOrder": 26010
+    "tabOrder": 15000
   },
   "visual": {
     "visualType": "card",
@@ -65,7 +65,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "22D"
                 }
               }
             },
@@ -120,6 +120,19 @@
               }
             ],
             "highlightMatching": 1
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
           }
         }
       ]
@@ -477,21 +490,8 @@
             }
           ]
         },
-        "howCreated": "User"
-      },
-      {
-        "name": "df7ab3e2f1d74f4eb1a4",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "qtdConvertida"
-          }
-        },
-        "type": "Advanced"
+        "howCreated": "User",
+        "isLockedInViewMode": true
       }
     ]
   }

@@ -226,7 +226,7 @@ table Medidas
 		displayFolder: EstoqueFisico\Cores
 		lineageTag: fb638285-5904-46e5-bd9f-8d23d4135cc5
 
-	measure qtd_aplic = CALCULATE(SUM(fct_MateriaisAplicados[quantidade]))
+	measure qtd_aplic = CALCULATE(SUM(fct_MateriaisAplicados[quantidade]))+0
 		displayFolder: Aplicados
 		lineageTag: 0dbd3a91-96f6-41bd-a01e-93b6365c505c
 
@@ -314,7 +314,7 @@ table Medidas
 		displayFolder: Aplicados
 		lineageTag: e55d28bf-1090-4690-be02-a1644a1b928c
 
-	measure qtd_remov = CALCULATE(SUM(fct_materiaisRetirados[quantidade_removida]))
+	measure qtd_remov = CALCULATE(SUM(fct_materiaisRetirados[quantidade_removida]))+0
 		formatString: #,0
 		displayFolder: Retirados
 		lineageTag: 8f1398ed-9b2a-4b6e-8974-0df0667bdba2
@@ -408,7 +408,7 @@ table Medidas
 			
 			CALCULATE(
 			    SUM(fct_requisicaoMaterial[quantidade_executada])
-			)
+			)+0
 		formatString: #,0
 		displayFolder: Requisicao
 		lineageTag: 190aceee-c390-4181-bc13-49e3d88d6191
@@ -539,7 +539,7 @@ table Medidas
 			
 			CALCULATE(
 			    SUM(fct_devolucaoMaterial[quantidade_executada])
-			)
+			)+0
 		formatString: #,0
 		displayFolder: Devolução
 		lineageTag: 0f8b39ba-9727-4dcf-bdbb-9af8b8a687e3
@@ -639,7 +639,7 @@ table Medidas
 			
 			CALCULATE(
 			    SUM(fct_conversaoMateriais[quantidade_convertido])
-			)
+			)+0
 		formatString: #,0
 		displayFolder: Conversão
 		lineageTag: a80fdb26-901f-4230-83b8-e91aeede2cb9

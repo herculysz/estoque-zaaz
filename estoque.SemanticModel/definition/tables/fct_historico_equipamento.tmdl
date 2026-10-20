@@ -1,0 +1,252 @@
+table fct_historico_equipamento
+	lineageTag: 168f4e54-f758-495a-ae4b-c4374e7d7cab
+
+	column tipo_movimentacao
+		dataType: string
+		lineageTag: 5654f893-12b7-4a90-ac4b-72d196560295
+		summarizeBy: none
+		sourceColumn: tipo_movimentacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_movimentacao
+		dataType: int64
+		formatString: 0
+		lineageTag: b7f73248-4baf-45a7-97d8-fb74afdc7fab
+		summarizeBy: sum
+		sourceColumn: id_movimentacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column base
+		dataType: string
+		lineageTag: 8ee4fc04-fb29-420e-aa0d-55f8f06357d5
+		summarizeBy: none
+		sourceColumn: base
+
+		annotation SummarizationSetBy = Automatic
+
+	column contrato
+		dataType: string
+		lineageTag: b6555db6-0034-4296-91c2-04ddd64010b8
+		summarizeBy: none
+		sourceColumn: contrato
+
+		annotation SummarizationSetBy = Automatic
+
+	column projeto
+		dataType: string
+		lineageTag: 68cc9c55-4d44-4898-967c-730bf0a19809
+		summarizeBy: none
+		sourceColumn: projeto
+
+		annotation SummarizationSetBy = Automatic
+
+	column data
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7e19c8dd-75dd-47dd-b078-225b7bcbdb86
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+	column numero_serie
+		dataType: string
+		lineageTag: 3a20ded9-22b3-4f6d-b4ec-a2e33acdd161
+		summarizeBy: none
+		sourceColumn: numero_serie
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria_tecnologia
+		dataType: string
+		lineageTag: db4ecb3f-5d76-4432-a028-267cc3c05523
+		summarizeBy: none
+		sourceColumn: categoria_tecnologia
+
+		annotation SummarizationSetBy = Automatic
+
+	column familia
+		dataType: string
+		lineageTag: 680dc6ab-809d-49d0-9c4a-1d6455111357
+		summarizeBy: none
+		sourceColumn: familia
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_material
+		dataType: string
+		lineageTag: 2d28bf1b-89a1-4f24-8433-6dfe93917e8d
+		summarizeBy: none
+		sourceColumn: id_material
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_material
+		dataType: string
+		lineageTag: a9b2de01-f983-4f1c-896a-16596bb3bb1e
+		summarizeBy: none
+		sourceColumn: descricao_material
+
+		annotation SummarizationSetBy = Automatic
+
+	column condicao
+		dataType: string
+		lineageTag: c621f303-2e25-4468-af58-e5f9b2564eec
+		summarizeBy: none
+		sourceColumn: condicao
+
+		annotation SummarizationSetBy = Automatic
+
+	column serializado
+		dataType: string
+		lineageTag: 037d70b4-e1da-4dc1-aaf6-c209d57dff84
+		summarizeBy: none
+		sourceColumn: serializado
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_material_convertido
+		dataType: string
+		lineageTag: 052781fa-5bf2-4056-bf73-f1c54a32efee
+		summarizeBy: none
+		sourceColumn: id_material_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_material_convertido
+		dataType: string
+		lineageTag: a4d00035-d8b0-4910-8168-e429d670f392
+		summarizeBy: none
+		sourceColumn: descricao_material_convertido
+
+		annotation SummarizationSetBy = Automatic
+
+	column condicao_convertida
+		dataType: string
+		lineageTag: ea857b84-4cd9-48cf-9779-5e9df3bd858a
+		summarizeBy: none
+		sourceColumn: condicao_convertida
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpf_colaborador
+		dataType: string
+		lineageTag: d417746b-3e49-4957-a72a-a836809cd9dd
+		summarizeBy: none
+		sourceColumn: cpf_colaborador
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_colaborador
+		dataType: string
+		lineageTag: 460855ea-bf61-4913-ad3d-91803fe070e4
+		summarizeBy: none
+		sourceColumn: nome_colaborador
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_funcao
+		dataType: string
+		lineageTag: 858e1731-e694-4597-b2ae-e420d2fab9fe
+		summarizeBy: none
+		sourceColumn: descricao_funcao
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpf_colaborador_aprovador
+		dataType: string
+		lineageTag: ced917e7-7579-4147-9a02-6b10894f6be8
+		summarizeBy: none
+		sourceColumn: cpf_colaborador_aprovador
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_colaborador_aprovador
+		dataType: string
+		lineageTag: 63c1a466-14a0-4140-87ad-0b370cfa6091
+		summarizeBy: none
+		sourceColumn: nome_colaborador_aprovador
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricao_funcao_aprovador
+		dataType: string
+		lineageTag: 805f1ae7-bb3a-4d8c-8492-b615be915519
+		summarizeBy: none
+		sourceColumn: descricao_funcao_aprovador
+
+		annotation SummarizationSetBy = Automatic
+
+	column bk_protocolo
+		dataType: string
+		lineageTag: 7aa2a7d6-432b-4f71-a71f-fa5b9645ccd8
+		summarizeBy: none
+		sourceColumn: bk_protocolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_solicitacao
+		dataType: string
+		lineageTag: 9ebe3d8d-440f-403c-a92e-3dc21e631d33
+		summarizeBy: none
+		sourceColumn: tipo_solicitacao
+
+		annotation SummarizationSetBy = Automatic
+
+	column status_protocolo
+		dataType: string
+		lineageTag: b430dfda-a20e-4440-b060-6318c4c650fe
+		summarizeBy: none
+		sourceColumn: status_protocolo
+
+		annotation SummarizationSetBy = Automatic
+
+	column grupo_servico
+		dataType: string
+		lineageTag: 69de4c21-32f5-4310-ba04-0748561ebfa1
+		summarizeBy: none
+		sourceColumn: grupo_servico
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantidade_solicitada
+		dataType: double
+		lineageTag: 786932c7-c76e-4f8c-81d8-004d5f929117
+		summarizeBy: sum
+		sourceColumn: quantidade_solicitada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column quantidade_executada
+		dataType: double
+		lineageTag: 4ec8b354-bc08-4a77-bb3a-33dc469f77b2
+		summarizeBy: sum
+		sourceColumn: quantidade_executada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column quantidade_movimento_cliente
+		dataType: double
+		lineageTag: e7243d80-9261-4187-a9b4-623e556debd8
+		summarizeBy: sum
+		sourceColumn: quantidade_movimento_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fct_historico_equipamento = m
+		mode: import
+		source =
+				let
+				    Fonte = PostgreSQL.Database(hostname, db),
+				    platinum_historico_equipamento = Fonte{[Schema="platinum",Item="historico_equipamento"]}[Data]
+				in
+				    platinum_historico_equipamento
+

@@ -11,7 +11,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["db","hostname","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fct_materiaisRetirados","fct_conversaoMateriais","fct_updated","dim_calendario","fct_requisicaoMaterial","fct_devolucaoMaterial"]
+annotation PBI_QueryOrder = ["db","hostname","fct_saldoEstoque","fct_saldoVolante","fct_materiaisAplicados","fct_materiaisRetirados","fct_conversaoMateriais","fct_updated","dim_calendario","fct_requisicaoMaterial","fct_devolucaoMaterial","fct_historico_equipamento"]
 
 annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode","MCP-PBIModeling"]
 
@@ -41,6 +41,8 @@ ref table LocalDateTable_82621324-0f8d-4eb6-a95b-c2bc62ee4c4a
 ref table fct_conversaoMateriais
 ref table fct_requisicaoMaterial
 ref table fct_devolucaoMaterial
+ref table Empresa
+ref table fct_historico_equipamento
 
 ref cultureInfo pt-BR
 

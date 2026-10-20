@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "0751b63695308d170466",
   "position": {
     "x": 25.11627906976744,
     "y": 160.46511627906978,
-    "z": 19000,
+    "z": 18000,
     "height": 115.81395348837209,
     "width": 200.93023255813952,
-    "tabOrder": 19000
+    "tabOrder": 18000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -99,7 +99,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'ZAAZ NORDESTE'"
+                                "Value": "'ZAAZ SUL E SUDESTE'"
                               }
                             }
                           ]

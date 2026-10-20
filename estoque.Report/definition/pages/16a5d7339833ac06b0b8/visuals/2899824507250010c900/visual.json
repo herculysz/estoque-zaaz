@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "2899824507250010c900",
   "position": {
     "x": 24.791760968824889,
@@ -116,13 +116,6 @@
                             {
                               "Literal": {
                                 "Value": "'OP03'"
-                              }
-                            }
-                          ],
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'OP04'"
                               }
                             }
                           ]
