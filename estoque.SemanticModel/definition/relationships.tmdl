@@ -83,10 +83,6 @@ relationship 91e403ce-d0a6-4132-2681-5242f39a15b6
 	fromColumn: fct_materiaisRetirados.baixa_protocolo_data
 	toColumn: dim_calendario.data_formatada
 
-relationship 90e1e89e-2419-4a87-7d9f-eba651e0df3b
-	fromColumn: fct_historico_equipamento.data
-	toColumn: dim_calendario.data_formatada
-
 relationship 28a4f1db-ba64-f957-76f9-e070d0b4a15e
 	fromColumn: fct_materiaisAplicados.base
 	toColumn: Empresa.Empresa
@@ -103,10 +99,6 @@ relationship e13481f4-caa1-ac97-4964-c56550e7e096
 	fromColumn: fct_devolucaoMaterial.base
 	toColumn: Empresa.Empresa
 
-relationship eddbea96-1e07-8a94-1f02-5d9a795d61e9
-	fromColumn: fct_historico_equipamento.base
-	toColumn: Empresa.Empresa
-
 relationship 31006579-c4d1-eb3c-ba94-774810a3f473
 	fromColumn: fct_saldoEstoque.base
 	toColumn: Empresa.Empresa
@@ -118,4 +110,32 @@ relationship c6e2510a-73b1-c4fd-258d-9f5fce567147
 relationship 269f7950-f582-93d4-4e73-a9e89265d7fe
 	fromColumn: fct_conversaoMateriais.base
 	toColumn: Empresa.Empresa
+
+relationship 95cb03f5-3140-ca1e-ab29-37183cb190c6
+	fromColumn: fct_conversaoMateriais.categoria_tecnologia_convertido
+	toColumn: TecnologiaPeso.Tecnologia
+
+relationship 8c759b12-76d8-a0c0-9a3a-859c7549da3a
+	fromColumn: fct_devolucaoMaterial.categoria_tecnologia
+	toColumn: TecnologiaPeso.Tecnologia
+
+relationship 132a8fc0-740a-0aa3-493e-8759e3b8d2aa
+	fromColumn: fct_requisicaoMaterial.categoria_tecnologia
+	toColumn: TecnologiaPeso.Tecnologia
+
+relationship c1acbdc2-eaa0-8ae3-09b0-534af4854eb3
+	fromColumn: fct_materiaisRetirados.categoria_tecnologia
+	toColumn: TecnologiaPeso.Tecnologia
+
+relationship 7f640e3d-48de-b383-9611-e65dd8b850c9
+	fromColumn: fct_materiaisAplicados.categoria_tecnologia
+	toColumn: TecnologiaPeso.Tecnologia
+
+relationship 8f1e09c4-4160-d644-cdb3-2461db5653cc
+	fromColumn: fct_saldoEstoque.categoria_tecnologia
+	toColumn: TecnologiaPeso.Tecnologia
+
+relationship 990b03ad-210e-a35a-4136-0386970404cf
+	fromColumn: fct_saldoVolante.categoria_tecnologia
+	toColumn: TecnologiaPeso.Tecnologia
 

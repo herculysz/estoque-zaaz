@@ -1,0 +1,77 @@
+table TecnologiaPeso
+	lineageTag: ee4550ff-40f0-4588-9461-38f067a2c28c
+
+	column Tecnologia
+		lineageTag: 4964ff38-3878-4715-8866-412217ebcf80
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Tecnologia]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Peso
+		lineageTag: cec7a98b-d01e-4b9b-9d49-0a92967e1e9b
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Peso]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition TecnologiaPeso = calculated
+		mode: import
+		source = ```
+				
+				VAR Tecnologias = 
+				    DISTINCT(
+				        UNION(
+				            SELECTCOLUMNS(fct_saldoEstoque, "Tecnologia", fct_saldoEstoque[categoria_tecnologia]),
+				            SELECTCOLUMNS(fct_saldoVolante, "Tecnologia", fct_saldoVolante[categoria_tecnologia]),
+				            SELECTCOLUMNS(fct_materiaisRetirados, "Tecnologia", fct_materiaisRetirados[categoria_tecnologia]),
+				            SELECTCOLUMNS(fct_materiaisAplicados, "Tecnologia", fct_materiaisAplicados[categoria_tecnologia]),
+				            SELECTCOLUMNS(fct_devolucaoMaterial, "Tecnologia", fct_devolucaoMaterial[categoria_tecnologia]),
+				            SELECTCOLUMNS(fct_requisicaoMaterial, "Tecnologia", fct_requisicaoMaterial[categoria_tecnologia]),
+				            SELECTCOLUMNS(fct_conversaoMateriais, "Tecnologia", fct_conversaoMateriais[categoria_tecnologia_convertido])
+				        )
+				    )
+				VAR TabelaComPeso = 
+				    ADDCOLUMNS(
+				        Tecnologias,
+				        "Peso",
+				        SWITCH(
+				            TRUE(),
+				            [Tecnologia] IN 
+				            {
+				                "SEM INFORMACAO",
+				                "OBSOLETO", 
+				                "ONT WIFI 5", 
+				                "ONT WIFI 6", 
+				                "RADIO"
+				            }, 1.0,
+				            [Tecnologia] IN 
+				            { 
+				                "ONU", 
+				                "ROTEADOR WIFI 5", 
+				                "ROTEADOR WIFI 6" 
+				            }, 0.5,
+				            [Tecnologia] IN 
+				            { 
+				                "CHIP MOVEL", 
+				                "FERRAMENTAL", 
+				                "MISCELANEA", 
+				                "INSUMO" 
+				            }, 0.0,
+				            BLANK()
+				        )
+				    )
+				RETURN
+				
+				FILTER(
+				    TabelaComPeso,
+				    NOT ISBLANK([Tecnologia]) && [Tecnologia] <> ""
+				)
+				```
+
+	annotation PBI_Id = 2ccc702d93be4cfd99aff6dcecef23c0
+

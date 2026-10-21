@@ -12,3 +12,11 @@ expression hostname = "177.13.0.39:5432" meta [IsParameterQuery=true, List={"10.
 
 	annotation PBI_ResultType = Text
 
+expression fct_historico_equipamento =
+		let
+		    Fonte = PostgreSQL.Database(hostname, db),
+		    platinum_historico_equipamento = Fonte{[Schema="platinum",Item="historico_equipamento"]}[Data]
+		in
+		    platinum_historico_equipamento
+	lineageTag: 6e4b9bbc-ce9d-4cda-8596-7d868d5549fd
+

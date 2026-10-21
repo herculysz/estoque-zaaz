@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "831ea7ee67baff3899aa",
+  "position": {
+    "x": 942.85714285714323,
+    "y": 940.047614586683,
+    "z": 38006,
+    "height": 84.285714285714292,
+    "width": 212.85714285714286,
+    "tabOrder": 38006
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Equipamentos convertidos para o prefixo DET- ou DEF- (DEFEITO), multiplicado pelo peso do agrupamento tecnológico."
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

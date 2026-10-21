@@ -733,6 +733,139 @@ table Medidas
 		displayFolder: Conversão
 		lineageTag: eac5ff47-0a8e-4db7-adcd-2ddae245ae30
 
+	measure qtd_aplic_peso = ```
+			
+			
+			CALCULATE(
+			    --[qtd_aplic],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtd_aplic] 
+			    ),
+			    fct_materiaisAplicados[serializado] = "SERIALIZADO",
+			    fct_materiaisAplicados[condicao] = "REAPROVEITADO"
+			)
+			```
+		displayFolder: Aplicados
+		lineageTag: 9c46c5ee-22eb-44d2-be27-20f16c315639
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure qtdRequisitada_Peso =
+			
+			
+			CALCULATE(
+			    --[qtdRequisitada],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtdRequisitada]
+			    ),
+			    fct_requisicaoMaterial[serializado] = "SERIALIZADO",
+			    fct_requisicaoMaterial[condicao] = "REAPROVEITADO"
+			)
+		displayFolder: Requisicao
+		lineageTag: c9f2cf72-db9d-49be-b49f-6a64c2cc8f34
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure qtd_convertida_REAP_peso =
+			
+			
+			CALCULATE(
+			    --[qtdConvertida],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtdConvertida]
+			    ),
+			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
+			    fct_conversaoMateriais[condicao_convertida] = "REAPROVEITADO"
+			)
+		displayFolder: Conversão
+		lineageTag: f28176f5-7e01-44a2-b22c-cbd193d8fc9c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure qtd_convertida_SUC_peso =
+			
+			
+			CALCULATE(
+			    --[qtdConvertida],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtdConvertida]
+			    ),
+			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
+			    fct_conversaoMateriais[condicao_convertida] = "DESUSO"
+			)
+		formatString: #,0
+		displayFolder: Conversão
+		lineageTag: dea1728d-c3cc-4098-b22a-d2e2b7d71045
+
+	measure qtd_convertida_DEF_peso =
+			
+			
+			CALCULATE(
+			    --[qtdConvertida],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtdConvertida]
+			    ),
+			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
+			    fct_conversaoMateriais[condicao_convertida] = "DEFEITO"
+			)
+		formatString: #,0
+		displayFolder: Conversão
+		lineageTag: af7b2237-e515-4a87-b793-6f557ab6cf53
+
+	measure qtd_convertida_peso =
+			
+			
+			CALCULATE(
+			    --[qtdConvertida],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtdConvertida]
+			    ),
+			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
+			    fct_conversaoMateriais[condicao_convertida] IN {"DESUSO", "DEFEITO", "REAPROVEITADO"}
+			)
+		formatString: #,0
+		displayFolder: Conversão
+		lineageTag: 9b452f66-d41b-4c56-a138-55bc70c67c78
+
+	measure qtdDevolvida_Peso =
+			
+			
+			CALCULATE(
+			    --[qtdDevolvida],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtdDevolvida]
+			    ),
+			    fct_devolucaoMaterial[serializado] = "SERIALIZADO",
+			    fct_devolucaoMaterial[condicao] = "RETIRADO"
+			)
+		displayFolder: Devolução
+		lineageTag: e3b84737-855c-4767-a977-50c716b51133
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure qtd_remov_peso =
+			
+			
+			CALCULATE(
+			    --[qtd_remov],
+			    SUMX(
+			        TecnologiaPeso,
+			        TecnologiaPeso[Peso] * [qtd_remov]
+			    ),
+			    fct_materiaisRetirados[serializado] = "SERIALIZADO"
+			)
+		displayFolder: Retirados
+		lineageTag: eac1f57b-cf15-40d5-9ed6-5eae0824bda0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Ordinal
 		dataType: int64
 		isHidden

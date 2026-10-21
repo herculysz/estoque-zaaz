@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "bf7acdecfe4fa110b8d1",
+  "position": {
+    "x": 1341.4285714285716,
+    "y": 362.85714285714289,
+    "z": 38013,
+    "height": 61.428571428571431,
+    "width": 254.28571428571431,
+    "tabOrder": 38013
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Equipamentos entregues aos técnicos por meio de RM's, multiplicado pelo peso do agrupamento tecnológico."
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

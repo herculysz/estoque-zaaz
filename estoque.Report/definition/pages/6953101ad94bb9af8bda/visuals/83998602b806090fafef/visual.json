@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "83998602b806090fafef",
   "position": {
-    "x": 1082.1681667916016,
-    "y": 463.66492146596863,
+    "x": 1082.1681667916018,
+    "y": 506.56967890979445,
     "z": 15000,
     "height": 150,
     "width": 200,
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "qtdConvertida"
+                  "Property": "qtd_convertida_REAP_peso"
                 }
               },
-              "queryRef": "Medidas.qtdConvertida",
-              "nativeQueryRef": "qtdConvertida"
+              "queryRef": "Medidas.qtd_convertida_REAP_peso",
+              "nativeQueryRef": "qtd_convertida_REAP_peso"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "qtdConvertida"
+                "Property": "qtd_convertida_REAP_peso"
               }
             },
             "direction": "Descending"
@@ -451,47 +451,23 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_conversaoMateriais",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "condicao_convertida"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'REAPROVEITADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true
+      },
+      {
+        "name": "daedeaef92eb801bc1fa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_conversaoMateriais"
+              }
+            },
+            "Property": "serializado"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
       }
     ]
   }

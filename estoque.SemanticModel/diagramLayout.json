@@ -4,8 +4,8 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
-        "y": 231.42857142857144
+        "x": 380,
+        "y": 0
       },
       "nodes": [
         {
@@ -140,8 +140,8 @@
         },
         {
           "location": {
-            "x": 899.581748420587,
-            "y": 949.53124999999989
+            "x": 332.43889127772974,
+            "y": 945.24553571428532
           },
           "nodeIndex": "Empresa",
           "nodeLineageTag": "0019f09d-c182-4f0d-9664-293e7df00410",
@@ -153,8 +153,8 @@
         },
         {
           "location": {
-            "x": 1701.248415087254,
-            "y": 429.53125000000006
+            "x": 1821.248415087254,
+            "y": 445.24553571428578
           },
           "nodeIndex": "fct_historico_equipamento",
           "nodeLineageTag": "168f4e54-f758-495a-ae4b-c4374e7d7cab",
@@ -163,6 +163,19 @@
             "width": 234
           },
           "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1266.6769865158251,
+            "y": 944.76562499999989
+          },
+          "nodeIndex": "TecnologiaPeso",
+          "nodeLineageTag": "ee4550ff-40f0-4588-9461-38f067a2c28c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 13
         }
       ],
       "name": "Todas as tabelas",

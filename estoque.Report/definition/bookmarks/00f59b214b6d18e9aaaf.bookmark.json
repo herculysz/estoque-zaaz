@@ -496,46 +496,6 @@
               "objects": {}
             }
           },
-          "19eb5d54c710d3f7a83e": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "c37fd103e3083a3a2f86",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "ConvertidosMediaMes"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "ConvertidosMediaMes"
-                    }
-                  }
-                }
-              ]
-            }
-          },
           "1bd184638c86c7116614": {
             "filters": {
               "byExpr": [

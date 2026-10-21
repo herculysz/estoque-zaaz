@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "bcc629ea4e40d96383f7",
+  "position": {
+    "x": 297.14285714285751,
+    "y": 725.7619003009687,
+    "z": 37000,
+    "height": 90,
+    "width": 200,
+    "tabOrder": 37000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Quantidade de equipamentos retirados em ordens de serviço, multiplicado pelo peso do agrupamento tecnológico."
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

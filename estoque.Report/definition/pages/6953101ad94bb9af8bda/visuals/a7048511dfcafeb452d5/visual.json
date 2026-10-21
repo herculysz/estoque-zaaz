@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "a7048511dfcafeb452d5",
+  "position": {
+    "x": 547.14285714285757,
+    "y": 338.61904315811142,
+    "z": 38001,
+    "height": 85.714285714285722,
+    "width": 200,
+    "tabOrder": 38001
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Equipamentos com prefixo RET- devolvidos ao estoque por meio de DM's, multiplicado pelo peso do agrupamento tecnológico."
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

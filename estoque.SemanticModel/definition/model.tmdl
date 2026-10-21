@@ -42,7 +42,7 @@ ref table fct_conversaoMateriais
 ref table fct_requisicaoMaterial
 ref table fct_devolucaoMaterial
 ref table Empresa
-ref table fct_historico_equipamento
+ref table TecnologiaPeso
 
 ref cultureInfo pt-BR
 

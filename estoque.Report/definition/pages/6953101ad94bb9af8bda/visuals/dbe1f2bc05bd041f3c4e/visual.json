@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "dbe1f2bc05bd041f3c4e",
   "position": {
-    "x": 296.53383034174493,
-    "y": 460.69362060831963,
+    "x": 296.53383034174527,
+    "y": 503.59837805214534,
     "z": 4000,
     "height": 150,
     "width": 200,
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "qtd_remov"
+                  "Property": "qtd_remov_peso"
                 }
               },
-              "queryRef": "Medidas.qtd_remov",
-              "nativeQueryRef": "qtd_remov"
+              "queryRef": "Medidas.qtd_remov_peso",
+              "nativeQueryRef": "qtd_remov_peso"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "qtd_remov"
+                "Property": "qtd_remov_peso"
               }
             },
             "direction": "Descending"
@@ -481,45 +481,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_materiaisRetirados",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "serializado"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'SERIALIZADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true
       },

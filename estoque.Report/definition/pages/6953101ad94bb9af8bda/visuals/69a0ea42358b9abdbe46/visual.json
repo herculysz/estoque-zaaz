@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "69a0ea42358b9abdbe46",
   "position": {
-    "x": 1642.617801047121,
-    "y": 472.14659685863853,
-    "z": 25000,
-    "height": 149.84293193717278,
-    "width": 217.69633507853405,
-    "tabOrder": 25000
+    "x": 1641.6707616707617,
+    "y": 506.78682132588972,
+    "z": 22000,
+    "height": 147.8132678132678,
+    "width": 217.002457002457,
+    "tabOrder": 22000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "qtd_aplic"
+                  "Property": "qtd_aplic_peso"
                 }
               },
-              "queryRef": "Medidas.qtd_aplic",
-              "nativeQueryRef": "qtd_aplic"
+              "queryRef": "Medidas.qtd_aplic_peso",
+              "nativeQueryRef": "qtd_aplic_peso"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "qtd_aplic"
+                "Property": "qtd_aplic_peso"
               }
             },
             "direction": "Descending"
@@ -496,45 +496,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_materiaisAplicados",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "serializado"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'SERIALIZADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true
       },
@@ -551,45 +512,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_materiaisAplicados",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "condicao"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'REAPROVEITADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true
       }

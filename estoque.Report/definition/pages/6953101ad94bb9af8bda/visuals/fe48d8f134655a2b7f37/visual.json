@@ -1,0 +1,34 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "fe48d8f134655a2b7f37",
+  "position": {
+    "x": 942.85714285714289,
+    "y": 146.33587681159841,
+    "z": 38008,
+    "height": 82.857142857142861,
+    "width": 212.85714285714286,
+    "tabOrder": 38008
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Equipamentos convertidos para o prefixo SUC- (SUCATA/DESUSO), multiplicado pelo peso do agrupamento tecnológico."
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

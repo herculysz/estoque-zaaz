@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "fc829a537d831e225d93",
   "position": {
-    "x": 547.82261705338067,
-    "y": 460.83769633507848,
+    "x": 547.822617053381,
+    "y": 503.74245377890418,
     "z": 11000,
     "height": 150.31019202363368,
     "width": 200,
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "qtdDevolvida"
+                  "Property": "qtdDevolvida_Peso"
                 }
               },
-              "queryRef": "Medidas.qtdDevolvida",
-              "nativeQueryRef": "qtdDevolvida"
+              "queryRef": "Medidas.qtdDevolvida_Peso",
+              "nativeQueryRef": "qtdDevolvida_Peso"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "qtdDevolvida"
+                "Property": "qtdDevolvida_Peso"
               }
             },
             "direction": "Descending"
@@ -466,45 +466,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_devolucaoMaterial",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "serializado"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'SERIALIZADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true
       },
@@ -521,45 +482,6 @@
           }
         },
         "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fct_devolucaoMaterial",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "condicao"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'RETIRADO'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
         "howCreated": "User",
         "isLockedInViewMode": true
       }
