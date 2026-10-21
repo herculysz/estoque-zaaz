@@ -850,46 +850,6 @@
               "objects": {}
             }
           },
-          "79abd088b498ce1e503a": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "cf4b18585941155f8ecf",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "RemovMediaMes"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "RemovMediaMes"
-                    }
-                  }
-                }
-              ]
-            }
-          },
           "845badc8006e7a110430": {
             "filters": {
               "byExpr": [

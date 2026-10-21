@@ -1252,46 +1252,6 @@
               "objects": {}
             }
           },
-          "c2a662e1e94b4149af2a": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "192f6f0b358a42b8fcc1",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DevolvidoMediaMes"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DevolvidoMediaMes"
-                    }
-                  }
-                }
-              ]
-            }
-          },
           "cb04b590b24b38639fb6": {
             "filters": {
               "byExpr": [

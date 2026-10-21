@@ -329,46 +329,6 @@
               ]
             }
           },
-          "5425a38093157b920d08": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "313f92657ab92d11357d",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "AplicMediaMes"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "AplicMediaMes"
-                    }
-                  }
-                }
-              ]
-            }
-          },
           "54b2438e12d576134327": {
             "singleVisual": {
               "visualType": "textbox",

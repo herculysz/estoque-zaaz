@@ -252,6 +252,8 @@ table Medidas
 			VAR MesAnterior = [qtd_Aplic_Mes_Anterior]
 			VAR CalcDiffMes = DIVIDE( MesAtual - MesAnterior, MesAnterior, 0 )
 			RETURN
+			
+			
 			IF(CalcDiffMes >0, "+"&FORMAT(CalcDiffMes, "0.00%"), CalcDiffMes)
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: Aplicados

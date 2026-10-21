@@ -255,46 +255,6 @@
               "objects": {}
             }
           },
-          "c2a662e1e94b4149af2a": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "58853d1af65837c086c8",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DevolvidoMediaMes"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "DevolvidoMediaMes"
-                    }
-                  }
-                }
-              ]
-            }
-          },
           "f2795c6b4c0b32546feb": {
             "filters": {
               "byExpr": [

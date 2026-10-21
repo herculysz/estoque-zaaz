@@ -255,46 +255,6 @@
               "objects": {}
             }
           },
-          "2ddfb2cc04195ca57ece": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "922a4ad2575f181a221e",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "RequisitadoMediaMes"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "RequisitadoMediaMes"
-                    }
-                  }
-                }
-              ]
-            }
-          },
           "33aeeb24ae5072881d7c": {
             "filters": {
               "byExpr": [
