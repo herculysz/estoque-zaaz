@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 380,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -150,19 +150,6 @@
             "width": 234
           },
           "zIndex": 12
-        },
-        {
-          "location": {
-            "x": 1821.248415087254,
-            "y": 445.24553571428578
-          },
-          "nodeIndex": "fct_historico_equipamento",
-          "nodeLineageTag": "168f4e54-f758-495a-ae4b-c4374e7d7cab",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 1
         },
         {
           "location": {
