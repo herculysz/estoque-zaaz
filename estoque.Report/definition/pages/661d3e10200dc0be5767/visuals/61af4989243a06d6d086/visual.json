@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "61af4989243a06d6d086",
   "position": {
     "x": 891.98952879581157,
@@ -39,60 +39,12 @@
                       "Entity": "fct_materiaisRetirados"
                     }
                   },
-                  "Property": "diretor"
-                }
-              },
-              "queryRef": "fct_materiaisRetirados.diretor",
-              "nativeQueryRef": "Diretor",
-              "active": true,
-              "displayName": "Diretor"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisRetirados"
-                    }
-                  },
-                  "Property": "gerente"
-                }
-              },
-              "queryRef": "fct_materiaisRetirados.gerente",
-              "nativeQueryRef": "Gerente",
-              "active": false,
-              "displayName": "Gerente"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisRetirados"
-                    }
-                  },
-                  "Property": "coordenador"
-                }
-              },
-              "queryRef": "fct_materiaisRetirados.coordenador",
-              "nativeQueryRef": "Coordenador",
-              "active": false,
-              "displayName": "Coordenador"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisRetirados"
-                    }
-                  },
                   "Property": "supervisor"
                 }
               },
               "queryRef": "fct_materiaisRetirados.supervisor",
               "nativeQueryRef": "Supervisor",
-              "active": false,
+              "active": true,
               "displayName": "Supervisor"
             },
             {
@@ -193,41 +145,10 @@
           },
           {
             "queryRefs": [
-              "fct_materiaisRetirados.diretor"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisRetirados"
-                    }
-                  },
-                  "Property": "diretor"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "fct_materiaisRetirados.gerente"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "fct_materiaisRetirados.coordenador"
-            ],
-            "isCollapsed": true
-          },
-          {
-            "queryRefs": [
               "fct_materiaisRetirados.supervisor"
             ],
-            "isCollapsed": true
+            "isCollapsed": true,
+            "isPinned": true
           },
           {
             "queryRefs": [

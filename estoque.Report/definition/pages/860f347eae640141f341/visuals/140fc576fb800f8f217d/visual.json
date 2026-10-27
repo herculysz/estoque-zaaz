@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "2185d739ef2b93b51f4c",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "140fc576fb800f8f217d",
   "position": {
-    "x": 25.268761358622019,
-    "y": 762.398633625832,
-    "z": 14000,
+    "x": 25.895953757225431,
+    "y": 760.23121387283231,
+    "z": 27001,
     "height": 110.23255813953489,
     "width": 200.93023255813952,
-    "tabOrder": 14000
+    "tabOrder": 27001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,35 +20,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_calendario"
+                      "Entity": "fct_requisicaoMaterial"
                     }
                   },
-                  "Property": "data_formatada"
+                  "Property": "data_movimentacao_rmdm"
                 }
               },
-              "queryRef": "dim_calendario.data_formatada",
-              "nativeQueryRef": "data_formatada",
+              "queryRef": "fct_requisicaoMaterial.data_movimentacao_rmdm",
+              "nativeQueryRef": "data_movimentacao_rmdm",
               "active": true
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_calendario"
-                  }
-                },
-                "Property": "data_formatada"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -74,8 +59,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d",
-                    "Entity": "dim_calendario",
+                    "Name": "f",
+                    "Entity": "fct_requisicaoMaterial",
                     "Type": 0
                   }
                 ],
@@ -87,10 +72,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d"
+                                "Source": "f"
                               }
                             },
-                            "Property": "data_formatada"
+                            "Property": "data_movimentacao_rmdm"
                           }
                         },
                         "LowerBound": {
@@ -331,11 +316,24 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "data_formatada",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a52d9ff09b6d38ee74cf",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_requisicaoMaterial"
+              }
+            },
+            "Property": "data_movimentacao_rmdm"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

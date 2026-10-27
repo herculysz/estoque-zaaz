@@ -38,21 +38,6 @@
                       "Entity": "dim_calendario"
                     }
                   },
-                  "Property": "trimestre"
-                }
-              },
-              "queryRef": "dim_calendario.trimestre",
-              "nativeQueryRef": "trimestre",
-              "active": true
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_calendario"
-                    }
-                  },
                   "Property": "mes"
                 }
               },
@@ -2692,6 +2677,96 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "77a6b95979be21cbe458",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f412371717c302c4b5cb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "mes"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b1f05a9691ce4b861e3e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f2b1d26a6b2f5b0ef8ae",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "qtdDevolvida"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 2,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "qtdDevolvida"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

@@ -3,7 +3,9 @@
   "displayName": "DevoluçãoOPNE",
   "name": "115daa5444c7752f9fe7",
   "options": {
-    "targetVisualNames": [],
+    "targetVisualNames": [
+      "2fce62e27aede708041d"
+    ],
     "preserveNewVisualVisibility": true
   },
   "explorationState": {
@@ -31,15 +33,27 @@
           ]
         },
         "visualContainers": {
-          "2315bee52491d4806338": {
+          "070ac29a1b6fc1d6ed92": {
+            "singleVisual": {
+              "visualType": "image",
+              "objects": {}
+            }
+          },
+          "07da652b464ff305d882": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
             }
           },
-          "2fce62e27aede708041d": {
+          "09067dce8573d2a7495b": {
             "singleVisual": {
               "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "0995d4abb15caaae40e2": {
+            "singleVisual": {
+              "visualType": "textbox",
               "objects": {}
             }
           },
@@ -47,7 +61,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "15edf31f9186cea20916",
+                  "name": "464556d4a1973f26438a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -68,11 +82,151 @@
               "objects": {}
             }
           },
+          "1682a067692db0deceda": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "1fd8048f7920da308f35": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "2315bee52491d4806338": {
+            "singleVisual": {
+              "visualType": "shape",
+              "objects": {}
+            }
+          },
+          "2fce62e27aede708041d": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "34e59dd088b48b65c03e": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "3b54ba92cd6c9683b7bb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "edcb1db9a90c0f307674",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "descricao_material"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "descricao_material"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "46105387a5dfdc1534cb": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "d5c7943e93fd58db3c28",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "projeto"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "projeto"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "51375b4e6e48df69d700": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "770017f837fd9c2b2f90",
+                  "name": "4a9ad468d52e8fb36266",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -188,11 +342,11 @@
               }
             }
           },
-          "3b54ba92cd6c9683b7bb": {
+          "69a8207638c4e3fc7db9": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "9fe64402a5f7fdd18747",
+                  "name": "5fa88c60caee39e98b63",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -201,7 +355,7 @@
                           "Entity": "fct_devolucaoMaterial"
                         }
                       },
-                      "Property": "descricao_material"
+                      "Property": "tem_caracter_incorreto"
                     }
                   },
                   "howCreated": 0
@@ -236,7 +390,7 @@
                           "Entity": "fct_devolucaoMaterial"
                         }
                       },
-                      "Property": "descricao_material"
+                      "Property": "tem_caracter_incorreto"
                     }
                   }
                 ]
@@ -249,17 +403,848 @@
               "objects": {}
             }
           },
-          "07da652b464ff305d882": {
+          "7bd605cfde1ff9c46ff7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "ac35d8ff977845455220",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "condicao"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "condicao"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "7f809f06f9106fa44e2d": {
+            "singleVisual": {
+              "visualType": "pageNavigator",
+              "objects": {}
+            }
+          },
+          "9406568eae6458d8b477": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "3c95f48cf94d6dbf72e5",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "base"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "advancedSlicerVisual",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_devolucaoMaterial",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "f"
+                                            }
+                                          },
+                                          "Property": "base"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'ZAAZ NORDESTE'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "true"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "a31e5e6227a37a310964": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "277d015e3fbc8bfe2917",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "bk_material"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "bk_material"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "a436fadce39294455dbc": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "f981be7fc3ae02ada434",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "base"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b3260afa51f789520409",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "contrato"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a02666d0c760ba56f130",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "projeto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c4175179f3cbfee9f5ec",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "nome"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0e198e53f21f74c544bb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "descricao_funcao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e76ba989ee6af67ceccd",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "categoria_tecnologia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "73315a45285b5ddeeb46",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "condicao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "99c2e0cb87b9109237c9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "bk_material"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "112c960adf6b37ccf839",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "descricao_material"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1051f59edfea312a1237",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d20da0bd49d2cede2b76",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "numero_serie"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "aba7017ba8e2c32dbcd9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "unidade_medida"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7abfc24b3e4897a1499b",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "quantidade_solicitada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "e907e33bc04316644f21",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "quantidade_executada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f32c971a4cec45d3b94c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "status_baixada"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "b850e9dbac431728afb0",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "status_cancelado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a4e88a137ab2f973122f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "data_movimentacao_rmdm"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "9b4b1cce0a6f03f0e808",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "hora_movimentacao_rmdm"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "da2f6da0fe4cbb9a6633",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "tem_caracter_incorreto"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
+            }
+          },
+          "abf8cd2688b0a9acc3d9": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "1de8266a0c051aa6e02c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_materiaisAplicados"
+                        }
+                      },
+                      "Property": "numero_serie"
+                    }
+                  },
+                  "howCreated": 1
+                },
+                {
+                  "name": "74368816c270dec8ac3c",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "ano"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "db7bdc4b423527acc4e7",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "mes"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "572a1606de0b4f1b3d85",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "categoria_tecnologia"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5a18f3aea826fe84dedd",
+                  "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "Medidas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "qtdDevolvida"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "qtdDevolvida"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "columnChart",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "ano"
+                    }
+                  }
+                },
+                {
+                  "Direction": 1,
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "mes"
+                    }
+                  }
+                }
+              ],
+              "activeProjections": {
+                "Category": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "ano"
+                    }
+                  },
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_calendario"
+                        }
+                      },
+                      "Property": "mes"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "aec962ec33b5cabd9e57": {
             "singleVisual": {
               "visualType": "shape",
               "objects": {}
+            }
+          },
+          "b8a302b99e37bb513ee7": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0f66c816edcd1c44ab5d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_devolucaoMaterial",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "f"
+                                            }
+                                          },
+                                          "Property": "serializado"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'SERIALIZADO'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'Dropdown'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "selection": [
+                    {
+                      "properties": {
+                        "strictSingleSelect": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "false"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "c1d2c5e699b8c150d5bd": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "cb04b590b24b38639fb6": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "58cbfe74e7b2048401d7",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "qtdDevolvida"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "qtdDevolvida"
+                    }
+                  }
+                }
+              ]
             }
           },
           "f2795c6b4c0b32546feb": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "8a00a2275def05567fae",
+                  "name": "061fbf6dfb4dd74d5bc6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -378,11 +1363,11 @@
               }
             }
           },
-          "9406568eae6458d8b477": {
+          "bc7b5ca841d91ff94c66": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "3c1a05bb0a971d9297b8",
+                  "name": "f7ebbabb0f92cb661940",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -391,7 +1376,7 @@
                           "Entity": "fct_devolucaoMaterial"
                         }
                       },
-                      "Property": "base"
+                      "Property": "data_movimentacao_rmdm"
                     }
                   },
                   "howCreated": 0
@@ -399,7 +1384,7 @@
               ]
             },
             "singleVisual": {
-              "visualType": "advancedSlicerVisual",
+              "visualType": "slicer",
               "objects": {
                 "merge": {
                   "general": [
@@ -418,816 +1403,15 @@
                             "Where": [
                               {
                                 "Condition": {
-                                  "In": {
-                                    "Expressions": [
-                                      {
-                                        "Column": {
-                                          "Expression": {
-                                            "SourceRef": {
-                                              "Source": "f"
-                                            }
-                                          },
-                                          "Property": "base"
-                                        }
-                                      }
-                                    ],
-                                    "Values": [
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'ZAAZ NORDESTE'"
-                                          }
-                                        }
-                                      ]
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "true"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "aec962ec33b5cabd9e57": {
-            "singleVisual": {
-              "visualType": "shape",
-              "objects": {}
-            }
-          },
-          "a31e5e6227a37a310964": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "065c5a2c02e7d758f1a2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "bk_material"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "bk_material"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "7f809f06f9106fa44e2d": {
-            "singleVisual": {
-              "visualType": "pageNavigator",
-              "objects": {}
-            }
-          },
-          "1682a067692db0deceda": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "c1d2c5e699b8c150d5bd": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "7bd605cfde1ff9c46ff7": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "b6bb0834e6a56334a65f",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "condicao"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "condicao"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "abf8cd2688b0a9acc3d9": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "1de8266a0c051aa6e02c",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_materiaisAplicados"
-                        }
-                      },
-                      "Property": "numero_serie"
-                    }
-                  },
-                  "howCreated": 1
-                },
-                {
-                  "name": "b5754dfc8560dce5a58d",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "ano"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cf9fcf9ce950e1c0ff75",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "trimestre"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "fb95f47c5c66cb18f620",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "mes"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cffcb9e94f86b8a72290",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "qtdDevolvida"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "be8b6663a1de0f4022d2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "categoria_tecnologia"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "columnChart",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "ano"
-                    }
-                  }
-                },
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "mes"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Category": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "ano"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "trimestre"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "mes"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "0995d4abb15caaae40e2": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "46105387a5dfdc1534cb": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "1f861d4bd8c352e47d17",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "projeto"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "projeto"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "69a8207638c4e3fc7db9": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "95689df7f88fa3426642",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "tem_caracter_incorreto"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "tem_caracter_incorreto"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "1fd8048f7920da308f35": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "a436fadce39294455dbc": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "cc3e794c1505290ffb7a",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "base"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "1bb9514ce076c8b99c7e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "contrato"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f10632e95a0e60df6c0b",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "projeto"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "103b23ebae095da96897",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "nome"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "9c85a0255a3dec99185e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "descricao_funcao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "05d8d3cdf8ba8a0be0e2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "categoria_tecnologia"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7e8c3564fb9646f58ffc",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "condicao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "57ad7d7053d68f876467",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "bk_material"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f3844e03952f479c00fb",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "descricao_material"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "c65a40d1d2a622c01de4",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "serializado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "af1577ddbbb54f558d14",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "numero_serie"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "8da36504cdcec19d564c",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "unidade_medida"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "f93bbd90d77ef13f7103",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "quantidade_solicitada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "46d235ef3fed646a8223",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "quantidade_executada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ccd8f41f72fa0b5b6d79",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "status_baixada"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7eba5fa7222138f6ac57",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "status_cancelado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0274feae2ffd612b0694",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "data_movimentacao_rmdm"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "06bd8b0d2c88ac59843e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "hora_movimentacao_rmdm"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0e3187b8b47b43cd9d03",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "tem_caracter_incorreto"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "tableEx",
-              "objects": {}
-            }
-          },
-          "2185d739ef2b93b51f4c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "78ee5844a37782d395d3",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "d",
-                                "Entity": "dim_calendario",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
                                   "Between": {
                                     "Expression": {
                                       "Column": {
                                         "Expression": {
                                           "SourceRef": {
-                                            "Source": "d"
+                                            "Source": "f"
                                           }
                                         },
-                                        "Property": "data_formatada"
+                                        "Property": "data_movimentacao_rmdm"
                                       }
                                     },
                                     "LowerBound": {
@@ -1289,10 +1473,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dim_calendario"
+                          "Entity": "fct_devolucaoMaterial"
                         }
                       },
-                      "Property": "data_formatada"
+                      "Property": "data_movimentacao_rmdm"
                     }
                   }
                 }
@@ -1303,177 +1487,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "34e59dd088b48b65c03e": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "070ac29a1b6fc1d6ed92": {
-            "singleVisual": {
-              "visualType": "image",
-              "objects": {}
-            }
-          },
-          "cb04b590b24b38639fb6": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "7f304ede72e40cd03e39",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "qtdDevolvida"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "qtdDevolvida"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "b8a302b99e37bb513ee7": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "73f815f043c1a63a4dca",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
                           "Entity": "fct_devolucaoMaterial"
                         }
                       },
-                      "Property": "serializado"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "f",
-                                "Entity": "fct_devolucaoMaterial",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "In": {
-                                    "Expressions": [
-                                      {
-                                        "Column": {
-                                          "Expression": {
-                                            "SourceRef": {
-                                              "Source": "f"
-                                            }
-                                          },
-                                          "Property": "serializado"
-                                        }
-                                      }
-                                    ],
-                                    "Values": [
-                                      [
-                                        {
-                                          "Literal": {
-                                            "Value": "'SERIALIZADO'"
-                                          }
-                                        }
-                                      ]
-                                    ]
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'Dropdown'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "selection": [
-                    {
-                      "properties": {
-                        "strictSingleSelect": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "false"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_devolucaoMaterial"
-                        }
-                      },
-                      "Property": "serializado"
+                      "Property": "data_movimentacao_rmdm"
                     }
                   }
                 ]
@@ -1491,7 +1508,7 @@
               "expanded": {
                 "expr": {
                   "Literal": {
-                    "Value": "true"
+                    "Value": "false"
                   }
                 }
               }

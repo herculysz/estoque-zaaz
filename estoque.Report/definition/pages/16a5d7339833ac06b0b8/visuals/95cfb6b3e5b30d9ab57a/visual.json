@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "066ff8af508cdb4bce72",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "95cfb6b3e5b30d9ab57a",
   "position": {
-    "x": 25.268761358622019,
-    "y": 762.398633625832,
-    "z": 14000,
+    "x": 25.472636815920396,
+    "y": 762.58706467661682,
+    "z": 27001,
     "height": 110.23255813953489,
     "width": 200.93023255813952,
-    "tabOrder": 14000
+    "tabOrder": 27001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,35 +20,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_calendario"
+                      "Entity": "fct_materiaisAplicados"
                     }
                   },
-                  "Property": "data_formatada"
+                  "Property": "baixa_protocolo_data"
                 }
               },
-              "queryRef": "dim_calendario.data_formatada",
-              "nativeQueryRef": "data_formatada",
+              "queryRef": "fct_materiaisAplicados.baixa_protocolo_data",
+              "nativeQueryRef": "baixa_protocolo_data",
               "active": true
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_calendario"
-                  }
-                },
-                "Property": "data_formatada"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -74,8 +59,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d",
-                    "Entity": "dim_calendario",
+                    "Name": "f",
+                    "Entity": "fct_materiaisAplicados",
                     "Type": 0
                   }
                 ],
@@ -87,10 +72,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d"
+                                "Source": "f"
                               }
                             },
-                            "Property": "data_formatada"
+                            "Property": "baixa_protocolo_data"
                           }
                         },
                         "LowerBound": {
@@ -330,11 +315,6 @@
           }
         }
       ]
-    },
-    "syncGroup": {
-      "groupName": "data_formatada",
-      "fieldChanges": true,
-      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

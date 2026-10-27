@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "59544f869c0603bd91e4",
   "position": {
     "x": 890.57591623036649,
@@ -39,60 +39,12 @@
                       "Entity": "fct_materiaisAplicados"
                     }
                   },
-                  "Property": "diretor"
-                }
-              },
-              "queryRef": "fct_materiaisAplicados.diretor",
-              "nativeQueryRef": "Diretor",
-              "active": true,
-              "displayName": "Diretor"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "gerente"
-                }
-              },
-              "queryRef": "fct_materiaisAplicados.gerente",
-              "nativeQueryRef": "Gerente",
-              "active": false,
-              "displayName": "Gerente"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "coordenador"
-                }
-              },
-              "queryRef": "fct_materiaisAplicados.coordenador",
-              "nativeQueryRef": "Coordenador",
-              "active": false,
-              "displayName": "Coordenador"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
                   "Property": "supervisor"
                 }
               },
               "queryRef": "fct_materiaisAplicados.supervisor",
               "nativeQueryRef": "Supervisor",
-              "active": false,
+              "active": true,
               "displayName": "Supervisor"
             },
             {
@@ -186,51 +138,6 @@
                     }
                   },
                   "Property": "base"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "fct_materiaisAplicados.diretor"
-            ],
-            "isCollapsed": true,
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "fct_materiaisAplicados.gerente"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "gerente"
-                }
-              }
-            ],
-            "isPinned": true
-          },
-          {
-            "queryRefs": [
-              "fct_materiaisAplicados.coordenador"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fct_materiaisAplicados"
-                    }
-                  },
-                  "Property": "coordenador"
                 }
               }
             ],

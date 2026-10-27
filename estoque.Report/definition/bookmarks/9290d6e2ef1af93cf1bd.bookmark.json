@@ -3,7 +3,9 @@
   "displayName": "ConversãoOPNE",
   "name": "9290d6e2ef1af93cf1bd",
   "options": {
-    "targetVisualNames": [],
+    "targetVisualNames": [
+      "45affcda6b63aae8cc59"
+    ],
     "preserveNewVisualVisibility": true
   },
   "explorationState": {
@@ -91,7 +93,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "124a88a9bbea55550bdd",
+                  "name": "078815903a3bfb637942",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -142,145 +144,11 @@
               }
             }
           },
-          "066ff8af508cdb4bce72": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "34bd951cd32cc8a150e9",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "d",
-                                "Entity": "dim_calendario",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Between": {
-                                    "Expression": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "d"
-                                          }
-                                        },
-                                        "Property": "data_formatada"
-                                      }
-                                    },
-                                    "LowerBound": {
-                                      "DateSpan": {
-                                        "Expression": {
-                                          "DateAdd": {
-                                            "Expression": {
-                                              "Now": {}
-                                            },
-                                            "Amount": -6,
-                                            "TimeUnit": 2
-                                          }
-                                        },
-                                        "TimeUnit": 2
-                                      }
-                                    },
-                                    "UpperBound": {
-                                      "DateSpan": {
-                                        "Expression": {
-                                          "DateAdd": {
-                                            "Expression": {
-                                              "Now": {}
-                                            },
-                                            "Amount": -1,
-                                            "TimeUnit": 2
-                                          }
-                                        },
-                                        "TimeUnit": 2
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'RelativeDatePicker'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  }
-                ]
-              }
-            }
-          },
           "0ffb6f59f2c87f2def28": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "65b1975c737e2b12ef10",
+                  "name": "de5af583b58e9035e05d",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -368,7 +236,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "c7918d71a5045b07ecc6",
+                  "name": "cb84dda16aa1ae506df1",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -493,7 +361,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7bca099baabdbe52ed4a",
+                  "name": "954f47e7ea124787a58c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -616,7 +484,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5aefd03e496a6563d028",
+                  "name": "8036b5222653ac205e94",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -656,7 +524,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "7b5988f55d4f0469991d",
+                  "name": "43404b98a26511e51157",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -671,22 +539,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "35e70534dc915a9dedee",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "trimestre"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ceaceeb5639e7eb4b34d",
+                  "name": "7e42e2f90aec8c1d0a5e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -701,7 +554,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "8a7207cb7316dbfcfea3",
+                  "name": "4cd417245e21f83a0ac2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -716,8 +569,42 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "96c3044eb41aec00fbdb",
+                  "name": "ec906c3e959a288d014c",
                   "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "Medidas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "qtdConvertida"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Measure": {
                       "Expression": {
@@ -782,16 +669,6 @@
                           "Entity": "dim_calendario"
                         }
                       },
-                      "Property": "trimestre"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
                       "Property": "mes"
                     }
                   }
@@ -803,7 +680,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6afd76bd6551237bf9da",
+                  "name": "fe9ca5b2d2d0efc8ede2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -894,7 +771,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a9927d0573834c601c99",
+                  "name": "ad016cd80ea3d212a992",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -961,7 +838,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0ad3459d2dd63c536097",
+                  "name": "1fb1c90f2963ac8ccc11",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1076,7 +953,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5a3050337bb861cdeaed",
+                  "name": "256c82f4d138ef8c0b2f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1137,7 +1014,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "918e37d4bc9e83601419",
+                  "name": "0b7309bfb7085393aae3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1194,11 +1071,17 @@
               "objects": {}
             }
           },
+          "e4770f0b165281c25e27": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "f22888d6d23012aaf391": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "e2cabed435c88e2afc02",
+                  "name": "aa962aebe9f4d08762ae",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1238,7 +1121,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d9d2a5fb21910a4e22e5",
+                  "name": "60fed3211cf0252d889b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1253,7 +1136,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "cc3b698795a826656eb9",
+                  "name": "2407c5189c956b5d48f6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1268,7 +1151,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1a0b961c5ba8b350eabb",
+                  "name": "f56f1d3ef18ee26b6b11",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1283,7 +1166,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "095907a50d2698870aac",
+                  "name": "ea6cdfb2bffad8b5e8d2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1298,7 +1181,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "36dce8ad0863854139c2",
+                  "name": "bacdfb7e58a58e98737a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1313,7 +1196,22 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3e5c4617ef95bc55e8bb",
+                  "name": "7fdc261a3d7cbdaea90e",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "categoria_tecnologia_original"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "bff56e8ea2b8f79402ce",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1328,7 +1226,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d34fa4234511bf356fd5",
+                  "name": "875f5d6c599239664bf9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1343,7 +1241,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bd651cf6d082b0ca8d13",
+                  "name": "14e31c7879b10dd9a533",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1358,7 +1256,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7c347666050f3ba7ec7a",
+                  "name": "a29b744eaf2baaf98ab9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1373,142 +1271,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0e58a3d9698119589bc3",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "numero_serie_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b39043ab90b0e357342a",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "unidade_medida_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "9e24e415950aa4041cb0",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "quantidade_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "6c8e43fd4c49f0769a1b",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "data_conversao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "71a635271901e2ffa6a7",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "status_baixa"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "200000c7da4cfa0764cf",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "nome"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cc36d121abf4efebb1cd",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "descricao_funcao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "832722e8c7ff74effa44",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "tem_caracter_incorreto"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "cfea5e854ff862d362c4",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "serializado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7f127cde6cc9b07316c8",
+                  "name": "873a9c3de3f46f212203",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1523,7 +1286,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f212f15858f698e82386",
+                  "name": "31939e9143e0e9d604ef",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1532,7 +1295,127 @@
                           "Entity": "fct_conversaoMateriais"
                         }
                       },
-                      "Property": "categoria_tecnologia_original"
+                      "Property": "numero_serie_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c7e94fadcc7e8efc1182",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "unidade_medida_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dff4636f4b6b0c806357",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "quantidade_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "45c9d7f11586cb42efd2",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "data_conversao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "caed919cdfd967e56083",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "status_baixa"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "8cba1def0a535d70b57d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "nome"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0411c170c8999525fc90",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "descricao_funcao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7e73cb0e7f4226b72988",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d87b13c5fbc28ccd656f",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "tem_caracter_incorreto"
                     }
                   },
                   "howCreated": 0
@@ -1544,10 +1427,123 @@
               "objects": {}
             }
           },
-          "e4770f0b165281c25e27": {
+          "d29ccf421a6da9c987be": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "0729e740ae9477929d1c",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "data_conversao"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_conversaoMateriais",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Between": {
+                                    "Expression": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "f"
+                                          }
+                                        },
+                                        "Property": "data_conversao"
+                                      }
+                                    },
+                                    "LowerBound": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "DateAdd": {
+                                            "Expression": {
+                                              "Now": {}
+                                            },
+                                            "Amount": -6,
+                                            "TimeUnit": 2
+                                          }
+                                        },
+                                        "TimeUnit": 2
+                                      }
+                                    },
+                                    "UpperBound": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "DateAdd": {
+                                            "Expression": {
+                                              "Now": {}
+                                            },
+                                            "Amount": -1,
+                                            "TimeUnit": 2
+                                          }
+                                        },
+                                        "TimeUnit": 2
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "data_conversao"
+                    }
+                  }
+                ]
+              }
             }
           }
         }

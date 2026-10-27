@@ -4,7 +4,7 @@
   "name": "62145822291e3b0f905c",
   "options": {
     "targetVisualNames": [
-      "911aa99454845c701ba0"
+      "e23aaf24147c434caae9"
     ],
     "preserveNewVisualVisibility": true
   },
@@ -92,7 +92,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "fe1708d83333503e3d13",
+                  "name": "69bb38a6599da59b6ba2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -147,7 +147,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d3ca14340f678c3d7ac3",
+                  "name": "26f1e39e3abd3dcdbf7c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -262,7 +262,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "8bb598bdca2ac9d6e629",
+                  "name": "5615874ecfd3c0168fff",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -323,7 +323,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4f265c1d3aad648d36b9",
+                  "name": "eb19034522e3f25f0be6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -378,7 +378,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ed709152a2a18f98e6e6",
+                  "name": "502738d7b923b8626664",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -393,7 +393,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "88758fe0c0b6635d3efc",
+                  "name": "be0ad4b03d8eabaf6d48",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -408,7 +408,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0e9a259a5ff1669dc5cc",
+                  "name": "ee689651889c022d71e4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -423,7 +423,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "869cd15206dfd804e26f",
+                  "name": "e54733a4f2fa9803ad83",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -438,7 +438,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "23bdc2a9a4c69b41d20d",
+                  "name": "ead7282c6c9f9d1be70c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -453,7 +453,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ad3da264235ac41330b7",
+                  "name": "38d8eafe16c22c8605af",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -468,7 +468,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "30e8aad519d5f263a0cd",
+                  "name": "c0cab80a433c80fff6d9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -483,7 +483,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3dc794d5c5440b02bf05",
+                  "name": "45e742c74914e7b050ab",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -498,7 +498,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a8010e8d2df65738f6d1",
+                  "name": "e6ef70678076dc0e2728",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -513,7 +513,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1a6ed8dd16ce828e85dc",
+                  "name": "54c763f4be7d2db004fa",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -528,7 +528,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ba7a2e9a3983cd89055f",
+                  "name": "643066aa33aa8fb5d715",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -543,7 +543,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b1f230b0506ca3fbb512",
+                  "name": "1bc580a916984d12f908",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -558,7 +558,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "25849d4797f2150c939f",
+                  "name": "37eed3edb815ded9cb23",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -573,7 +573,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d0432d170fc0f8836386",
+                  "name": "19bab64e931757b24d1b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -588,7 +588,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a62b3e644ae7e09f3563",
+                  "name": "8a2ea4f6bfcb54a9744a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -603,7 +603,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a06e70de5b4a1f0ce082",
+                  "name": "89ce8fdfd310518f7565",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -618,7 +618,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9788f5a8f45ac64c702a",
+                  "name": "594cd8c98eac4d2923a9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -633,7 +633,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6a920643cbb47429d70a",
+                  "name": "90ff4f5acab419fd6e90",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -648,7 +648,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "67277be65575145663fa",
+                  "name": "edec489bfb4481030dbb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -663,7 +663,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "6f583b4a1c9ec467fbf9",
+                  "name": "d2fb577bac291a81fe6a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -688,7 +688,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "69112992689393c6c132",
+                  "name": "2c2c1c125a81618572e9",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -728,7 +728,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ffed3eeaeafb2e2a21b9",
+                  "name": "18bf019473f638d61a69",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -795,7 +795,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d87b1afeab7d995bed57",
+                  "name": "e776b18bce7353e3efa5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -856,7 +856,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "10eee2871c3d47a0d775",
+                  "name": "31476401c3479c1e43d7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -911,7 +911,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5f6cd2b31e56489908e9",
+                  "name": "1adf8c4e4ad83d3ecba3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -966,7 +966,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "158ab4c3611014623682",
+                  "name": "7073d521bf695607dc2b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1084,16 +1084,16 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "59ef6975f1b8b1bbd8fa",
+                  "name": "9a9ddafb8db8bc4f9b88",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dim_calendario"
+                          "Entity": "fct_materiaisRetirados"
                         }
                       },
-                      "Property": "data_formatada"
+                      "Property": "baixa_protocolo_data"
                     }
                   },
                   "howCreated": 0
@@ -1112,8 +1112,8 @@
                             "Version": 2,
                             "From": [
                               {
-                                "Name": "d",
-                                "Entity": "dim_calendario",
+                                "Name": "f",
+                                "Entity": "fct_materiaisRetirados",
                                 "Type": 0
                               }
                             ],
@@ -1125,10 +1125,10 @@
                                       "Column": {
                                         "Expression": {
                                           "SourceRef": {
-                                            "Source": "d"
+                                            "Source": "f"
                                           }
                                         },
-                                        "Property": "data_formatada"
+                                        "Property": "baixa_protocolo_data"
                                       }
                                     },
                                     "LowerBound": {
@@ -1204,10 +1204,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dim_calendario"
+                          "Entity": "fct_materiaisRetirados"
                         }
                       },
-                      "Property": "data_formatada"
+                      "Property": "baixa_protocolo_data"
                     }
                   }
                 ]
@@ -1218,7 +1218,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "549e16ff1e7d2b95f523",
+                  "name": "2c1cfb0c71058ea9f083",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1233,22 +1233,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "0fab2dbe06bcbafc47f8",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "trimestre"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "bfd121212d87277417eb",
+                  "name": "f2d9d5c6f7be7389f55e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1263,7 +1248,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "854e2c4cf73f457163f6",
+                  "name": "4e63eddbf64b28521770",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1278,8 +1263,42 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "17460ebf0003bcef0373",
+                  "name": "529f2040b6b249ce9b78",
                   "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "Medidas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "qtd_remov"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Measure": {
                       "Expression": {
@@ -1344,16 +1363,6 @@
                           "Entity": "dim_calendario"
                         }
                       },
-                      "Property": "trimestre"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
                       "Property": "mes"
                     }
                   }
@@ -1365,7 +1374,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "266728f914610eaae1e4",
+                  "name": "f7426ff3aac558a9da51",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -1391,15 +1400,15 @@
               "objects": {}
             }
           },
-          "fb77b4c9312ebc0a0db1": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
           "e8f0ab4277de0e557bff": {
             "singleVisual": {
               "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "fb77b4c9312ebc0a0db1": {
+            "singleVisual": {
+              "visualType": "textbox",
               "objects": {}
             }
           }

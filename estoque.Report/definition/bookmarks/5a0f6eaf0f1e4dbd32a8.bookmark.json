@@ -3,7 +3,9 @@
   "displayName": "DevoluçãoOPN",
   "name": "5a0f6eaf0f1e4dbd32a8",
   "options": {
-    "targetVisualNames": [],
+    "targetVisualNames": [
+      "bc7b5ca841d91ff94c66"
+    ],
     "preserveNewVisualVisibility": true
   },
   "explorationState": {
@@ -43,6 +45,12 @@
               "objects": {}
             }
           },
+          "09067dce8573d2a7495b": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
           "0995d4abb15caaae40e2": {
             "singleVisual": {
               "visualType": "textbox",
@@ -53,7 +61,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5df8b27b1090910f5473",
+                  "name": "07ab3d1cc8b04795dc32",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -86,140 +94,6 @@
               "objects": {}
             }
           },
-          "2185d739ef2b93b51f4c": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "b13651d53efa6da8308d",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "d",
-                                "Entity": "dim_calendario",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Between": {
-                                    "Expression": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "d"
-                                          }
-                                        },
-                                        "Property": "data_formatada"
-                                      }
-                                    },
-                                    "LowerBound": {
-                                      "DateSpan": {
-                                        "Expression": {
-                                          "DateAdd": {
-                                            "Expression": {
-                                              "Now": {}
-                                            },
-                                            "Amount": -6,
-                                            "TimeUnit": 2
-                                          }
-                                        },
-                                        "TimeUnit": 2
-                                      }
-                                    },
-                                    "UpperBound": {
-                                      "DateSpan": {
-                                        "Expression": {
-                                          "DateAdd": {
-                                            "Expression": {
-                                              "Now": {}
-                                            },
-                                            "Amount": -1,
-                                            "TimeUnit": 2
-                                          }
-                                        },
-                                        "TimeUnit": 2
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'RelativeDatePicker'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "orderBy": [
-                {
-                  "Direction": 1,
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  }
-                }
-              ],
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "data_formatada"
-                    }
-                  }
-                ]
-              }
-            }
-          },
           "2315bee52491d4806338": {
             "singleVisual": {
               "visualType": "shape",
@@ -242,7 +116,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9f0cc30f7959ce69c569",
+                  "name": "9fb1a52acba61213fda6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -297,7 +171,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "271d038851817062e030",
+                  "name": "60aadae18529a09695b2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -352,7 +226,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "df63d68719f2e7784b91",
+                  "name": "14dba4fc1bc74c375d7f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -407,7 +281,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5298169ae2923ff2bda2",
+                  "name": "7fa8931869ec04f69729",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -468,7 +342,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2f8502ba1c10fd778afb",
+                  "name": "9a5e0d2f9deb2f1c8602",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -529,7 +403,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "11b1c7c4c1604199d735",
+                  "name": "75a067c7907d5db048dd",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -617,7 +491,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "fb203887d36099485539",
+                  "name": "f30662cbd611a2ecf44c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -672,7 +546,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "6b8668c0f968d81d12ec",
+                  "name": "237b877e4de8c4868ae2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -687,7 +561,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "14aef241beb1d10511e0",
+                  "name": "79f9c1942e0715765b68",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -702,7 +576,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4745b00bd4676d365129",
+                  "name": "3bba69a6c95db38fb9a1",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -717,7 +591,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f07b5ffb71f28a37ddf1",
+                  "name": "f281291c4af3b1d58bb3",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -732,7 +606,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2ff4b64925e46e96b0a5",
+                  "name": "e6d10430967423d04621",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -747,7 +621,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e2ad301bf5ccc6bd1539",
+                  "name": "cbc4c20fc945f2296099",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -762,7 +636,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7e6a91b3a2c9f48e5b3e",
+                  "name": "4a7b2d7efd08ab0b0296",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -777,7 +651,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4cadef59b67a74197d60",
+                  "name": "6d38086748dc3d2e9df5",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -792,7 +666,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "beb3a76ddb54409436ed",
+                  "name": "44d1d3191314e8d4e7ad",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -807,7 +681,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7b6c73f88a85de21365d",
+                  "name": "dc93cb0ecf8df38f94a4",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -822,7 +696,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e482fb7fd5f62bc7097b",
+                  "name": "f0a7d1186d079c6fa5c6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -837,7 +711,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "22eb55d39ba6f6634fda",
+                  "name": "4cae7b4e0ce2775b73cb",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -852,7 +726,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "9c6dfe9f41a995a2a94f",
+                  "name": "1d1079467c6e0cd0c647",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -867,7 +741,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e296bf85bb15329a62da",
+                  "name": "f23b65dfd21eab1644b6",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -882,7 +756,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "aa3be301d4cc61daa025",
+                  "name": "10ab9d9f6df49ea1c2a9",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -897,7 +771,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "964d9adc4bdd038b1f1c",
+                  "name": "8f2182323129cc74470b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -912,7 +786,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5688a56d65c0a626d103",
+                  "name": "bcbd391d1dd0e69d5e01",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -927,7 +801,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "d4ff48f84726233237f0",
+                  "name": "9bd73e6fd85810b10448",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -942,7 +816,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7492dd2e6752a4bdfc98",
+                  "name": "9d1ae900304cf183d430",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -982,7 +856,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "0b95bc969a00b946757c",
+                  "name": "33df2b7ffcd6cef78f20",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -997,22 +871,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "1cfd47f9a3a6d71eb5cb",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "trimestre"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "7a6309f66afd176f65ff",
+                  "name": "79f364ac7c10dd9ddf8f",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1027,7 +886,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "438cce78908476098942",
+                  "name": "41be2e04ef9e09a8c7ec",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1042,8 +901,42 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bcb72577d688ca333d60",
+                  "name": "f6c788b945a43b971468",
                   "type": "Advanced",
+                  "filter": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "m",
+                        "Entity": "Medidas",
+                        "Type": 0
+                      }
+                    ],
+                    "Where": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "m"
+                                  }
+                                },
+                                "Property": "qtdDevolvida"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "1L"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
                   "expression": {
                     "Measure": {
                       "Expression": {
@@ -1108,16 +1001,6 @@
                           "Entity": "dim_calendario"
                         }
                       },
-                      "Property": "trimestre"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
                       "Property": "mes"
                     }
                   }
@@ -1135,7 +1018,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "42a4c1a47f51fcaa6b42",
+                  "name": "e370f0845bfb820efd4e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1256,7 +1139,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "412c3553aa6bc55e5517",
+                  "name": "04256f2357c1379bad32",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1296,7 +1179,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "2c8321b97a5efca8a535",
+                  "name": "90dab0c393aef5011a43",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1415,10 +1298,123 @@
               }
             }
           },
-          "09067dce8573d2a7495b": {
+          "bc7b5ca841d91ff94c66": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "747ce773f836a2a6841d",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "data_movimentacao_rmdm"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
             "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_devolucaoMaterial",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Between": {
+                                    "Expression": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "f"
+                                          }
+                                        },
+                                        "Property": "data_movimentacao_rmdm"
+                                      }
+                                    },
+                                    "LowerBound": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "DateAdd": {
+                                            "Expression": {
+                                              "Now": {}
+                                            },
+                                            "Amount": -6,
+                                            "TimeUnit": 2
+                                          }
+                                        },
+                                        "TimeUnit": 2
+                                      }
+                                    },
+                                    "UpperBound": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "DateAdd": {
+                                            "Expression": {
+                                              "Now": {}
+                                            },
+                                            "Amount": -1,
+                                            "TimeUnit": 2
+                                          }
+                                        },
+                                        "TimeUnit": 2
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_devolucaoMaterial"
+                        }
+                      },
+                      "Property": "data_movimentacao_rmdm"
+                    }
+                  }
+                ]
+              }
             }
           }
         }

@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "ae3309d917d70aa86b9c",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "bc7b5ca841d91ff94c66",
   "position": {
-    "x": 25.268761358622019,
-    "y": 762.398633625832,
-    "z": 12000,
+    "x": 25.895953757225431,
+    "y": 760.23121387283231,
+    "z": 26001,
     "height": 110.23255813953489,
     "width": 200.93023255813952,
-    "tabOrder": 12000
+    "tabOrder": 26001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,35 +20,20 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_calendario"
+                      "Entity": "fct_devolucaoMaterial"
                     }
                   },
-                  "Property": "data_formatada"
+                  "Property": "data_movimentacao_rmdm"
                 }
               },
-              "queryRef": "dim_calendario.data_formatada",
-              "nativeQueryRef": "data_formatada",
+              "queryRef": "fct_devolucaoMaterial.data_movimentacao_rmdm",
+              "nativeQueryRef": "data_movimentacao_rmdm",
               "active": true
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_calendario"
-                  }
-                },
-                "Property": "data_formatada"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -74,8 +59,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d",
-                    "Entity": "dim_calendario",
+                    "Name": "f",
+                    "Entity": "fct_devolucaoMaterial",
                     "Type": 0
                   }
                 ],
@@ -87,10 +72,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d"
+                                "Source": "f"
                               }
                             },
-                            "Property": "data_formatada"
+                            "Property": "data_movimentacao_rmdm"
                           }
                         },
                         "LowerBound": {
@@ -331,11 +316,24 @@
         }
       ]
     },
-    "syncGroup": {
-      "groupName": "data_formatada",
-      "fieldChanges": true,
-      "filterChanges": true
-    },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "01732918d7e816594877",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "data_movimentacao_rmdm"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
