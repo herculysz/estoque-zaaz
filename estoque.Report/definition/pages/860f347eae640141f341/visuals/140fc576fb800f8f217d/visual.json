@@ -34,6 +34,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fct_requisicaoMaterial"
+                  }
+                },
+                "Property": "data_movimentacao_rmdm"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

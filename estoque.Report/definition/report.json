@@ -96,16 +96,6 @@
           "type": "Image"
         },
         {
-          "name": "love-arrow27775991079410445.png",
-          "path": "love-arrow27775991079410445.png",
-          "type": "Image"
-        },
-        {
-          "name": "love-arrow7764760825631812.png",
-          "path": "love-arrow7764760825631812.png",
-          "type": "Image"
-        },
-        {
           "name": "mechanic7476555646603428.png",
           "path": "mechanic7476555646603428.png",
           "type": "Image"
@@ -154,6 +144,7 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
+    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   }
 }

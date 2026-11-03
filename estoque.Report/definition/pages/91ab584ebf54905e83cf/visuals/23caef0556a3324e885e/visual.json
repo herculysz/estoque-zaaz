@@ -195,7 +195,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F6C60B'"
+                      "Value": "'#00A098'"
                     }
                   }
                 }
@@ -236,7 +236,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FD3397'"
+                      "Value": "'#F6C60B'"
                     }
                   }
                 }
@@ -816,6 +816,62 @@
         },
         "type": "Categorical",
         "howCreated": "User"
+      },
+      {
+        "name": "60d01cac8b48e70b8ab8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "384b89d90cd338708141",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "descricao_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a791ee4503364eba5638",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoVolante"
+              }
+            },
+            "Property": "condicao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6dd8d084d74a71e10242",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "saldoV_disponivel_graph"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

@@ -34,6 +34,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fct_materiaisAplicados"
+                  }
+                },
+                "Property": "baixa_protocolo_data"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

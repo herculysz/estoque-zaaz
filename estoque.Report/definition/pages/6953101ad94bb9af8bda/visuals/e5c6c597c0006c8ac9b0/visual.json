@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "9bbd0f61fdd31bd7a520",
+  "name": "e5c6c597c0006c8ac9b0",
   "position": {
-    "x": 747.14198878113007,
-    "y": 558.87334383126051,
-    "z": 18000,
-    "height": 56.720827178729692,
-    "width": 60.974889217134418,
-    "tabOrder": 18000
+    "x": 748.54950115118959,
+    "y": 556.991557943208,
+    "z": 38016,
+    "height": 53.046815042210291,
+    "width": 64.834996162701458,
+    "tabOrder": 38016
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'love-arrow.png'"
+                      "Value": "'scribble (1).png'"
                     }
                   }
                 },
@@ -29,7 +29,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "love-arrow27775991079410445.png"
+                      "ItemName": "scribble_(1)938819979482314.png"
                     }
                   }
                 },

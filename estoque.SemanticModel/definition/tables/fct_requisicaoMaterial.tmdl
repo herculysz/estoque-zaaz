@@ -226,6 +226,14 @@ table fct_requisicaoMaterial
 
 		annotation SummarizationSetBy = Automatic
 
+	column numero_documento
+		dataType: string
+		lineageTag: c4781330-44e1-43c5-abbd-0d395eaf7c42
+		summarizeBy: none
+		sourceColumn: numero_documento
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_requisicaoMaterial = m
 		mode: import
 		source = ```
@@ -239,12 +247,14 @@ table fct_requisicaoMaterial
 				        dim_movimento_rmdm.contrato,
 				        dim_movimento_rmdm.projeto,
 				        dim_movimento_rmdm.data_movimentacao_rmdm,
+						dim_movimento_rmdm.numero_documento,
 				        dim_material.categoria_tecnologia,
 				        dim_movimento_rmdm.condicao,
 				        dim_material.bk_material,
 				        dim_material.descricao_material,
 				        dim_material.unidade_medida,
-				        dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
+				        --dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
+						COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie,
 				        dim_movimento_rmdm.serializado,
 				        fct_movimento_requisicao.quantidade_solicitada,
 				        fct_movimento_requisicao.quantidade_executada,

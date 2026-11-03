@@ -40,10 +40,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dim_calendario"
+                    "Entity": "fct_materiaisRetirados"
                   }
                 },
-                "Property": "data_formatada"
+                "Property": "baixa_protocolo_data"
               }
             },
             "direction": "Ascending"

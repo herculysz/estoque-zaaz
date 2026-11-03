@@ -93,7 +93,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5f7f425a1c66e25b3eea",
+                  "name": "763304ac08cc1abccb03",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -148,7 +148,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f6c14d5edffd923d0739",
+                  "name": "0a57c39425e336811d55",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -236,7 +236,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "5816dd8e2d04a0fb93fe",
+                  "name": "47840e708348b37b1b86",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -303,7 +303,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "20d587a7c5e37b5d62d4",
+                  "name": "504ee4695a37dd25dba7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -358,7 +358,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "39745c1affee25bfbec6",
+                  "name": "a578168055e0a4475cd6",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -398,7 +398,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "49cbabd1a231b7b8f647",
+                  "name": "4ea20482a9cefb6befde",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -413,22 +413,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e4a05587bfa8c40b1b9e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
-                      "Property": "trimestre"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "3da101dbb9e33c6720f8",
+                  "name": "ac22a87501ed7b54b0fc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -443,7 +428,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f4a0c0cd7c4ec86a86cb",
+                  "name": "67d4fcf019fa410944cc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -458,7 +443,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b2e6a41bd2e54290af83",
+                  "name": "e1e0a9d980d16ea361fe",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -558,16 +543,6 @@
                           "Entity": "dim_calendario"
                         }
                       },
-                      "Property": "trimestre"
-                    }
-                  },
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "dim_calendario"
-                        }
-                      },
                       "Property": "mes"
                     }
                   }
@@ -579,7 +554,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "0c11fdd9c27a26dee0f8",
+                  "name": "0bf17a907a705895a8c2",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -670,7 +645,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "f2930130ed2ced4eb4a6",
+                  "name": "37ab05bea20c3903505e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -737,7 +712,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9b76470b8e246f2fa93c",
+                  "name": "c91c850b1e3c3d0968b8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -852,7 +827,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "892b6a6247ea2dd61072",
+                  "name": "5ef17f026c717821e8d0",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -913,7 +888,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "9a3e1262a3e9c367aeb2",
+                  "name": "caf59b4e4a9aa026e078",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -933,6 +908,67 @@
               "visualType": "slicer",
               "objects": {
                 "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_conversaoMateriais",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "In": {
+                                    "Expressions": [
+                                      {
+                                        "Column": {
+                                          "Expression": {
+                                            "SourceRef": {
+                                              "Source": "f"
+                                            }
+                                          },
+                                          "Property": "condicao_convertida"
+                                        }
+                                      }
+                                    ],
+                                    "Values": [
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'DEFEITO'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'DESUSO'"
+                                          }
+                                        }
+                                      ],
+                                      [
+                                        {
+                                          "Literal": {
+                                            "Value": "'REAPROVEITADO'"
+                                          }
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
                   "data": [
                     {
                       "properties": {
@@ -964,373 +1000,11 @@
               }
             }
           },
-          "da6540f8c293f03644f5": {
-            "singleVisual": {
-              "visualType": "textbox",
-              "objects": {}
-            }
-          },
-          "e4770f0b165281c25e27": {
-            "singleVisual": {
-              "visualType": "actionButton",
-              "objects": {}
-            }
-          },
-          "f22888d6d23012aaf391": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "fed0bb2ff7fef4cf2d8b",
-                  "type": "Advanced",
-                  "expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "qtdConvertida"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "card",
-              "objects": {},
-              "orderBy": [
-                {
-                  "Direction": 2,
-                  "Expression": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Medidas"
-                        }
-                      },
-                      "Property": "qtdConvertida"
-                    }
-                  }
-                }
-              ]
-            }
-          },
-          "fa9610ee1cba1b646216": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "8fb5b3482347b5db31b7",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "contrato"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "71fe26ed02a1e566a49e",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "projeto"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "3bc306491da1c27b10c4",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "bk_material_original"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "974537df47780fbd7a17",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "descricao_material_original"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "728c95a63a6118c68677",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "condicao_original"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "80202170267d62e365d2",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "categoria_tecnologia_original"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "b9c4225e655e1f6cae2f",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "numero_serie_original"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "83d745cc631376e90e81",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "bk_material_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "a91cb0f996515d52dd48",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "descricao_material_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "636c87a42e8968c70d36",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "condicao_convertida"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ea8519577f063b1a2dda",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "categoria_tecnologia_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "8bed4637c9a281bec281",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "numero_serie_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "fe50feb3098cca01a6a5",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "unidade_medida_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ce28b7110e33bb217010",
-                  "type": "Advanced",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "quantidade_convertido"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "dad44e78e1690b1d0226",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "data_conversao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "4b1482970e69aba7d0da",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "status_baixa"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "ed256e44a2b6557900c5",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "nome"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "13497fd0ffc61d80c443",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "descricao_funcao"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "0441eb39d7efdfebb657",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "serializado"
-                    }
-                  },
-                  "howCreated": 0
-                },
-                {
-                  "name": "3f4e2566e80377ed33f1",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_conversaoMateriais"
-                        }
-                      },
-                      "Property": "tem_caracter_incorreto"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "tableEx",
-              "objects": {}
-            }
-          },
           "d29ccf421a6da9c987be": {
             "filters": {
               "byExpr": [
                 {
-                  "name": "75a8ec284bac7de573bf",
+                  "name": "bf5a9d6c10654c60d420",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1443,6 +1117,368 @@
                   }
                 ]
               }
+            }
+          },
+          "da6540f8c293f03644f5": {
+            "singleVisual": {
+              "visualType": "textbox",
+              "objects": {}
+            }
+          },
+          "e4770f0b165281c25e27": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "f22888d6d23012aaf391": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "6b8b502b530117903106",
+                  "type": "Advanced",
+                  "expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "qtdConvertida"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "card",
+              "objects": {},
+              "orderBy": [
+                {
+                  "Direction": 2,
+                  "Expression": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Medidas"
+                        }
+                      },
+                      "Property": "qtdConvertida"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "fa9610ee1cba1b646216": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "4d7cc879e4d62d083590",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "contrato"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0212b91121b769dd6e04",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "projeto"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "09e318a4ae9196630663",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "bk_material_original"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "f3678162ae80ccc837ae",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "descricao_material_original"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "a96acb6c96b0be60e21a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "condicao_original"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7fdae5982b2311e78039",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "categoria_tecnologia_original"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "5df0d69c603a54a420ae",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "numero_serie_original"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "7b775e26261a4b041cd8",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "bk_material_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "de4ac7b046b3b76035b9",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "descricao_material_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c446278597b5079e9b6b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "condicao_convertida"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "80b61e68826ce44dc3c1",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "categoria_tecnologia_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "4c35bed209de86255adb",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "numero_serie_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "dd03d5010281400b0c05",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "unidade_medida_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "ebb1cadf8bb3237e140d",
+                  "type": "Advanced",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "quantidade_convertido"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "d64b618fbc7e8c31d7da",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "data_conversao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1ab45b2dc7ccc460308a",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "status_baixa"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "c456c374eaedd304e71b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "nome"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "440c6772b6ce6450a61b",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "descricao_funcao"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "1da7347fa54301490396",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "serializado"
+                    }
+                  },
+                  "howCreated": 0
+                },
+                {
+                  "name": "0efdc26b07c83e080710",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_conversaoMateriais"
+                        }
+                      },
+                      "Property": "tem_caracter_incorreto"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "tableEx",
+              "objects": {}
             }
           }
         }

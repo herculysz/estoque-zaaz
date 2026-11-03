@@ -493,7 +493,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FF55AA'"
+                      "Value": "'#000054'"
                     }
                   }
                 }
@@ -1316,8 +1316,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#E000FF'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -1355,8 +1356,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#E000FF'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -1379,7 +1381,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "1D"
                 }
               }
             },
@@ -1806,6 +1808,34 @@
             }
           ]
         }
+      },
+      {
+        "name": "bb2a9d47a00490802b09",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "ano"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "85d94b5b78552cb712a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_calendario"
+              }
+            },
+            "Property": "mes"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

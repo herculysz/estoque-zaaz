@@ -3,9 +3,7 @@
   "displayName": "RequisitadosOPSSE",
   "name": "3d67f8a524454debdb3c",
   "options": {
-    "targetVisualNames": [
-      "657a23a5ea4567e71c6d"
-    ],
+    "targetVisualNames": [],
     "preserveNewVisualVisibility": true
   },
   "explorationState": {
@@ -39,6 +37,125 @@
               "objects": {}
             }
           },
+          "140fc576fb800f8f217d": {
+            "filters": {
+              "byExpr": [
+                {
+                  "name": "a52d9ff09b6d38ee74cf",
+                  "type": "Categorical",
+                  "expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "data_movimentacao_rmdm"
+                    }
+                  },
+                  "howCreated": 0
+                }
+              ]
+            },
+            "singleVisual": {
+              "visualType": "slicer",
+              "objects": {
+                "merge": {
+                  "general": [
+                    {
+                      "properties": {
+                        "filter": {
+                          "filter": {
+                            "Version": 2,
+                            "From": [
+                              {
+                                "Name": "f",
+                                "Entity": "fct_requisicaoMaterial",
+                                "Type": 0
+                              }
+                            ],
+                            "Where": [
+                              {
+                                "Condition": {
+                                  "Between": {
+                                    "Expression": {
+                                      "Column": {
+                                        "Expression": {
+                                          "SourceRef": {
+                                            "Source": "f"
+                                          }
+                                        },
+                                        "Property": "data_movimentacao_rmdm"
+                                      }
+                                    },
+                                    "LowerBound": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "DateAdd": {
+                                            "Expression": {
+                                              "Now": {}
+                                            },
+                                            "Amount": -6,
+                                            "TimeUnit": 2
+                                          }
+                                        },
+                                        "TimeUnit": 2
+                                      }
+                                    },
+                                    "UpperBound": {
+                                      "DateSpan": {
+                                        "Expression": {
+                                          "DateAdd": {
+                                            "Expression": {
+                                              "Now": {}
+                                            },
+                                            "Amount": -1,
+                                            "TimeUnit": 2
+                                          }
+                                        },
+                                        "TimeUnit": 2
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "data": [
+                    {
+                      "properties": {
+                        "mode": {
+                          "expr": {
+                            "Literal": {
+                              "Value": "'RelativeDatePicker'"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              "activeProjections": {
+                "Values": [
+                  {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fct_requisicaoMaterial"
+                        }
+                      },
+                      "Property": "data_movimentacao_rmdm"
+                    }
+                  }
+                ]
+              }
+            }
+          },
           "1cb39b719505ddb43ae2": {
             "singleVisual": {
               "visualType": "actionButton",
@@ -49,7 +166,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "4c55822c353604736c16",
+                  "name": "7b39931dcc0c5d507c0d",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -74,7 +191,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "a0087fc44deb23bda087",
+                  "name": "56891d23095c97490d59",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -194,7 +311,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3570fa61a008c4fe2edb",
+                  "name": "7d44a74b00550470bb6c",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -261,7 +378,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "cbe3eef9b461f78afea6",
+                  "name": "497092735e9066e80718",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -383,7 +500,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "777a4fc38e614b2d536f",
+                  "name": "225b4e17d2d39820e927",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -477,7 +594,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d3dc4e5e3e1ec233b2b2",
+                  "name": "044e24b6e601500e7aec",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -550,7 +667,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3352206f16d5a3d93f1a",
+                  "name": "5024e8bc81060b87a3a6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -620,7 +737,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "eeb55843639e836da078",
+                  "name": "a16a4da3a3a02a83c881",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -635,7 +752,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f4f6932a2f5489a6de0d",
+                  "name": "5ff7f56b5256c4341fda",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -650,7 +767,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "31ba60618b098cedee79",
+                  "name": "da557449b660a3cb1425",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -665,7 +782,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "108ecb23457d5a6b78f5",
+                  "name": "42ffbad9b05896513ebd",
                   "type": "Advanced",
                   "filter": {
                     "Version": 2,
@@ -782,7 +899,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "d68c6f1c27098f1d7eb9",
+                  "name": "eeaf6bad9d457e102209",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -837,7 +954,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "3dc1ec8ee3602796e446",
+                  "name": "cae7383eb734e2b00c35",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -898,7 +1015,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "b2e591b27ca8bf10422e",
+                  "name": "f20a8692063943cee6cc",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -913,7 +1030,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4bd112cb6af9d17fd36b",
+                  "name": "730588a09aa0288ba0e7",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -928,7 +1045,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4bc267b46343aa3202e7",
+                  "name": "c179083c71863cc3b38a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -943,7 +1060,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "881ba2e331ced7b9bd29",
+                  "name": "854af6f6e8c4c7dc4d11",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -958,7 +1075,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "31d6192e0026bd7fee8e",
+                  "name": "fa9c11bf910034484107",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -973,7 +1090,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "4eea20d0794c85a1a02a",
+                  "name": "01866483b8e41710409e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -988,7 +1105,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "632b68a3bba9af0cbf39",
+                  "name": "6adb60d4ae5be7a85ce1",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1003,7 +1120,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ff1f55476b1ac1d6a11b",
+                  "name": "84fab52d0c30c0dc7149",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1018,7 +1135,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "c58fdbf3ee83c0943e3d",
+                  "name": "fe339ece08790bb518c8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1033,7 +1150,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "a12f59ff6b65dca4578a",
+                  "name": "d9183de6536a5a0ab802",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1048,7 +1165,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "5c2b55fa59d3fa1bc477",
+                  "name": "0e5763fcb72010a85322",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1063,7 +1180,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "74fed915889c46d90f76",
+                  "name": "e3603256223a62d4197b",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1078,7 +1195,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "14de44229d4883e4ea01",
+                  "name": "c1a5c975043e40593189",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1093,7 +1210,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7312a40095c90ca31fb7",
+                  "name": "986e600bea5d27471484",
                   "type": "Advanced",
                   "expression": {
                     "Column": {
@@ -1108,7 +1225,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "e72aa1c05e538fd9a126",
+                  "name": "c6d69c8e429b0629ca66",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1123,7 +1240,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "70e35b8cfe73ec4993a5",
+                  "name": "19834b563d65dc2c5950",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1138,7 +1255,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "b3490400a8ed5bb478af",
+                  "name": "16bdbfc4479020db4b4e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1153,7 +1270,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "06506cde86733b66cbc0",
+                  "name": "00fad3e1746650124ac8",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1168,7 +1285,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f76d4d237ad7bcacb0ea",
+                  "name": "0593555fb99aa02178b6",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1205,7 +1322,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "374c03cbe6b150a8ffd9",
+                  "name": "a09725441badc32b8d6c",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -1245,7 +1362,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "ddc5265f3647bb460dcc",
+                  "name": "350f9a1001d08b80a070",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -1350,125 +1467,6 @@
                         }
                       },
                       "Property": "serializado"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "140fc576fb800f8f217d": {
-            "filters": {
-              "byExpr": [
-                {
-                  "name": "38f3e85ac99209e0b3c0",
-                  "type": "Categorical",
-                  "expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "data_movimentacao_rmdm"
-                    }
-                  },
-                  "howCreated": 0
-                }
-              ]
-            },
-            "singleVisual": {
-              "visualType": "slicer",
-              "objects": {
-                "merge": {
-                  "general": [
-                    {
-                      "properties": {
-                        "filter": {
-                          "filter": {
-                            "Version": 2,
-                            "From": [
-                              {
-                                "Name": "f",
-                                "Entity": "fct_requisicaoMaterial",
-                                "Type": 0
-                              }
-                            ],
-                            "Where": [
-                              {
-                                "Condition": {
-                                  "Between": {
-                                    "Expression": {
-                                      "Column": {
-                                        "Expression": {
-                                          "SourceRef": {
-                                            "Source": "f"
-                                          }
-                                        },
-                                        "Property": "data_movimentacao_rmdm"
-                                      }
-                                    },
-                                    "LowerBound": {
-                                      "DateSpan": {
-                                        "Expression": {
-                                          "DateAdd": {
-                                            "Expression": {
-                                              "Now": {}
-                                            },
-                                            "Amount": -6,
-                                            "TimeUnit": 2
-                                          }
-                                        },
-                                        "TimeUnit": 2
-                                      }
-                                    },
-                                    "UpperBound": {
-                                      "DateSpan": {
-                                        "Expression": {
-                                          "DateAdd": {
-                                            "Expression": {
-                                              "Now": {}
-                                            },
-                                            "Amount": -1,
-                                            "TimeUnit": 2
-                                          }
-                                        },
-                                        "TimeUnit": 2
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        }
-                      }
-                    }
-                  ],
-                  "data": [
-                    {
-                      "properties": {
-                        "mode": {
-                          "expr": {
-                            "Literal": {
-                              "Value": "'RelativeDatePicker'"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  ]
-                }
-              },
-              "activeProjections": {
-                "Values": [
-                  {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_requisicaoMaterial"
-                        }
-                      },
-                      "Property": "data_movimentacao_rmdm"
                     }
                   }
                 ]

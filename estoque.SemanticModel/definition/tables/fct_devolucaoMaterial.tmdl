@@ -226,6 +226,14 @@ table fct_devolucaoMaterial
 
 		annotation SummarizationSetBy = Automatic
 
+	column numero_documento
+		dataType: string
+		lineageTag: e715a433-34b0-4f6e-8dae-c7487dfa6abb
+		summarizeBy: none
+		sourceColumn: numero_documento
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_devolucaoMaterial = m
 		mode: import
 		source = ```
@@ -239,12 +247,14 @@ table fct_devolucaoMaterial
 				        dim_movimento_rmdm.contrato,
 				        dim_movimento_rmdm.projeto,
 				        dim_movimento_rmdm.data_movimentacao_rmdm,
+						dim_movimento_rmdm.numero_documento,
 				        dim_material.categoria_tecnologia,
 				        dim_movimento_rmdm.condicao,
 				        dim_material.bk_material,
 				        dim_material.descricao_material,
 				        dim_material.unidade_medida,
-				        dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
+				        --dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
+						COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie,
 				        dim_movimento_rmdm.serializado,
 				        fct_movimento_devolucao.quantidade_solicitada,
 				        fct_movimento_devolucao.quantidade_executada,

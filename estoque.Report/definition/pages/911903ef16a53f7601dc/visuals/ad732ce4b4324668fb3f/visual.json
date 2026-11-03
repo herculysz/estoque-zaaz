@@ -317,7 +317,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#F6C60B'"
+                      "Value": "'#00A098'"
                     }
                   }
                 }
@@ -358,7 +358,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FD3397'"
+                      "Value": "'#F6C60B'"
                     }
                   }
                 }
@@ -950,5 +950,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "b716dc63a5301eba6c2d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoEstoque"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a7b846366de69664d61b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoEstoque"
+              }
+            },
+            "Property": "contrato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ffc9b4b40b41e92cd1c5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoEstoque"
+              }
+            },
+            "Property": "projeto"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "04e66ee88d28dca0030e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_saldoEstoque"
+              }
+            },
+            "Property": "condicao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "07db58ce146460d10876",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "saldoEF_disponivel_graph"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

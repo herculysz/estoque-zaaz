@@ -1232,7 +1232,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#FF55AA'"
+                      "Value": "'#000054'"
                     }
                   }
                 }
@@ -1644,8 +1644,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#E000FF'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -1676,8 +1677,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#E000FF'"
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
                     }
                   }
                 }
@@ -1698,6 +1700,13 @@
               }
             },
             "dataLabelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "width": {
               "expr": {
                 "Literal": {
                   "Value": "1D"
