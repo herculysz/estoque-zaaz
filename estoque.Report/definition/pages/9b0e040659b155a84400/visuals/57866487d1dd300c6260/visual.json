@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "57866487d1dd300c6260",
   "position": {
     "x": 35.340314136125656,
@@ -412,6 +412,22 @@
           },
           "selector": {
             "metadata": "dim_calendario.ano_mes"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "424.1428563426759D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fct_materiaisAplicados.categoria_tecnologia"
           }
         }
       ]

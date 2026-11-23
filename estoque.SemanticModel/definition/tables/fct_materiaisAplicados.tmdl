@@ -322,11 +322,44 @@ table fct_materiaisAplicados
 
 		annotation SummarizationSetBy = Automatic
 
+	column ultima_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1e557d41-2c37-424a-8bbd-ffa460d520ee
+		summarizeBy: none
+		sourceColumn: ultima_atualizacao
+
+		variation Variação
+			isDefault
+			relationship: 88de608c-9f50-4045-b70a-9f420c75d4c6
+			defaultHierarchy: LocalDateTable_95a0d1ab-7ba6-4697-879d-0f3ca7dcc9ba.'Hierarquia de datas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: 30dd0f3a-c90c-47b1-bba7-e7d9fa07f279
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: b25f7d67-fb92-49c0-8afc-9d8a96ce4eba
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_materiaisAplicados = m
 		mode: import
 		source =
 				let
-					Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
+					//Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
+					Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db, [CommandTimeout=#duration(0, 0, 1, 0)]), "
 					SELECT
 						dim_movimentacao_material.sk_movimentacao_material,
 						dim_movimentacao_material.numero_documento,
@@ -355,13 +388,17 @@ table fct_materiaisAplicados
 						dim_colaborador.coordenador,
 						dim_colaborador.gerente,
 						dim_colaborador.diretor,
-						COALESCE(dim_serial_equipamento.numero_serie, dim_movimentacao_material.numero_serie) as numero_serie
+						COALESCE(dim_serial_equipamento.numero_serie, dim_movimentacao_material.numero_serie) as numero_serie,
+						fct_movimentacao_material_aplicado.ultima_atualizacao,
+						dim_cidade.cidade,
+						dim_cidade.uf
 					from gold.dim_movimentacao_material as dim_movimentacao_material
 					inner join gold.fct_movimentacao_material_aplicado AS fct_movimentacao_material_aplicado ON (fct_movimentacao_material_aplicado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)
 					left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimentacao_material_aplicado.sk_material)
 					left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimentacao_material_aplicado.sk_colaborador)
 					left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_aplicado.sk_numero_serie)
 					left join gold.dim_solicitacao as dim_solicitacao on (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_aplicado.sk_protocolo)
+					left join gold.dim_cidade as dim_cidade on (dim_cidade.sk_cidade = fct_movimentacao_material_aplicado.sk_cidade)
 					WHERE
 						dim_solicitacao.data_fechamento >= '2026-01-01'
 						OR (dim_solicitacao.data_fechamento IS NULL AND dim_movimentacao_material.data_aplicacao >= '2026-01-01')

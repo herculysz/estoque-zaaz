@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "15b4e329470e84abd0e0",
   "position": {
     "x": 1485.7068062827225,
@@ -23,13 +23,45 @@
                       "Entity": "fct_materiaisAplicados"
                     }
                   },
-                  "Property": "projeto"
+                  "Property": "base"
                 }
               },
-              "queryRef": "fct_materiaisAplicados.projeto",
-              "nativeQueryRef": "Projeto",
+              "queryRef": "fct_materiaisAplicados.base",
+              "nativeQueryRef": "Empresa",
               "active": true,
-              "displayName": "Projeto"
+              "displayName": "Empresa"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "uf"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.uf",
+              "nativeQueryRef": "UF",
+              "active": true,
+              "displayName": "UF"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "cidade"
+                }
+              },
+              "queryRef": "fct_materiaisAplicados.cidade",
+              "nativeQueryRef": "Cidade",
+              "active": false,
+              "displayName": "Cidade"
             }
           ]
         },
@@ -71,6 +103,74 @@
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.base"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "base"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.uf"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisAplicados"
+                    }
+                  },
+                  "Property": "uf"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "fct_materiaisAplicados.cidade"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'ZAAZ NORDESTE'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "columnHeaders": [
         {
@@ -248,7 +348,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'PROJETOS DETALHADOS'"
+                  "Value": "'REGIÃO DETALHADA'"
                 }
               }
             },

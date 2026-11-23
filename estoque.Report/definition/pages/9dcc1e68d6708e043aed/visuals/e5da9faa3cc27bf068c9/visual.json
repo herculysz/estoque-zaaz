@@ -17,27 +17,37 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fct_updated"
-                        }
-                      },
-                      "Property": "DataHoraAtualização"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 3
+                  "Property": "MAX_UPDATE_RETIRADOS"
                 }
               },
-              "queryRef": "Min(_Updated.DataHoraAtualização)",
-              "nativeQueryRef": "DataHoraAtualização mais recente"
+              "queryRef": "Medidas.MAX_UPDATE_RETIRADOS",
+              "nativeQueryRef": "MAX_UPDATE_RETIRADOS"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "MAX_UPDATE_RETIRADOS"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
         "isDefaultSort": true
       }
     },

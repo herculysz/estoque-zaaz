@@ -322,12 +322,46 @@ table fct_materiaisRetirados
 
 		annotation SummarizationSetBy = Automatic
 
+	column ultima_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 81fccbf2-af45-4fa0-a343-07c73bf8918e
+		summarizeBy: none
+		sourceColumn: ultima_atualizacao
+
+		variation Variação
+			isDefault
+			relationship: b6ede158-485e-4912-a321-87f547a69b68
+			defaultHierarchy: LocalDateTable_7342d248-6019-43cc-ab63-24a78f8da9c6.'Hierarquia de datas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: c18449e8-4d02-4dd4-a1df-e487776ea1d7
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column uf
+		dataType: string
+		lineageTag: f6c32876-aa3b-410b-bc66-ee2cdd14104b
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_materiaisRetirados = m
 		mode: import
 		source = ```
 				let
-				    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
-				    SELECT DISTINCT
+				    
+					//Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db, [CommandTimeout=#duration(0, 0, 1, 0)]), "
+					Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
+				    SELECT --DISTINCT
 				        dim_movimentacao_material.sk_movimentacao_material,
 				        dim_movimentacao_material.numero_documento,
 				        dim_movimentacao_material.contrato,
@@ -357,7 +391,10 @@ table fct_materiaisRetirados
 						dim_colaborador.coordenador,
 						dim_colaborador.gerente,
 						dim_colaborador.diretor,
-				    	COALESCE(dim_serial_equipamento.numero_serie, dim_movimentacao_material.numero_serie) as numero_serie
+				    	COALESCE(dim_serial_equipamento.numero_serie, dim_movimentacao_material.numero_serie) as numero_serie,
+						fct_movimentacao_material_retirado.ultima_atualizacao,
+						dim_cidade.cidade,
+						dim_cidade.uf
 				    FROM gold.dim_movimentacao_material AS dim_movimentacao_material
 				    INNER JOIN gold.fct_movimentacao_material_retirado AS fct_movimentacao_material_retirado 
 				        ON (fct_movimentacao_material_retirado.sk_movimentacao_material = dim_movimentacao_material.sk_movimentacao_material)
@@ -369,6 +406,7 @@ table fct_materiaisRetirados
 				        ON (dim_serial_equipamento.sk_numero_serie = fct_movimentacao_material_retirado.sk_numero_serie)
 				    LEFT JOIN gold.dim_solicitacao AS dim_solicitacao 
 				        ON (dim_solicitacao.sk_protocolo::bigint = fct_movimentacao_material_retirado.sk_protocolo)
+					left join gold.dim_cidade as dim_cidade on (dim_cidade.sk_cidade = fct_movimentacao_material_retirado.sk_cidade)
 				    WHERE
 						dim_solicitacao.data_fechamento >= '2026-01-01'
 						OR (dim_solicitacao.data_fechamento IS NULL AND dim_movimentacao_material.data_aplicacao >= '2026-01-01')

@@ -208,11 +208,28 @@ table fct_saldoEstoque
 
 		annotation SummarizationSetBy = Automatic
 
+	column ultima_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 20cdbb36-4612-43a7-97cb-fcbc085b3b1f
+		summarizeBy: none
+		sourceColumn: ultima_atualizacao
+
+		variation Variação
+			isDefault
+			relationship: 08e9e87b-53ca-41f0-9b48-6b11dba225f3
+			defaultHierarchy: LocalDateTable_d304a262-5ae6-434c-ab57-1cc1af23cfce.'Hierarquia de datas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_saldoEstoque = m
 		mode: import
 		source = ```
 				let
-				    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
+				    //Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), "
+					Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db, [CommandTimeout=#duration(0, 0, 1, 0)]), "
 					with max_data_saldo as (
 						select distinct
 							dim_saldo_tecnico_estoque.base as base,
@@ -236,10 +253,10 @@ table fct_saldoEstoque
 						fct_saldo_estoque.saldo_disponivel,
 						dim_material.categoria_tecnologia,
 						dim_saldo_tecnico_estoque.condicao,
-						dim_saldo_tecnico_estoque.serializado
+						dim_saldo_tecnico_estoque.serializado,
+						fct_saldo_estoque.ultima_atualizacao
 					from max_data_saldo
-					left join gold.dim_saldo_tecnico_estoque as dim_saldo_tecnico_estoque on (dim_saldo_tecnico_estoque.base = max_data_saldo.base  
-																								and dim_saldo_tecnico_estoque.data_saldo = max_data_saldo.data_saldo)
+					left join gold.dim_saldo_tecnico_estoque as dim_saldo_tecnico_estoque on (dim_saldo_tecnico_estoque.base = max_data_saldo.base and dim_saldo_tecnico_estoque.data_saldo = max_data_saldo.data_saldo)
 					inner join gold.fct_saldo_estoque as fct_saldo_estoque on (fct_saldo_estoque.sk_saldo = dim_saldo_tecnico_estoque.sk_saldo)
 					left join gold.dim_material as dim_material on (dim_material.sk_material = fct_saldo_estoque.sk_material)
 					left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_saldo_estoque.sk_numero_serie)

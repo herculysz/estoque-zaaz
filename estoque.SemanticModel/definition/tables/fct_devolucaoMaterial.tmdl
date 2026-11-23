@@ -261,7 +261,8 @@ table fct_devolucaoMaterial
 				        dim_colaborador.nome,
 				        dim_colaborador.descricao_funcao,
 				        dim_movimento_rmdm.status_baixada,
-				        dim_movimento_rmdm.status_cancelado 
+				        dim_movimento_rmdm.status_cancelado,
+						fct_movimento_devolucao.ultima_atualizacao::timestamp 
 				    FROM gold.dim_movimento_rmdm AS dim_movimento_rmdm
 				    inner join gold.fct_movimento_devolucao as fct_movimento_devolucao on (fct_movimento_devolucao.sk_movimento_rmdm = dim_movimento_rmdm.sk_movimento_rmdm)
 				    left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimento_devolucao.sk_material)

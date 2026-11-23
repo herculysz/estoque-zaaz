@@ -1,0 +1,969 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ebe9be057b64767be131",
+  "position": {
+    "x": 0,
+    "y": 72.094240837696333,
+    "z": 0,
+    "height": 1007.9057591623038,
+    "width": 1919.6858638743456,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "contrato"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.contrato",
+              "nativeQueryRef": "contrato1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "projeto"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.projeto",
+              "nativeQueryRef": "projeto1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "bk_protocolo"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.bk_protocolo",
+              "nativeQueryRef": "bk_protocolo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "status_protocolo"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.status_protocolo",
+              "nativeQueryRef": "status_protocolo"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "tipo_solicitacao"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.tipo_solicitacao",
+              "nativeQueryRef": "tipo_solicitacao1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "descricao_funcao"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.descricao_funcao",
+              "nativeQueryRef": "descricao_funcao1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "nome"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.nome",
+              "nativeQueryRef": "nome1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "baixa_protocolo_data"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.baixa_protocolo_data",
+              "nativeQueryRef": "baixa_protocolo_data"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "baixa_protocolo_hora"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.baixa_protocolo_hora",
+              "nativeQueryRef": "baixa_protocolo_hora"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "inclusao_material_data"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.data_inclusao_material.1",
+              "nativeQueryRef": "inclusao_material_data"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "inclusao_material_hora"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.data_inclusao_material.2",
+              "nativeQueryRef": "data_inclusao_material.2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "bk_material"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.bk_material",
+              "nativeQueryRef": "bk_material"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "descricao_material"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.descricao_material",
+              "nativeQueryRef": "descricao_material"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "numero_serie"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.numero_serie",
+              "nativeQueryRef": "numero_serie"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "categoria_tecnologia"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.categoria_tecnologia",
+              "nativeQueryRef": "categoria_tecnologia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "condicao"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.condicao",
+              "nativeQueryRef": "condicao"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "unidade_medida"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.unidade_medida",
+              "nativeQueryRef": "unidade_medida"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "quantidade_removida"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.quantidade_removida",
+              "nativeQueryRef": "quantidade_removida"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "serializado"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.serializado",
+              "nativeQueryRef": "serializado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_materiaisRetirados"
+                    }
+                  },
+                  "Property": "tem_caracter_incorreto"
+                }
+              },
+              "queryRef": "fct_materiaisRetirados.tem_caracter_incorreto",
+              "nativeQueryRef": "tem_caracter_incorreto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "qtd_remov_peso"
+                }
+              },
+              "queryRef": "Medidas.qtd_remov_peso",
+              "nativeQueryRef": "qtd_remov_peso"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "defaultColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'RETIRADOS ANALÍTICO'"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FAFBFC'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F1C4C'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CDCDCD'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showVisualInformationButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualWarningButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualErrorButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillRoleSelector": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillUpButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillDownLevelButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillDownExpandButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ce441b17e7cb0166ff19'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "shadowDistance": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "angle": {
+              "expr": {
+                "Literal": {
+                  "Value": "45D"
+                }
+              }
+            },
+            "shadowSpread": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "85D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "859be913a07b52093a93",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "contrato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e6277f4ed690edeed217",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "projeto"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "9c391493a613d2ce023d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "bk_protocolo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "78446f3c740c95998933",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "status_protocolo"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "189966573bc857ba03a8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "tipo_solicitacao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b7000621dce40b51a00d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "descricao_funcao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0fb01cc19716c2b39a0c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "nome"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "809e939961d907ce0ed9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "baixa_protocolo_data"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c9826d73b987cbc8c130",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "baixa_protocolo_hora"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f1188dd3404778703c1a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "inclusao_material_data"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1ba8021ed0c0ca402b95",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "inclusao_material_hora"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "599953c53546ce210a0e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "bk_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "bddc02b49565ac00140b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "descricao_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e25fb06372229ded3c94",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "numero_serie"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "04093ad2c578cd880cc4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7b82a9c340965a2d247b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "condicao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f61e83830b5a2bd48a43",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "unidade_medida"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4a68d242889e9630424e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "quantidade_removida"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7a39cb3c3eeb95100594",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "serializado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2d917e9c8bd1e1d6e351",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_materiaisRetirados"
+              }
+            },
+            "Property": "tem_caracter_incorreto"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "68fdbc69b241d26d32c9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "qtd_remov_peso"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "qtd_remov_peso"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

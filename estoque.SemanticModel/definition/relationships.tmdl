@@ -139,3 +139,28 @@ relationship 990b03ad-210e-a35a-4136-0386970404cf
 	fromColumn: fct_saldoVolante.categoria_tecnologia
 	toColumn: TecnologiaPeso.Tecnologia
 
+relationship 08e9e87b-53ca-41f0-9b48-6b11dba225f3
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_saldoEstoque.ultima_atualizacao
+	toColumn: LocalDateTable_d304a262-5ae6-434c-ab57-1cc1af23cfce.Date
+
+relationship fb81793b-19cc-44d5-bd26-29bded9ebd5b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_saldoVolante.ultima_atualizacao
+	toColumn: LocalDateTable_418bcf1b-2367-48d3-bf96-66e022e0c516.Date
+
+relationship 3af9848d-a40a-4ffa-a7a6-ec36a820b4bb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_requisicaoMaterial.ultima_atualizacao
+	toColumn: LocalDateTable_4d37f560-4b02-4197-8532-7e464b76ac4b.Date
+
+relationship 88de608c-9f50-4045-b70a-9f420c75d4c6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_materiaisAplicados.ultima_atualizacao
+	toColumn: LocalDateTable_95a0d1ab-7ba6-4697-879d-0f3ca7dcc9ba.Date
+
+relationship b6ede158-485e-4912-a321-87f547a69b68
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fct_materiaisRetirados.ultima_atualizacao
+	toColumn: LocalDateTable_7342d248-6019-43cc-ab63-24a78f8da9c6.Date
+

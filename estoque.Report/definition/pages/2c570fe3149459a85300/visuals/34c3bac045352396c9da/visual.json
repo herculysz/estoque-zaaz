@@ -1,0 +1,942 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "34c3bac045352396c9da",
+  "position": {
+    "x": 0,
+    "y": 72.094240837696333,
+    "z": 0,
+    "height": 1007.9057591623038,
+    "width": 1919.6858638743456,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "base"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.base",
+              "nativeQueryRef": "base1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "contrato"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.contrato",
+              "nativeQueryRef": "contrato"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "projeto"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.projeto",
+              "nativeQueryRef": "projeto"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "nome"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.nome",
+              "nativeQueryRef": "nome"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "descricao_funcao"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.descricao_funcao",
+              "nativeQueryRef": "descricao_funcao"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "categoria_tecnologia"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.categoria_tecnologia",
+              "nativeQueryRef": "categoria_tecnologia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "condicao"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.condicao",
+              "nativeQueryRef": "condicao"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "bk_material"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.bk_material",
+              "nativeQueryRef": "bk_material"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "descricao_material"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.descricao_material",
+              "nativeQueryRef": "descricao_material"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "serializado"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.serializado",
+              "nativeQueryRef": "serializado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "numero_serie"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.numero_serie",
+              "nativeQueryRef": "numero_serie"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "unidade_medida"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.unidade_medida",
+              "nativeQueryRef": "un",
+              "displayName": "un"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "quantidade_solicitada"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.quantidade_solicitada",
+              "nativeQueryRef": "quantidade_solicitada"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "quantidade_executada"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.quantidade_executada",
+              "nativeQueryRef": "quantidade_executada"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "status_baixada"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.status_baixada",
+              "nativeQueryRef": "status_baixada"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "status_cancelado"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.status_cancelado",
+              "nativeQueryRef": "status_cancelado"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "data_movimentacao_rmdm"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.data_movimentacao_rmdm",
+              "nativeQueryRef": "data_movimentacao_rmdm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "hora_movimentacao_rmdm"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.hora_movimentacao_rmdm",
+              "nativeQueryRef": "hora_movimentacao_rmdm"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fct_devolucaoMaterial"
+                    }
+                  },
+                  "Property": "tem_caracter_incorreto"
+                }
+              },
+              "queryRef": "fct_devolucaoMaterial.tem_caracter_incorreto",
+              "nativeQueryRef": "tem_caracter_incorreto"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "qtdDevolvida_Peso"
+                }
+              },
+              "queryRef": "Medidas.qtdDevolvida_Peso",
+              "nativeQueryRef": "qtdDevolvida_Peso"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "columnAdjustment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'growToFit'"
+                }
+              }
+            },
+            "defaultColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "90D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'DEVOLUÇÃO ANALÍTICO'"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FAFBFC'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1F1C4C'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "spaceAbovePlotArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "spaceAboveSubtitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#CDCDCD'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "showVisualInformationButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualWarningButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showVisualErrorButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillRoleSelector": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillToggleButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillUpButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillDownLevelButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDrillDownExpandButton": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ce441b17e7cb0166ff19'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "shadowDistance": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "angle": {
+              "expr": {
+                "Literal": {
+                  "Value": "45D"
+                }
+              }
+            },
+            "shadowSpread": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "85D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a70fe4fe4c9d26248db5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "base"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1261c30010b02d0d80b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "contrato"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "def19190e70740b52de3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "projeto"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1e5a59141808436c06a3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "nome"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8a4e3d2fb27e4454e021",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "descricao_funcao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "97d64748ca0502a6a978",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "categoria_tecnologia"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e1c1a257ab6318d9a01b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "condicao"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "584d96108dd5887d58b9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "bk_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "04be634f9ace2b0b8626",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "descricao_material"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4fae6bc5d69d502bbca3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "serializado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "dfe09f90c79d21aa6149",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "numero_serie"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "346b97adcc010d7b4d7b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "unidade_medida"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1d576484166ddd470d18",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "quantidade_solicitada"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "229b721cb8a730114cbc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "quantidade_executada"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fdd18258a6a80d36b340",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "status_baixada"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "35ba4564ab61181c27aa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "status_cancelado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "820f242008c6a4900a90",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "data_movimentacao_rmdm"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "a9e6159729ac0006e2b5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "hora_movimentacao_rmdm"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4f11d5d45eb8420ebac4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fct_devolucaoMaterial"
+              }
+            },
+            "Property": "tem_caracter_incorreto"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3551ef763eb1a0559678",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "qtdDevolvida_Peso"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "qtdDevolvida_Peso"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

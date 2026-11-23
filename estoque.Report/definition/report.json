@@ -56,16 +56,6 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "bidirectional_(1)18679759975403065.png",
-          "path": "bidirectional_(1)18679759975403065.png",
-          "type": "Image"
-        },
-        {
-          "name": "bidirectional3327973253434855.png",
-          "path": "bidirectional3327973253434855.png",
-          "type": "Image"
-        },
-        {
           "name": "car35707148579118264.png",
           "path": "car35707148579118264.png",
           "type": "Image"
@@ -144,7 +134,6 @@
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
     "useEnhancedTooltips": true,
-    "filterPaneHiddenInEditMode": true,
     "useDefaultAggregateDisplayName": true
   }
 }

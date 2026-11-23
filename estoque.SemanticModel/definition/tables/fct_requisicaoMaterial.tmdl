@@ -234,46 +234,63 @@ table fct_requisicaoMaterial
 
 		annotation SummarizationSetBy = Automatic
 
+	column ultima_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 2e37c8aa-3788-46a9-ab66-e935dd60a3ae
+		summarizeBy: none
+		sourceColumn: ultima_atualizacao
+
+		variation Variação
+			isDefault
+			relationship: 3af9848d-a40a-4ffa-a7a6-ec36a820b4bb
+			defaultHierarchy: LocalDateTable_4d37f560-4b02-4197-8532-7e464b76ac4b.'Hierarquia de datas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_requisicaoMaterial = m
 		mode: import
 		source = ```
 				let
-				    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), 
-				    "
-				    SELECT DISTINCT
-				        dim_movimento_rmdm.sk_movimento_rmdm,
-				        --dim_movimento_rmdm.numero_documento,
-				        dim_movimento_rmdm.base,
-				        dim_movimento_rmdm.contrato,
-				        dim_movimento_rmdm.projeto,
-				        dim_movimento_rmdm.data_movimentacao_rmdm,
-						dim_movimento_rmdm.numero_documento,
-				        dim_material.categoria_tecnologia,
-				        dim_movimento_rmdm.condicao,
-				        dim_material.bk_material,
-				        dim_material.descricao_material,
-				        dim_material.unidade_medida,
-				        --dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
-						COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie,
-				        dim_movimento_rmdm.serializado,
-				        fct_movimento_requisicao.quantidade_solicitada,
-				        fct_movimento_requisicao.quantidade_executada,
-				        dim_colaborador.nome,
-				        dim_colaborador.descricao_funcao,
-				        dim_movimento_rmdm.status_baixada,
-				        dim_movimento_rmdm.status_cancelado 
-				    FROM gold.dim_movimento_rmdm AS dim_movimento_rmdm
-				    inner join gold.fct_movimento_requisicao as fct_movimento_requisicao on (fct_movimento_requisicao.sk_movimento_rmdm = dim_movimento_rmdm.sk_movimento_rmdm)
-				    left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimento_requisicao.sk_material)
-				    left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimento_requisicao.sk_colaborador_requisitante)
-				    left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimento_requisicao.sk_numero_serie)
-					
-					", null, [EnableFolding=true]),
-				    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_movimentacao_rmdm", type text}}, "pt-BR"), "data_movimentacao_rmdm", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_movimentacao_rmdm.1", "data_movimentacao_rmdm.2"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"data_movimentacao_rmdm.1", type date}, {"data_movimentacao_rmdm.2", type time}, {"sk_movimento_rmdm", type text}}),
-				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"data_movimentacao_rmdm.1", "data_movimentacao_rmdm"}, {"data_movimentacao_rmdm.2", "hora_movimentacao_rmdm"}})
-				in
-				    #"Colunas Renomeadas"
+									    Fonte = Value.NativeQuery(PostgreSQL.Database(hostname, db), 
+									    "
+									    SELECT DISTINCT
+									        dim_movimento_rmdm.sk_movimento_rmdm,
+									        --dim_movimento_rmdm.numero_documento,
+									        dim_movimento_rmdm.base,
+									        dim_movimento_rmdm.contrato,
+									        dim_movimento_rmdm.projeto,
+									        dim_movimento_rmdm.data_movimentacao_rmdm,
+											dim_movimento_rmdm.numero_documento,
+									        dim_material.categoria_tecnologia,
+									        dim_movimento_rmdm.condicao,
+									        dim_material.bk_material,
+									        dim_material.descricao_material,
+									        dim_material.unidade_medida,
+									        --dim_serial_equipamento.numero_serie, --COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie
+											COALESCE(dim_serial_equipamento.numero_serie, dim_movimento_rmdm.numero_serie) as numero_serie,
+									        dim_movimento_rmdm.serializado,
+									        fct_movimento_requisicao.quantidade_solicitada,
+									        fct_movimento_requisicao.quantidade_executada,
+									        dim_colaborador.nome,
+									        dim_colaborador.descricao_funcao,
+									        dim_movimento_rmdm.status_baixada,
+									        dim_movimento_rmdm.status_cancelado,
+				    						fct_movimento_requisicao.ultima_atualizacao
+									    FROM gold.dim_movimento_rmdm AS dim_movimento_rmdm
+									    inner join gold.fct_movimento_requisicao as fct_movimento_requisicao on (fct_movimento_requisicao.sk_movimento_rmdm = dim_movimento_rmdm.sk_movimento_rmdm)
+									    left join gold.dim_material as dim_material on (dim_material.sk_material = fct_movimento_requisicao.sk_material)
+									    left join gold.dim_colaborador as dim_colaborador on (dim_colaborador.sk_colaborador = fct_movimento_requisicao.sk_colaborador_requisitante)
+									    left join gold.dim_serial_equipamento as dim_serial_equipamento on (dim_serial_equipamento.sk_numero_serie = fct_movimento_requisicao.sk_numero_serie)
+										
+										", null, [EnableFolding=true]),
+									    #"Dividir Coluna por Delimitador" = Table.SplitColumn(Table.TransformColumnTypes(Fonte, {{"data_movimentacao_rmdm", type text}}, "pt-BR"), "data_movimentacao_rmdm", Splitter.SplitTextByEachDelimiter({" "}, QuoteStyle.Csv, false), {"data_movimentacao_rmdm.1", "data_movimentacao_rmdm.2"}),
+									    #"Tipo Alterado" = Table.TransformColumnTypes(#"Dividir Coluna por Delimitador",{{"data_movimentacao_rmdm.1", type date}, {"data_movimentacao_rmdm.2", type time}, {"sk_movimento_rmdm", type text}}),
+									    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"data_movimentacao_rmdm.1", "data_movimentacao_rmdm"}, {"data_movimentacao_rmdm.2", "hora_movimentacao_rmdm"}})
+									in
+									    #"Colunas Renomeadas"
 				```
 
 	annotation PBI_NavigationStepName = Navegação

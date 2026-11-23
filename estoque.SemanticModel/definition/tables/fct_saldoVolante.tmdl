@@ -229,6 +229,22 @@ table fct_saldoVolante
 
 		annotation SummarizationSetBy = Automatic
 
+	column ultima_atualizacao
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d2595b54-8b8f-495d-85ff-f84358b4fe44
+		summarizeBy: none
+		sourceColumn: ultima_atualizacao
+
+		variation Variação
+			isDefault
+			relationship: fb81793b-19cc-44d5-bd26-29bded9ebd5b
+			defaultHierarchy: LocalDateTable_418bcf1b-2367-48d3-bf96-66e022e0c516.'Hierarquia de datas'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fct_saldoVolante = m
 		mode: import
 		source = ```
@@ -264,7 +280,8 @@ table fct_saldoVolante
 						dim_saldo_tecnico_estoque.serializado,
 						dim_saldo_tecnico_estoque.numero_serie,
 						fct_saldo_tecnico.saldo,
-						fct_saldo_tecnico.dias_posse
+						fct_saldo_tecnico.dias_posse,
+						fct_saldo_tecnico.ultima_atualizacao  
 					from max_data_saldo
 					left join gold.dim_saldo_tecnico_estoque as dim_saldo_tecnico_estoque on (dim_saldo_tecnico_estoque.base = max_data_saldo.base
 					and dim_saldo_tecnico_estoque.data_saldo = max_data_saldo.data_saldo)

@@ -72,7 +72,7 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "1L"
                 }
               }
             },
@@ -374,6 +374,34 @@
               "expr": {
                 "Literal": {
                   "Value": "'d351006e75bfc54436ec'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
+                }
+              }
+            },
+            "showSentenceFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "sentenceTemplate": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Quantidade de equipamentos retirados em ordens de serviço, multiplicado pelo peso do agrupamento tecnológico.'"
                 }
               }
             }

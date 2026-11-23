@@ -646,6 +646,8 @@ table Medidas
 		displayFolder: Conversão
 		lineageTag: a80fdb26-901f-4230-83b8-e91aeede2cb9
 
+		annotation PBI_FormatHint = {"isDecimal":true}
+
 	measure ConvertidosMediaMes = ```
 			
 			    VAR TabelaFiltrada = 
@@ -797,7 +799,7 @@ table Medidas
 			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
 			    fct_conversaoMateriais[condicao_convertida] = "DESUSO"
 			)
-		formatString: #,0
+		formatString: #,0.00
 		displayFolder: Conversão
 		lineageTag: dea1728d-c3cc-4098-b22a-d2e2b7d71045
 
@@ -813,7 +815,7 @@ table Medidas
 			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
 			    fct_conversaoMateriais[condicao_convertida] = "DEFEITO"
 			)
-		formatString: #,0
+		formatString: #,0.00
 		displayFolder: Conversão
 		lineageTag: af7b2237-e515-4a87-b793-6f557ab6cf53
 
@@ -829,7 +831,7 @@ table Medidas
 			    fct_conversaoMateriais[serializado] = "SERIALIZADO",
 			    fct_conversaoMateriais[condicao_convertida] IN {"DESUSO", "DEFEITO", "REAPROVEITADO"}
 			)
-		formatString: #,0
+		formatString: #,0.00
 		displayFolder: Conversão
 		lineageTag: 9b452f66-d41b-4c56-a138-55bc70c67c78
 
@@ -865,6 +867,46 @@ table Medidas
 		lineageTag: eac1f57b-cf15-40d5-9ed6-5eae0824bda0
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure MAX_UPDATE_SALDOEF =
+			
+			
+			MAX(fct_saldoEstoque[ultima_atualizacao])
+		formatString: General Date
+		displayFolder: EstoqueFisico
+		lineageTag: f057d379-7145-4337-ad67-b7bffab269f1
+
+	measure MAX_UPDATE_SALDOVOL =
+			
+			
+			MAX(fct_saldoVolante[ultima_atualizacao])
+		formatString: General Date
+		displayFolder: Volante
+		lineageTag: 6076a3c2-8761-4c32-b7da-d9913d71b850
+
+	measure MAX_UPDATE_REQ =
+			
+			
+			MAX(fct_requisicaoMaterial[ultima_atualizacao])
+		formatString: General Date
+		displayFolder: Requisicao
+		lineageTag: a05c7f84-a010-4f86-8e3b-f9683cb5db3f
+
+	measure MAX_UPDATE_Aplic =
+			
+			
+			MAX(fct_materiaisAplicados[ultima_atualizacao])
+		formatString: General Date
+		displayFolder: Aplicados
+		lineageTag: 2ebe9bc6-5319-4696-a786-0dac87e55030
+
+	measure MAX_UPDATE_RETIRADOS =
+			
+			
+			MAX(fct_materiaisRetirados[ultima_atualizacao])
+		formatString: General Date
+		displayFolder: Retirados
+		lineageTag: 7998612d-8eb2-4423-bef3-1b18e6e54f41
 
 	column Ordinal
 		dataType: int64

@@ -43,6 +43,11 @@ ref table fct_requisicaoMaterial
 ref table fct_devolucaoMaterial
 ref table Empresa
 ref table TecnologiaPeso
+ref table LocalDateTable_d304a262-5ae6-434c-ab57-1cc1af23cfce
+ref table LocalDateTable_418bcf1b-2367-48d3-bf96-66e022e0c516
+ref table LocalDateTable_4d37f560-4b02-4197-8532-7e464b76ac4b
+ref table LocalDateTable_95a0d1ab-7ba6-4697-879d-0f3ca7dcc9ba
+ref table LocalDateTable_7342d248-6019-43cc-ab63-24a78f8da9c6
 
 ref cultureInfo pt-BR
 

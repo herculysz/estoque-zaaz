@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "e5ba52490ac154026b19",
   "position": {
     "x": 25,
@@ -20,14 +20,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fct_updated"
+                      "Entity": "Medidas"
                     }
                   },
-                  "Property": "Update"
+                  "Property": "MAX_UPDATE_Aplic"
                 }
               },
-              "queryRef": "fct_updated.Atualização",
-              "nativeQueryRef": "Update"
+              "queryRef": "Medidas.MAX_UPDATE_Aplic",
+              "nativeQueryRef": "MAX_UPDATE_Aplic"
             }
           ]
         }
